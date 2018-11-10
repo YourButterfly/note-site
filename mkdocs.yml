@@ -1,6 +1,8 @@
 site_name: butter-fly
+site_url: 'https://yourbutterfly.github.io/note-site/' #不设置将找不到index.html所在目录
 repo_name: 'YourButterfly/note-site'
 repo_url: 'https://github.com/YourButterfly/note-site.git'
+
 
 remote_branch: gh-pages
 remote_name: origin
