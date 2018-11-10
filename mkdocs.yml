@@ -1,0 +1,19 @@
+site_name: butter-fly
+repo_name: 'YourButterfly/note-site'
+repo_url: 'https://github.com/YourButterfly/note-site.git'
+
+remote_branch: gh-pages
+remote_name: origin
+nav:
+        - 首页: index.md
+        - 文件格式:
+                - PDF: 
+                        - 简介: pdf/introduce.md
+                        - PageBox: pdf/page-boxes.md
+theme: 
+        name: 'material'
+        language: 'zh'
+        featuree:
+                tabs: true
+        palette:
+                primary: 'blue grey'
