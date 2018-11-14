@@ -31,17 +31,60 @@ git clone https://github.com/YourButterfly/note-site.git
 ```
 
 解释一下项目目录
-```
+
+```txt
+.
+├── docs //md文档，用来写的
+│   ├── index.md
+│   └── pdf
+│       ├── introduce.md
+│       └── page-boxes.md
+├── LICENSE //不用管
+└── mkdocs.yml // mkdoc的配置文件，大部分已经弄好了
+
+2 directories, 5 files
 
 ```
-use mkdocs
+介绍一下mkdocs命令
 
 ```shell
 $ mkdocs -h
 
 Commands:
-  build      Build the MkDocs documentation
-  gh-deploy  Deploy your documentation to GitHub Pages
-  new        Create a new MkDocs project
-  serve      Run the builtin development server
+  build      Build the MkDocs documentation，这里不需要
+  gh-deploy  Deploy your documentation to GitHub Pages，推送到github，已经配置好了，直接用‘mkdocs gh-deploy’
+  new        Create a new MkDocs project，这里不需要
+  serve      Run the builtin development server，预览页面
+```
+
+### 编写文档
+
+- 写之前pull一下，在项目主目录（note-site）里`git pull`，防止冲突
+- 写
+  - 在docs下创建目录，比如pdf，作为一个类别
+  - 在docs/pdf下创建你的文档，md格式，也可以继续创建目录，作为你的tag
+- 配置
+  - 配置mkdocs.yml，配置见下
+- 推送
+  - 保存一下项目git add，git commit ，git push
+  - 推送到gh-deploy分支上，直接`mkdocs gh-deploy`
+
+配置mkdocs.yml
+
+照着加就行
+
+```md
+
+nav:
+        - 首页: index.md
+        - 文件格式:
+                - PDF:
+                        - 简介: pdf/introduce.md
+                        - PageBox: pdf/page-boxes.md
+```
+
+预览
+
+```shell
+mkdocs serve
 ```
