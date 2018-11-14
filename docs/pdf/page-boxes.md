@@ -16,7 +16,12 @@ An EPS has only a single BoundingBox but a PDF contains a MediaBox, CropBox, Ble
 
 ## mediabox
 
-对大部分用户来说，mediabox对应着pdf页面的实际大小。但在用于出版时，mediabox包含了更对的有用的信息（比如说bleed，修建标记，文件名，日期等等），便于编辑。
+对大部分用户来说，mediabox对应着pdf页面的实际大小。但在用于出版时，mediabox包含了更多的有用的信息（比如说bleed，修建标记，文件名，日期等等），便于编辑。
+
+## bleedbox
+
+如果文档布局上的任何元素与文档边缘接触，则使用bleed。bleedbox的大小不同地方有不同的标准，常见的是比crop之后每条边长3~6mm。
+
 
 ## 
 -----------------------------

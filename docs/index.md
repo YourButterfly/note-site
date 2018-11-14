@@ -1,17 +1,47 @@
-# Welcome to MkDocs
+# 如何使用
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+--to神莱
 
-## Commands
+## 环境
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+```txt
+os:         linux 64位
+tools:      pip3 mkdocs mkdocs-material git
+language:   python3
+```
 
-## Project layout
+## go
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### python pip3 安装
+
+略
+
+### mkdocs mkdocs-material安装
+
+```shell
+sudo pip3 install mkdocs mkdocs-material
+```
+mkdocs-material 是主题
+### mkdocs 搭建
+
+git clone
+
+```shell
+git clone https://github.com/YourButterfly/note-site.git
+```
+
+解释一下项目目录
+```
+
+```
+use mkdocs
+
+```shell
+$ mkdocs -h
+
+Commands:
+  build      Build the MkDocs documentation
+  gh-deploy  Deploy your documentation to GitHub Pages
+  new        Create a new MkDocs project
+  serve      Run the builtin development server
+```
