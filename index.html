@@ -535,14 +535,20 @@ Commands:
 <h3 id="_3">编写文档</h3>
 <ul>
 <li>写之前pull一下，在项目主目录（note-site）里<code>git pull</code>，防止冲突</li>
-<li>写</li>
+<li>写<ul>
 <li>在docs下创建目录，比如pdf，作为一个类别</li>
 <li>在docs/pdf下创建你的文档，md格式，也可以继续创建目录，作为你的tag</li>
-<li>配置</li>
+</ul>
+</li>
+<li>配置<ul>
 <li>配置mkdocs.yml，配置见下</li>
-<li>推送</li>
+</ul>
+</li>
+<li>推送<ul>
 <li>保存一下项目git add，git commit ，git push</li>
 <li>推送到gh-deploy分支上，直接<code>mkdocs gh-deploy</code></li>
+</ul>
+</li>
 </ul>
 <p>配置mkdocs.yml</p>
 <p>照着加就行</p>
@@ -557,6 +563,17 @@ nav:
 
 <p>预览</p>
 <pre><code class="shell">mkdocs serve
+</code></pre>
+
+<p>推送</p>
+<pre><code class="shell">$ mkdocs gh-deploy
+INFO    -  Cleaning site directory 
+INFO    -  Building documentation to directory: /home/pwd/myMkDocs/first-project/site 
+INFO    -  Copying '/home/pwd/myMkDocs/first-project/site' to 'gh-pages' branch and pushing to GitHub. 
+Username for 'https://github.com': yourbutterfly
+Password for 'https://yourbutterfly@github.com':
+INFO    -  Your documentation should shortly be available at: https://YourButterfly.github.io/note-site/ 
+
 </code></pre>
                 
                   
