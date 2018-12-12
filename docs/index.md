@@ -21,7 +21,9 @@ language:   python3
 ```shell
 sudo pip3 install mkdocs mkdocs-material
 ```
+
 mkdocs-material 是主题
+
 ### mkdocs 搭建
 
 git clone
@@ -45,6 +47,7 @@ git clone https://github.com/YourButterfly/note-site.git
 2 directories, 5 files
 
 ```
+
 介绍一下mkdocs命令
 
 ```shell
@@ -93,11 +96,11 @@ mkdocs serve
 
 ```shell
 $ mkdocs gh-deploy
-INFO    -  Cleaning site directory 
-INFO    -  Building documentation to directory: /home/pwd/myMkDocs/first-project/site 
-INFO    -  Copying '/home/pwd/myMkDocs/first-project/site' to 'gh-pages' branch and pushing to GitHub. 
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /home/pwd/myMkDocs/first-project/site
+INFO    -  Copying '/home/pwd/myMkDocs/first-project/site' to 'gh-pages' branch and pushing to GitHub.
 Username for 'https://github.com': yourbutterfly
 Password for 'https://yourbutterfly@github.com':
-INFO    -  Your documentation should shortly be available at: https://YourButterfly.github.io/note-site/ 
+INFO    -  Your documentation should shortly be available at: https://YourButterfly.github.io/note-site/
 
 ```

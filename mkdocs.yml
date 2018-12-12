@@ -12,6 +12,12 @@ nav:
                 - PDF: 
                         - 简介: pdf/introduce.md
                         - PageBox: pdf/page-boxes.md
+                - DOT:
+                        - 简介: dot/introduce.md
+                        - Dot语言: dot/language.md
+        - Fuzz引擎:
+                - honggfuzz:
+                        - netdriver-introduce: honggfuzz/netdriver-introduce.md
 theme: 
         name: 'material'
         language: 'zh'
