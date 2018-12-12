@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/honggfuzz/netdriver-introduce/">
+      
       
       
         <meta name="lang:clipboard.copy" content="复制">
@@ -31,18 +33,18 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="/note-site/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
-        <title>butter-fly</title>
+        <title>netdriver-introduce - butter-fly</title>
       
     
     
-      <link rel="stylesheet" href="/note-site/assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="/note-site/assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -51,7 +53,7 @@
       
     
     
-      <script src="/note-site/assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -60,7 +62,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/note-site/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
@@ -98,6 +100,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#honggfuzz-netdriver" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -120,7 +126,7 @@
                 butter-fly
               </span>
               <span class="md-header-nav__topic">
-                
+                netdriver-introduce
               </span>
             
           
@@ -237,7 +243,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/." title="首页" class="md-nav__link">
+    <a href="../.." title="首页" class="md-nav__link">
       首页
     </a>
   </li>
@@ -287,7 +293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/pdf/introduce/" title="简介" class="md-nav__link">
+    <a href="../../pdf/introduce/" title="简介" class="md-nav__link">
       简介
     </a>
   </li>
@@ -299,7 +305,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/pdf/page-boxes/" title="PageBox" class="md-nav__link">
+    <a href="../../pdf/page-boxes/" title="PageBox" class="md-nav__link">
       PageBox
     </a>
   </li>
@@ -335,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/dot/introduce/" title="简介" class="md-nav__link">
+    <a href="../../dot/introduce/" title="简介" class="md-nav__link">
       简介
     </a>
   </li>
@@ -347,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/dot/language/" title="Dot语言" class="md-nav__link">
+    <a href="../../dot/language/" title="Dot语言" class="md-nav__link">
       Dot语言
     </a>
   </li>
@@ -367,10 +373,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Fuzz引擎
@@ -386,10 +394,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       honggfuzz
@@ -405,11 +415,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/note-site/honggfuzz/netdriver-introduce/" title="netdriver-introduce" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="netdriver-introduce" class="md-nav__link md-nav__link--active">
       netdriver-introduce
     </a>
+    
   </li>
 
         
@@ -430,12 +449,95 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/honggfuzz/netdriver-introduce.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="honggfuzz-netdriver">Honggfuzz NetDriver</h1>
+<p>如果我们要实现一个相当健壮的TCP服务的fuzzing，为了实现这个目标需要做到哪些</p>
+<ol>
+<li>能与现有TCP服务集成的一小段代码，比如说，一个能够被Apache的HTTP链接的静态或动态库，（这里可以使httpd这个二进制程序）</li>
+<li>将来自内存数组和长度标识的输入转成TCP流的技术</li>
+<li>当输入缓冲区没有任何数据时，有方法去通知TCP 服务端结束连接；否则TCP服务端将一直挂起，或者超时中断连接，或者超过fuzzer设定的timeout</li>
+<li>如果许多相同的TCP服务器同时在相同的系统上运行，配置相同(或者默认配置)，那么它们也会绑定到数字上相同的TCP端口。当然，只有当我们打算同时Fuzz同一个TCP服务器的多个实例时，这才重要(使用honggfuzz可以轻松做到什么)</li>
+</ol>
+<p>最近在Honggfuzz的代码库中引入的Honggfuzz网络驱动程序就试图实现这些。</p>
+<p>静态库 [libfhnetdriver/libhfnetdriver.a] <a href="https://github.com/google/honggfuzz/blob/master/libhfnetdriver/netdriver.c">源代码</a></p>
+<p>驱动程序将自己作为目标(提供符号)插入到最初由libFuzzer作者实现的接口中:</p>
+<pre><code class="c">int LLVMFuzzerTestOneInput(const uint8_t* buf, size_t len);
+</code></pre>
 
+<p>这种选择使得不仅可以在honggfuzz中使用该驱动程序，还可以在AFL和libFuzzer中使用该驱动程序。从现在开始，Apache HTTPD项目需要做的唯一修改可以归结为以下差异:</p>
+<pre><code class="patch">--- a/server/main.c
++++ b/server/main.c
+@@ -484,8 +484,11 @@ static void usage(process_rec *process)
+destroy_and_exit_process(process, 1);
+}
+
+-int main(int argc, const char * const argv[])
+-{
++#ifdef HFND_FUZZING_ENTRY_FUNCTION
++ HFND_FUZZING_ENTRY_FUNCTION(int argc, const char *const *argv) {
++#else
++ int main(int argc, const char *const *argv) {
++#endif
+char c;
+int showcompile = 0, showdirectives = 0;
+const char *confname = SERVER_CONFIG_FILE;
+</code></pre>
+
+<p>应用这个补丁之后，<strong>main()</strong>(属于Apache HTTPD 中server/main.c)会被编译器hfuzz-cc中的宏替代（'-D'定义宏），这个扩展宏对HonggFuzz NetDriver有特殊意义--识别为Apache HTTPD服务器代码的原始入口点的位置</p>
+<p>在将TCP server 链接静态库libhfnetdriver.a(这一步由hfuzz-cc/*编译器执行)之后，fuzz引擎会运行自己的main函数，然后在一个单独的线程中运行TCP服务端代码</p>
+<p>之前提到的TCP server 接受到输入结束的信号问题（比如说在fuzzing输入缓冲中不再有数据时，如何通知到TCP server），可以通过向其建立的tcp流中发送TCP FIN 包。在现代操作系统中，shutdown(sock, SHUT_WR)这个syscall完成了这个工作</p>
+<p>我们要解决的最后一个要求是，能够使用相同的TCP端口启动多个TCP服务器。很遗憾，setsockopt(SO_REUSEPORT)不能用在这，因为混乱的输入可以分发到随机的fuzz进程的实例，不过这里有一个很好的方法：</p>
+<pre><code>Linux network namespaces，正如它的名字所说，只能用在linux操作系统中。在不同的网络名称空间中运行每个新的TCP服务器允许它绑定到任何它希望的TCP端口，因为每个服务器都将看到属于自己的全新loopback接口。NetDriver 利用Linux namespace的代码可以在HonggFuzz的libhfcommin库中发现。
+</code></pre>
+<p>一旦TCP server 启动并接受新的TCP连接，net dirver 将：</p>
+<pre><code>在你选择的Fuzzer的准备阶段调用LLVMFuzzerTestOneInput()接口；
+连接TCP server，
+向建立的TCP连接发送（send()）输入,
+使用shutdown(sock, SHUT_WR) 通知TCP server 没有更多的输入数据，
+等待TCP server向我们发送数据，直到它关闭TCP连接的一端为止。
+关闭客户端的TCP连接点，
+重复上述过程
+</code></pre>
+<p>下面的命令集将帮助您开始使用NetDriver来Fuzz您的第一个项目(至少对于Apache HTTPD来说)。</p>
+<pre><code class="shell">$ ( cd httpd &amp;&amp; ./hfuzz.compile_and_install.asan.sh )
+$ honggfuzz -v -Q -f IN/ -w ./httpd.wordlist -- ./httpd/httpd -X -f /home/jagger/fuzz/apache/dist/conf/httpd.conf.h2
+...
+...
+Honggfuzz Net Driver (pid=21726): Waiting for the TCP server process to start accepting TCP connections at 127.0.0.1:8080. Sleeping for 1 second....
+Honggfuzz Net Driver (pid=21726): The TCP server process is ready to accept connections at 127.0.0.1:8080. TCP fuzzing starts now!
+Size:9378 (i,b,hw,edge,ip,cmp): 0/0/0/4643/110/56364, Tot:0/0/0/4643/110/56364
+Size:40712 (i,b,hw,edge,ip,cmp): 0/0/0/1971/104/21274, Tot:0/0/0/6614/214/77638
+...
+</code></pre>
+
+<p>在这个honggfuzz目录中可以找到自定义编译脚本，以及Apache HTTPD服务器所需的所有补丁、配置和初始语料库文件。
+我认为将网络驱动程序与libFuzzer和AFL fuzzing设置集成起来应该是一项相对简单的任务。</p>
+                
+                  
+                
+              
               
                 
 
@@ -448,6 +550,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../dot/language/" title="Dot语言" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Dot语言
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -468,26 +591,26 @@
       
     </div>
     
-      <script src="/note-site/assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
         
         
           
-          <script src="/note-site/assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="/note-site/assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="/note-site/assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/note-site/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
