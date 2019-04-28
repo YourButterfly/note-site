@@ -2,32 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://yourbutterfly.github.io/note-site/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://yourbutterfly.github.io/note-site/pdf/introduce/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://yourbutterfly.github.io/note-site/pdf/page-boxes/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://yourbutterfly.github.io/note-site/dot/introduce/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://yourbutterfly.github.io/note-site/dot/language/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://yourbutterfly.github.io/note-site/honggfuzz/netdriver-introduce/</loc>
-     <lastmod>2018-12-12</lastmod>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://yourbutterfly.github.io/note-site/angr/introduce/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://yourbutterfly.github.io/note-site/angr/ddg/</loc>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

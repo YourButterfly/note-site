@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/angr/program-state/">
+      
       
       
         <meta name="lang:clipboard.copy" content="复制">
@@ -31,18 +33,18 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="/note-site/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
-        <title>butter-fly</title>
+        <title>Program State - butter-fly</title>
       
     
     
-      <link rel="stylesheet" href="/note-site/assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="/note-site/assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -51,7 +53,7 @@
       
     
     
-      <script src="/note-site/assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -60,7 +62,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/note-site/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
@@ -98,6 +100,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#program-state" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -120,7 +126,7 @@
                 butter-fly
               </span>
               <span class="md-header-nav__topic">
-                
+                Program State
               </span>
             
           
@@ -237,7 +243,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/." title="首页" class="md-nav__link">
+    <a href="../.." title="首页" class="md-nav__link">
       首页
     </a>
   </li>
@@ -287,7 +293,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/pdf/introduce/" title="简介" class="md-nav__link">
+    <a href="../../pdf/introduce/" title="简介" class="md-nav__link">
       简介
     </a>
   </li>
@@ -299,7 +305,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/pdf/page-boxes/" title="PageBox" class="md-nav__link">
+    <a href="../../pdf/page-boxes/" title="PageBox" class="md-nav__link">
       PageBox
     </a>
   </li>
@@ -335,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/dot/introduce/" title="简介" class="md-nav__link">
+    <a href="../../dot/introduce/" title="简介" class="md-nav__link">
       简介
     </a>
   </li>
@@ -347,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/dot/language/" title="Dot语言" class="md-nav__link">
+    <a href="../../dot/language/" title="Dot语言" class="md-nav__link">
       Dot语言
     </a>
   </li>
@@ -407,7 +413,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/honggfuzz/netdriver-introduce/" title="netdriver-introduce" class="md-nav__link">
+    <a href="../../honggfuzz/netdriver-introduce/" title="netdriver-introduce" class="md-nav__link">
       netdriver-introduce
     </a>
   </li>
@@ -467,7 +473,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/angr/introduce/" title="angr-introduce" class="md-nav__link">
+    <a href="../introduce/" title="angr-introduce" class="md-nav__link">
       angr-introduce
     </a>
   </li>
@@ -479,7 +485,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note-site/angr/ddg/" title="DDG" class="md-nav__link">
+    <a href="../ddg/" title="DDG" class="md-nav__link">
       DDG
     </a>
   </li>
@@ -502,12 +508,153 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#state-plugins" title="State Plugins" class="md-nav__link">
+    State Plugins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history-plugin" title="history plugin" class="md-nav__link">
+    history plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/angr/program-state.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="program-state">Program State</h1>
+<h2 id="state-plugins">State Plugins</h2>
+<h3 id="history-plugin">history plugin</h3>
+<pre><code>It is actually a linked list of several history nodes, each one representing a single round of execution---you can traverse this list with state.history.parent.parent etc.
 
+In general, these values are stored as history.recent_NAME and the iterator over them is just history.NAME. For example, for addr in state.history.bbl_addrs: print hex(addr) will print out a basic block address trace for the binary, while state.history.recent_bbl_addrs is the list of basic blocks executed in the most recent step(最近的一步不应该是一个吗), state.history.parent.recent_bbl_addrs is the list of basic blocks executed in the previous step, etc.
+
+If you ever need to quickly obtain a flat list of these values, you can access .hardcopy, e.g. state.history.bbl_addrs.hardcopy. Keep in mind though, index-based accessing is implemented on the interators.
+</code></pre>
+<pre><code class="python">    for addr in state.history.bbl_addrs:
+        print(hex(addr))
+    print(&quot;--------------------------------\n&quot;)
+&quot;&quot;&quot;
+------------------------------------
+0x40137b
+0x4013e0
+...
+0x401b08
+0x401b36
+------------------------------------
+0x40137b
+0x4013e0
+...
+0x401b08
+0x401b36
+------------------------------------
+&quot;&quot;&quot;
+
+    for addr in state.history.recent_bbl_addrs:
+        print(hex(addr))
+    print(&quot;--------------------------------\n&quot;)
+&quot;&quot;&quot;
+
+------------------------------------
+0x401b36
+------------------------------------
+0x401b36
+------------------------------------
+&quot;&quot;&quot;
+
+    print(state.history.bbl_addrs.hardcopy)
+&quot;&quot;&quot;
+...
+[4199291, 4199392, 4199405, 4199426, 4199467, 4199495, 4199507, 4199560, 4199607, 4201284, 4199619, 4199660, 4199676, 4199717, 4199733, 4199774, 4199790, 4199831, 4199847, 4199888, 4199904,4199945, 4199961, 4200002, 4200018, 4200059, 4200075, 4200116, 4200132, 4200173, 4200189, 4200230, 4200246, 4200287, 4200303, 4200344, 4200360, 4200401, 4200417, 4200458, 4200474, 4200515, 4200531, 4200572, 4200588, 4200629, 4200645, 4200686, 4200702, 4200743, 4200759, 4200800, 4200816, 4200857, 4200945, 4200986, 4201002, 4201043, 4201059, 4201100, 4201116, 4201157, 4201170, 4201211, 4201224, 4201270]
+&quot;&quot;&quot;
+</code></pre>
+
+<pre><code>history.descriptions is a listing of string descriptions of each of the rounds of execution performed on the state.
+history.bbl_addrs 这个state执行过的基本块的地址的有序列表.
+There may be more than one per round of execution, and not all addresses may correspond to binary code - some may be addresses at which SimProcedures are hooked.
+history.jumpkinds 在state的history中每个控制流转变处理的有序列表, as VEX enum strings.
+history.guards is a listing of the conditions guarding each of the branches that the state has encountered.
+history.events is a semantic listing of "interesting events" which happened during execution, such as the presence of a symbolic jump condition, the program popping up a message box, or execution terminating with an exit code.
+history.actions 通常为空, 但如果你增加了 angr.options.refs 选项给 state, 它的内容是 log of all the memory, register, and temporary value accesses performed by the program.
+</code></pre>
+<pre><code class="python">    for i in state.history.descriptions:
+        print(i)
+&quot;&quot;&quot;
+---------------------------
+&lt;IRSB from 0x40137b: 1 sat 1 unsat&gt;
+...
+&lt;IRSB from 0x401afb: 2 sat&gt;
+&lt;IRSB from 0x401b08: 1 sat 1 unsat&gt;
+&lt;IRSB from 0x401b36: 1 sat 1 unsat&gt;
+---------------------------
+&quot;&quot;&quot;
+for i in state.history.actions:
+    print(i)
+&quot;&quot;&quot;
+---------------------------
+很多很长
+...
+&lt;SimActionData 0x401b36:8 tmp/write&gt;
+&lt;SimActionExit 0x401b36:10 default&gt;
+&lt;SimActionConstraint 0x401b36:10 &lt;SAO &lt;Bool True&gt;&gt;&gt;
+&lt;SimActionConstraint 0x401b36:10 &lt;SAO &lt;Bool False&gt;&gt;&gt;
+---------------------------
+&quot;&quot;&quot;
+for i in state.history.jumpkinds:
+    print(i)
+print(&quot;---------------------------&quot;)
+print(state.history.jumpkind)
+&quot;&quot;&quot;
+...
+Ijk_Boring
+Ijk_FakeRet
+Ijk_Call
+---------------------------
+Ijk_Call
+&quot;&quot;&quot;
+</code></pre>
+                
+                  
+                
+              
               
                 
 
@@ -540,26 +687,26 @@
       
     </div>
     
-      <script src="/note-site/assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
         
         
           
-          <script src="/note-site/assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="/note-site/assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="/note-site/assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/note-site/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
