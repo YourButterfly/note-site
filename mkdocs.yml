@@ -18,6 +18,10 @@ nav:
         - Fuzz引擎:
                 - honggfuzz:
                         - netdriver-introduce: honggfuzz/netdriver-introduce.md
+        - 符号执行:
+                - angr:
+                        - angr-introduce: angr/introduce.md
+                        - DDG: angr/ddg.md
 theme: 
         name: 'material'
         language: 'zh'
