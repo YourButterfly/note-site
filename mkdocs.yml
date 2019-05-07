@@ -22,10 +22,16 @@ nav:
                 - angr:
                         - angr-introduce: angr/introduce.md
                         - DDG: angr/ddg.md
+                        - CFG: angr/cfg.md
+                        - fast-questions: angr/fast-question.md
+                        - program-state: angr/program-state.md
+                        - sim_action: angr/sim_action.md
+        - MKDOCS:
+                - mkdocs-material:
+                        - images: mymkdocs/image.md
         - IOT:
-                - tool:
-                        - binwalk:
-                                - ISSUE: iot/tool/binwalk/issue.md
+                - binwalk:
+                        - ISSUE: iot/binwalk/issue.md
 theme: 
         name: 'material'
         language: 'zh'
