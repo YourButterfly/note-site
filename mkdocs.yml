@@ -22,6 +22,10 @@ nav:
                 - angr:
                         - angr-introduce: angr/introduce.md
                         - DDG: angr/ddg.md
+        - IOT:
+                - tool:
+                        - binwalk:
+                                - ISSUE: iot/tool/binwalk/issue.md
 theme: 
         name: 'material'
         language: 'zh'
