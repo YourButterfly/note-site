@@ -41,15 +41,13 @@ cd sasquatch
 
 ### failed to find lzma in python2 virtualenv
 
-description
-
 ```txt
 WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
 
 WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
 ```
 
-#### solution
+solution
 
 ```shell
 # workon virtualenv
@@ -59,13 +57,11 @@ pip install pyliblzma
 
 ### binwalk in python virtualenv
 
-#### description
-
 ```text
 After installing binwalk for python3, need to install binwalk (python2) for FAT.
 ```
 
-#### solution
+solution
 
 Warnning: It only contain python2 environment.
 
