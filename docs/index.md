@@ -1,4 +1,4 @@
-# 如何使用
+# 随笔和笔记
 
 --to神莱
 
@@ -51,7 +51,7 @@ git clone https://github.com/YourButterfly/note-site.git
 介绍一下mkdocs命令
 
 ```shell
-$ mkdocs -h
+mkdocs -h
 
 Commands:
   build      Build the MkDocs documentation，这里不需要
@@ -62,13 +62,13 @@ Commands:
 
 ### 编写文档
 
-- 写之前pull一下，在项目主目录（note-site）里`git pull`，防止冲突
-- 写
+1. 写之前pull一下，在项目主目录（note-site）里`git pull`，防止冲突
+2. 写
     - 在docs下创建目录，比如pdf，作为一个类别
     - 在docs/pdf下创建你的文档，md格式，也可以继续创建目录，作为你的tag
-- 配置
+3. 配置
     - 配置mkdocs.yml，配置见下
-- 推送
+4. 推送
     - 保存一下项目git add，git commit ，git push
     - 推送到gh-deploy分支上，直接`mkdocs gh-deploy`
 
@@ -102,5 +102,4 @@ INFO    -  Copying '/home/pwd/myMkDocs/first-project/site' to 'gh-pages' branch 
 Username for 'https://github.com': yourbutterfly
 Password for 'https://yourbutterfly@github.com':
 INFO    -  Your documentation should shortly be available at: https://YourButterfly.github.io/note-site/
-
 ```

@@ -4,11 +4,13 @@
 
 ### history plugin
 
+```text
     It is actually a linked list of several history nodes, each one representing a single round of execution---you can traverse this list with state.history.parent.parent etc.
 
     In general, these values are stored as history.recent_NAME and the iterator over them is just history.NAME. For example, for addr in state.history.bbl_addrs: print hex(addr) will print out a basic block address trace for the binary, while state.history.recent_bbl_addrs is the list of basic blocks executed in the most recent step(最近的一步不应该是一个吗), state.history.parent.recent_bbl_addrs is the list of basic blocks executed in the previous step, etc.
 
     If you ever need to quickly obtain a flat list of these values, you can access .hardcopy, e.g. state.history.bbl_addrs.hardcopy. Keep in mind though, index-based accessing is implemented on the interators.
+```
 
 ```python
     for addr in state.history.bbl_addrs:
@@ -49,6 +51,7 @@
 """
 ```
 
+```text
     history.descriptions is a listing of string descriptions of each of the rounds of execution performed on the state.
     history.bbl_addrs 这个state执行过的基本块的地址的有序列表.
     There may be more than one per round of execution, and not all addresses may correspond to binary code - some may be addresses at which SimProcedures are hooked.
@@ -56,6 +59,7 @@
     history.guards is a listing of the conditions guarding each of the branches that the state has encountered.
     history.events is a semantic listing of "interesting events" which happened during execution, such as the presence of a symbolic jump condition, the program popping up a message box, or execution terminating with an exit code.
     history.actions 通常为空, 但如果你增加了 angr.options.refs 选项给 state, 它的内容是 log of all the memory, register, and temporary value accesses performed by the program.
+```
 
 ```python
     for i in state.history.descriptions:

@@ -1,4 +1,6 @@
-# Honggfuzz NetDriver
+# Honggfuzz
+
+## Honggfuzz NetDriver
 
 如果我们要实现一个相当健壮的TCP服务的fuzzing，为了实现这个目标需要做到哪些
 
@@ -46,23 +48,25 @@ const char *confname = SERVER_CONFIG_FILE;
 
 我们要解决的最后一个要求是，能够使用相同的TCP端口启动多个TCP服务器。很遗憾，setsockopt(SO_REUSEPORT)不能用在这，因为混乱的输入可以分发到随机的fuzz进程的实例，不过这里有一个很好的方法：
 
+```text
     Linux network namespaces，正如它的名字所说，只能用在linux操作系统中。在不同的网络名称空间中运行每个新的TCP服务器允许它绑定到任何它希望的TCP端口，因为每个服务器都将看到属于自己的全新loopback接口。NetDriver 利用Linux namespace的代码可以在HonggFuzz的libhfcommin库中发现。
+```
 
 一旦TCP server 启动并接受新的TCP连接，net dirver 将：
 
-    在你选择的Fuzzer的准备阶段调用LLVMFuzzerTestOneInput()接口；
-    连接TCP server，
-    向建立的TCP连接发送（send()）输入,
-    使用shutdown(sock, SHUT_WR) 通知TCP server 没有更多的输入数据，
-    等待TCP server向我们发送数据，直到它关闭TCP连接的一端为止。
-    关闭客户端的TCP连接点，
-    重复上述过程
+1. 在你选择的Fuzzer的准备阶段调用LLVMFuzzerTestOneInput()接口；
+2. 连接TCP server，
+3. 向建立的TCP连接发送（send()）输入,
+4. 使用shutdown(sock, SHUT_WR) 通知TCP server 没有更多的输入数据，
+5. 等待TCP server向我们发送数据，直到它关闭TCP连接的一端为止。
+6. 关闭客户端的TCP连接点，
+7. 重复上述过程
 
 下面的命令集将帮助您开始使用NetDriver来Fuzz您的第一个项目(至少对于Apache HTTPD来说)。
 
 ```shell
-$ ( cd httpd && ./hfuzz.compile_and_install.asan.sh )
-$ honggfuzz -v -Q -f IN/ -w ./httpd.wordlist -- ./httpd/httpd -X -f /home/jagger/fuzz/apache/dist/conf/httpd.conf.h2
+( cd httpd && ./hfuzz.compile_and_install.asan.sh )
+honggfuzz -v -Q -f IN/ -w ./httpd.wordlist -- ./httpd/httpd -X -f /home/jagger/fuzz/apache/dist/conf/httpd.conf.h2
 ...
 ...
 Honggfuzz Net Driver (pid=21726): Waiting for the TCP server process to start accepting TCP connections at 127.0.0.1:8080. Sleeping for 1 second....
@@ -73,4 +77,4 @@ Size:40712 (i,b,hw,edge,ip,cmp): 0/0/0/1971/104/21274, Tot:0/0/0/6614/214/77638
 ```
 
 在这个honggfuzz目录中可以找到自定义编译脚本，以及Apache HTTPD服务器所需的所有补丁、配置和初始语料库文件。
-我认为将网络驱动程序与libFuzzer和AFL fuzzing设置集成起来应该是一项相对简单的任务。
+我认为将网络驱动程序与libFuzzer和AFL fuzzing设置集成起来应该是一项相对简单的任务.

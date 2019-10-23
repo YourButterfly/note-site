@@ -1,10 +1,10 @@
 # DDG
 
-    数据依赖图分析
+数据依赖图分析
 
 ## 标题没想好
 
-    ddg.graph 的节点是CodeLocation object
+ddg.graph 的节点是CodeLocation object
 
 ```python
 """
@@ -23,6 +23,7 @@ Constructor.
 
 ## class DDG(Analysis)
 
+```text
     This is a fast data dependence graph directly generated from our CFG analysis result. The only reason for its
     existence is the speed. There is zero guarantee for being sound or accurate. You are supposed to use it only when
     you want to track the simplest data dependence, and you do not care about soundness or accuracy.
@@ -32,13 +33,17 @@ Constructor.
 
     Also note that since we are using states from CFG, any improvement in analysis performed on CFG (like a points-to
     analysis) will directly benefit the DDG.
+```
 
 ### 类DDG\_\_init\_\_
 
+```python
     __init__(self, cfg, start=None, call_depth=None, block_addrs=None)
+```
 
 相关参数
 
+```text
     cfg:         Control flow graph. Please make sure each node has an associated `state` with it. You may
                             want to generate your CFG with `keep_state=True`.(cfg with state)
     start:       An address, Specifies where we start the generation of this data dependence graph.(分析ddg的起始地址)
@@ -46,6 +51,7 @@ Constructor.
                             call tree. None disables call_depth limit.(调用深度限制)
     iterable or None block_addrs: A collection of block addresses that the DDG analysis should be performed
                                              on.(是什么再说)
+```
 
 重要变量
 
@@ -77,10 +83,13 @@ Constructor.
 
 Begin construction!
 
+```python
     self._construct()
+```
 
 ### 构造\_construct(self)
 
+```python
         """
         Construct the data dependence graph.
 
@@ -101,6 +110,7 @@ Begin construction!
         - Symbolic memory access
             Well, they cannot be tracked under fastpath mode (which is the mode we are generating the CTF) anyways.
         """
+```
 
 一些初始化操作
 
@@ -238,9 +248,7 @@ while worklist:
                     self._worklist_append(nw, worklist, worklist_set)
 ```
 
-Variable
-
-    <|Reg 16, 8B>
+Variable <|Reg 16, 8B>
 
 ```python
 class SimRegisterVariable(SimVariable):

@@ -1,8 +1,10 @@
-# ISSUES
+# binwalk
 
-## failed to run external extractor 'sasquatch -p 1 -le -d 'squashfs-root'
+## issues
 
-### description
+### failed to run external extractor 'sasquatch -p 1 -le -d 'squashfs-root'
+
+#### description
 
 Miss binary ***sasquatch***
 
@@ -19,7 +21,7 @@ WARNING: Extractor.execute failed to run external extractor 'sasquatch -p 1 -be 
 1441936       0x160090        Squashfs filesystem, little endian, non-standard signature, version 3.0, size: 8789043 bytes, 2427 inodes, blocksize: 65536 bytes, created: 2012-11-02 04:51:50
 ```
 
-### solution
+#### solution
 
 ```shell
 cd /path/to/directory
@@ -37,9 +39,9 @@ cd sasquatch
 
 ```
 
-## failed to find lzma in python2 virtualenv
+### failed to find lzma in python2 virtualenv
 
-### description
+description
 
 ```txt
 WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
@@ -47,7 +49,7 @@ WARNING: The Python LZMA module could not be found. It is *strongly* recommended
 WARNING: The Python LZMA module could not be found. It is *strongly* recommended that you install this module for binwalk to provide proper LZMA identification and extraction results.
 ```
 
-### solution
+#### solution
 
 ```shell
 # workon virtualenv
@@ -55,15 +57,19 @@ pip install pyliblzma
 # It`s not the 'pylzma'
 ```
 
-## binwalk in python virtualenv
+### binwalk in python virtualenv
 
-### description
+#### description
 
+```text
 After installing binwalk for python3, need to install binwalk (python2) for FAT.
+```
 
-### solution
+#### solution
 
 Warnning: It only contain python2 environment.
+
+更方便的方法，在root下进入python虚环境后执行binwalk安装脚本
 
 ```shell
 # workon virtua_ env
