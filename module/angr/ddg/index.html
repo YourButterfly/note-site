@@ -1,0 +1,1177 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/angr/ddg/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>DDG - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ddg" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              DDG
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      文件格式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        文件格式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      符号执行
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        符号执行
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DDG
+      </label>
+    
+    <a href="./" title="DDG" class="md-nav__link md-nav__link--active">
+      DDG
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="标题没想好" class="md-nav__link">
+    标题没想好
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-ddganalysis" title="class DDG(Analysis)" class="md-nav__link">
+    class DDG(Analysis)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddg9595init9595" title="类DDG__init__" class="md-nav__link">
+    类DDG__init__
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95constructself" title="构造_construct(self)" class="md-nav__link">
+    构造_construct(self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../honggfuzz/netdriver-introduce.md" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="标题没想好" class="md-nav__link">
+    标题没想好
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-ddganalysis" title="class DDG(Analysis)" class="md-nav__link">
+    class DDG(Analysis)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddg9595init9595" title="类DDG__init__" class="md-nav__link">
+    类DDG__init__
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95constructself" title="构造_construct(self)" class="md-nav__link">
+    构造_construct(self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/angr/ddg.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="ddg">DDG<a class="headerlink" href="#ddg" title="Permanent link">&para;</a></h1>
+<p>数据依赖图分析</p>
+<h2 id="_1">标题没想好<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ddg.graph 的节点是CodeLocation object</p>
+<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Constructor.</span>
+
+<span class="sd">:param int block_addr:      块地址</span>
+<span class="sd">:param int stmt_idx:        Statement ID. None for SimProcedures</span>
+<span class="sd">:param class sim_procedure: 对应的 SimProcedure class.</span>
+<span class="sd">:param int ins_addr:        指令地址. Optional.</span>
+<span class="sd">:param kwargs:              其他参数, will be stored, but not used in __eq__ or __hash__.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="o">&lt;</span><span class="mh">0x40137b</span> <span class="nb">id</span><span class="o">=</span><span class="mh">0x40137b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="err">$</span><span class="n">ins_addr</span> <span class="nb">id</span><span class="o">=</span><span class="err">$</span><span class="n">block_addr</span><span class="p">[</span><span class="err">$</span><span class="n">stmt_idx</span><span class="p">]</span><span class="o">&gt;</span>
+</pre></div>
+
+<h2 id="class-ddganalysis">class DDG(Analysis)<a class="headerlink" href="#class-ddganalysis" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>    This is a fast data dependence graph directly generated from our CFG analysis result. The only reason for its
+    existence is the speed. There is zero guarantee for being sound or accurate. You are supposed to use it only when
+    you want to track the simplest data dependence, and you do not care about soundness or accuracy.
+
+    For a better data dependence graph, please consider performing a better static analysis first (like Value-set
+    Analysis), and then construct a dependence graph on top of the analysis result (for example, the VFG in angr).
+
+    Also note that since we are using states from CFG, any improvement in analysis performed on CFG (like a points-to
+    analysis) will directly benefit the DDG.
+</pre></div>
+
+<h3 id="ddg9595init9595">类DDG__init__<a class="headerlink" href="#ddg9595init9595" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>    <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">call_depth</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">block_addrs</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+
+<p>相关参数</p>
+<div class="codehilite"><pre><span></span>    cfg:         Control flow graph. Please make sure each node has an associated `state` with it. You may
+                            want to generate your CFG with `keep_state=True`.(cfg with state)
+    start:       An address, Specifies where we start the generation of this data dependence graph.(分析ddg的起始地址)
+    call_depth:  None or integers. A non-negative integer specifies how deep we would like to track in the
+                            call tree. None disables call_depth limit.(调用深度限制)
+    iterable or None block_addrs: A collection of block addresses that the DDG analysis should be performed
+                                             on.(是什么再说)
+</pre></div>
+
+<p>重要变量</p>
+<div class="codehilite"><pre><span></span>    <span class="c1"># 输入的参数相关</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span> <span class="o">=</span> <span class="n">cfg</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">entry</span> <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">start</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span> <span class="o">=</span> <span class="n">call_depth</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_block_addrs</span> <span class="o">=</span> <span class="n">block_addrs</span>
+
+    <span class="c1"># 结果存储</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_stmt_graph</span> <span class="o">=</span> <span class="n">networkx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_data_graph</span> <span class="o">=</span> <span class="n">networkx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_simplified_data_graph</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_ast_graph</span> <span class="o">=</span> <span class="n">networkx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>  <span class="c1"># A mapping of ProgramVariable to ASTs</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">_symbolic_mem_ops</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="c1"># 每个函数的数据依赖图</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_function_data_dependencies</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">DDGView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">simplified</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">simple_view</span> <span class="o">=</span> <span class="n">DDGView</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">simplified</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># 其他</span>
+</pre></div>
+
+<p>Begin construction!</p>
+<div class="codehilite"><pre><span></span>    <span class="bp">self</span><span class="o">.</span><span class="n">_construct</span><span class="p">()</span>
+</pre></div>
+
+<h3 id="95constructself">构造_construct(self)<a class="headerlink" href="#95constructself" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Construct the data dependence graph.</span>
+
+<span class="sd">        We track the following types of dependence:</span>
+<span class="sd">        - (Intra-IRSB) temporary variable dependencies</span>
+<span class="sd">        - 寄存器依赖</span>
+<span class="sd">        - 内存依赖, 尽管功能受限</span>
+
+<span class="sd">        追踪一下几种内存依赖:</span>
+<span class="sd">        - (Intra-functional) Stack read/write.</span>
+<span class="sd">            Trace changes of stack pointers inside a function, and the dereferences of stack pointers.</span>
+<span class="sd">        - (Inter-functional) Stack read/write.</span>
+<span class="sd">        - (Global) Static memory positions.</span>
+<span class="sd">            Keep a map of all accessible memory positions to their source statements per function. After that, we</span>
+<span class="sd">            traverse the CFG and link each pair of reads/writes together in the order of control-flow.</span>
+
+<span class="sd">        We do not track the following types of memory access</span>
+<span class="sd">        - Symbolic memory access</span>
+<span class="sd">            Well, they cannot be tracked under fastpath mode (which is the mode we are generating the CTF) anyways.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+</pre></div>
+
+<p>一些初始化操作</p>
+<div class="codehilite"><pre><span></span>        <span class="c1"># 初始化worklist,这一步将要分析的CFG node 加入worklist_set,将DDGJob 加入worklist</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="c1"># initial nodes are those nodes in CFG that has no in-degrees</span>
+            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">in_degree</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># Put it into the worklist</span>
+                    <span class="n">job</span> <span class="o">=</span> <span class="n">DDGJob</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_worklist_append</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">worklist</span><span class="p">,</span> <span class="n">worklist_set</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="o">.</span><span class="n">get_all_nodes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">):</span>
+                <span class="n">job</span> <span class="o">=</span> <span class="n">DDGJob</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_worklist_append</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">worklist</span><span class="p">,</span> <span class="n">worklist_set</span><span class="p">)</span>
+                <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">                增加一个CFGNode 和它的后继Node到work-list,这里同样要满足call-depth的限制</span>
+
+<span class="sd">                :param node_wrapper:    The NodeWrapper instance to insert.DDGJob</span>
+<span class="sd">                :param worklist:        The work-list, which is a list.</span>
+<span class="sd">                :param worklist_set:    A set of all CFGNodes that are inside the work-list, 为了加速查找.</span>
+<span class="sd">                                        It will be updated as well.</span>
+<span class="sd">                :returns:               A set of newly-inserted CFGNodes (not NodeWrapper instances).</span>
+<span class="sd">                # #</span>
+<span class="sd">                worklist.append(node_wrapper)　DDGJob的实例</span>
+<span class="sd">                worklist_set.add(node_wrapper.cfg_node)　添加的是cfg　node</span>
+
+<span class="sd">                &quot;&quot;&quot;</span>
+</pre></div>
+
+<p>开始循环处理
+分析的对象是每个CFGJob，CFGJob是node和call deepth的封装，操作的是node的final state，call deepth用作限制分析的深度</p>
+<div class="codehilite"><pre><span></span><span class="n">live_defs_per_node</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">while</span> <span class="n">worklist</span><span class="p">:</span>
+    <span class="c1"># pop 一个节点</span>
+    <span class="n">ddg_job</span> <span class="o">=</span> <span class="n">worklist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Processing </span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span> <span class="n">ddg_job</span><span class="p">)</span>
+    <span class="n">node</span><span class="p">,</span> <span class="n">call_depth</span> <span class="o">=</span> <span class="n">ddg_job</span><span class="o">.</span><span class="n">cfg_node</span><span class="p">,</span> <span class="n">ddg_job</span><span class="o">.</span><span class="n">call_depth</span>
+    <span class="n">worklist</span> <span class="o">=</span> <span class="n">worklist</span><span class="p">[</span> <span class="mi">1</span> <span class="p">:</span> <span class="p">]</span>
+    <span class="n">worklist_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+    <span class="c1"># 抓取所有的 final states. 通常超过一个 (对每一个 successor　都有一个state), 并处理它们</span>
+    <span class="c1"># process all of them</span>
+    <span class="n">final_states</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">final_states</span>
+
+    <span class="c1">#为每个节点创建livedefinition对象实例，初步判定表示生命周期的数据定义</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">live_defs_per_node</span><span class="p">:</span>
+        <span class="n">live_defs</span> <span class="o">=</span> <span class="n">live_defs_per_node</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">live_defs</span> <span class="o">=</span> <span class="n">LiveDefinitions</span><span class="p">()</span>
+        <span class="n">live_defs_per_node</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">live_defs</span>
+
+    <span class="n">successing_nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">successors</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
+
+    <span class="c1"># 尝试把每个final state分配给对应的后继node，反之亦然</span>
+    <span class="n">match_suc</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="n">match_state</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">suc</span> <span class="ow">in</span> <span class="n">successing_nodes</span><span class="p">:</span>
+        <span class="n">matched</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">final_states</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span> <span class="o">==</span> <span class="n">suc</span><span class="o">.</span><span class="n">addr</span><span class="p">:</span>　<span class="c1"># 判断这个state的跳转地址是否是后继node的地址</span>
+                    <span class="n">match_suc</span><span class="p">[</span><span class="n">suc</span><span class="o">.</span><span class="n">addr</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="n">match_state</span><span class="p">[</span><span class="n">state</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">suc</span><span class="p">)</span>
+                    <span class="n">matched</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">SimUnsatError</span><span class="p">,</span> <span class="n">SimSolverModeError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">):</span>
+                <span class="c1"># ignore</span>
+                <span class="n">matched</span> <span class="o">=</span> <span class="n">matched</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">matched</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="c1"># 查看是否所有的final state都找到了它的后继node,以及后继node都有final state</span>
+    <span class="n">matches</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">match_suc</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">successing_nodes</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">match_state</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">final_states</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">final_states</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">matches</span> <span class="ow">and</span> <span class="n">state</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">jumpkind</span> <span class="o">==</span> <span class="s1">&#39;Ijk_FakeRet&#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">final_states</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Skip fakerets if there are other control flow transitions available</span>
+            <span class="k">continue</span>
+
+        <span class="n">new_call_depth</span> <span class="o">=</span> <span class="n">call_depth</span>
+        <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">jumpkind</span> <span class="o">==</span> <span class="s1">&#39;Ijk_Call&#39;</span><span class="p">:</span>
+            <span class="n">new_call_depth</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">jumpkind</span> <span class="o">==</span> <span class="s1">&#39;Ijk_Ret&#39;</span><span class="p">:</span>
+            <span class="n">new_call_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">call_depth</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span><span class="p">:</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Do not trace into </span><span class="si">%s</span><span class="s1"> due to the call depth limit&#39;</span><span class="p">,</span> <span class="n">state</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">new_defs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_track</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">live_defs</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">irsb</span><span class="o">.</span><span class="n">statements</span> <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">irsb</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">else</span> <span class="bp">None</span><span class="p">)</span>
+
+        <span class="c1">#corresponding_successors = [n for n in successing_nodes if</span>
+        <span class="c1">#                            not state.ip.symbolic and n.addr == state.solver.eval(state.ip)]</span>
+        <span class="c1">#if not corresponding_successors:</span>
+        <span class="c1">#    continue</span>
+
+        <span class="n">changed</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="c1"># if every successor can be matched with one or more final states (by IP address),</span>
+        <span class="c1"># only take over the LiveDefinition of matching states</span>
+        <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+            <span class="n">add_state_to_sucs</span> <span class="o">=</span> <span class="n">match_state</span><span class="p">[</span><span class="n">state</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">add_state_to_sucs</span> <span class="o">=</span> <span class="n">successing_nodes</span>
+
+        <span class="k">for</span> <span class="n">successing_node</span> <span class="ow">in</span> <span class="n">add_state_to_sucs</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">jumpkind</span> <span class="o">==</span> <span class="s1">&#39;Ijk_Call&#39;</span> <span class="ow">or</span> <span class="n">state</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">jumpkind</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Ijk_Sys&#39;</span><span class="p">))</span> <span class="ow">and</span> \
+                    <span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">ip</span><span class="o">.</span><span class="n">symbolic</span> <span class="ow">or</span> <span class="n">successing_node</span><span class="o">.</span><span class="n">addr</span> <span class="o">!=</span> <span class="n">state</span><span class="o">.</span><span class="n">solver</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">ip</span><span class="p">)):</span>
+                <span class="n">suc_new_defs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_defs_at_call_sites</span><span class="p">(</span><span class="n">new_defs</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">suc_new_defs</span> <span class="o">=</span> <span class="n">new_defs</span>
+
+            <span class="k">if</span> <span class="n">successing_node</span> <span class="ow">in</span> <span class="n">live_defs_per_node</span><span class="p">:</span>
+                <span class="n">defs_for_next_node</span> <span class="o">=</span> <span class="n">live_defs_per_node</span><span class="p">[</span><span class="n">successing_node</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">defs_for_next_node</span> <span class="o">=</span> <span class="n">LiveDefinitions</span><span class="p">()</span>
+                <span class="n">live_defs_per_node</span><span class="p">[</span><span class="n">successing_node</span><span class="p">]</span> <span class="o">=</span> <span class="n">defs_for_next_node</span>
+
+            <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">code_loc_set</span> <span class="ow">in</span> <span class="n">suc_new_defs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="c1"># l.debug(&quot;Adding %d new definitions for variable %s.&quot;, len(code_loc_set), var)</span>
+                <span class="n">changed</span> <span class="o">|=</span> <span class="n">defs_for_next_node</span><span class="o">.</span><span class="n">add_defs</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">code_loc_set</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">changed</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> \
+                    <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">new_call_depth</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_depth</span><span class="p">):</span>
+                <span class="c1"># Put all reachable successors back to our work-list again</span>
+                <span class="k">for</span> <span class="n">successor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cfg</span><span class="o">.</span><span class="n">get_all_successors</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+                    <span class="n">nw</span> <span class="o">=</span> <span class="n">DDGJob</span><span class="p">(</span><span class="n">successor</span><span class="p">,</span> <span class="n">new_call_depth</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_worklist_append</span><span class="p">(</span><span class="n">nw</span><span class="p">,</span> <span class="n">worklist</span><span class="p">,</span> <span class="n">worklist_set</span><span class="p">)</span>
+</pre></div>
+
+<p>Variable &lt;|Reg 16, 8B&gt;</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">SimRegisterVariable</span><span class="p">(</span><span class="n">SimVariable</span><span class="p">):</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">,</span> <span class="s1">&#39;_hash&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reg_offset</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ident</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">SimVariable</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ident</span><span class="o">=</span><span class="n">ident</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reg</span> <span class="o">=</span> <span class="n">reg_offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">ident_str</span> <span class="o">=</span> <span class="s2">&quot;[</span><span class="si">%s</span><span class="s2">]&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ident</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ident</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">region_str</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">region</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">region</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">region</span>
+
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&lt;</span><span class="si">%s%s</span><span class="s2">|Reg </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">B&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">region_str</span><span class="p">,</span> <span class="n">ident_str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">s</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span> <span class="o">=</span> <span class="nb">hash</span><span class="p">((</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">region</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ident</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SimRegisterVariable</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ident</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">ident</span> <span class="ow">and</span> \
+                   <span class="bp">self</span><span class="o">.</span><span class="n">reg</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">reg</span> <span class="ow">and</span> \
+                   <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">size</span> <span class="ow">and</span> \
+                   <span class="bp">self</span><span class="o">.</span><span class="n">region</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">region</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">class</span> <span class="nc">SimVariable</span><span class="p">:</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ident&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;region&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ident</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param ident: A unique identifier provided by user or the program. Usually a string.</span>
+<span class="sd">        :param str name: Name of this variable.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ident</span> <span class="o">=</span> <span class="n">ident</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="n">region</span> <span class="k">if</span> <span class="n">region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">category</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../introduce/" title="angr-introduce" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                angr-introduce
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../cfg/" title="CFG" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                CFG
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.39abc4af.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
