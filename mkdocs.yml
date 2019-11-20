@@ -7,6 +7,7 @@ repo_url: 'https://github.com/YourButterfly/note-site.git'
 remote_branch: gh-pages
 remote_name: origin
 nav:
+        - 首页: index.md
         - 文件格式:
                 - PDF: module/fileformat/pdf.md
                 - DOT: module/fileformat/dot.md
@@ -21,7 +22,7 @@ nav:
         - IOT:
                 - binwalk: module/iot/binwalk.md
         - fuzzing:
-            - asan: module/fuzzing/asan.md
+            # - asan: module/fuzzing/asan.md
             - GUI: module/fuzzing/gui.md
             - honggfuzz: module\fuzzing\honggfuzz.md
         - kernel:
@@ -38,8 +39,11 @@ nav:
         - python:
             - python-prompt-toolkit: module/python/python-prompt-toolkit.md
             - easyfunction: module/python/easyfunction.md
-        - virtualization:
-            - qemu: module/virtualization/qemu.md
+            - flask: module/python/python-flask.md
+        # - virtualization:
+        #     - qemu: module/virtualization/qemu.md
+        - semmel-ql:
+            - CodeQL: module/semmel-ql/codeql.md
 theme: 
         name: 'material'
         language: 'zh'
