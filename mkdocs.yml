@@ -33,6 +33,8 @@ nav:
             - pass: module/llvm/pass.md
         - makefile:
             - cmake: module/makefile/cmake.md
+        - ndays:
+            - cve-2016-6258: module/ndays/cve-2016-6258.md
         - python:
             - python-prompt-toolkit: module/python/python-prompt-toolkit.md
             - easyfunction: module/python/easyfunction.md
