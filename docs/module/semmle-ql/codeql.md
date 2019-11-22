@@ -289,3 +289,31 @@ where e.getEnclosingStmt().getParentStmt*() = f.getStmt()
   and e.getLValue().getType().getUnderlyingType() instanceof IntegralType
 select e, "Assigning the value 0 to an integer, inside a for loop body."
 ```
+
+### Tutorial: Conversions and classes
+
+Conversions, 所有转换都会更改表达式的类型。它们可以是隐式转换(由编译器生成)，也可以是显式转换(由用户请求)。
+
+- Expr
+    - Conversion
+    - Cast
+        - CStyleCast
+        - StaticCast
+        - ConstCastReinterpretCast
+        - DynamicCast
+    - ArrayToPointerConversion
+    - VirtualMemberToFunctionPointerConversion
+
+
+Classes
+
+- Type
+    - UserType—includes classes, typedefs, and enums
+        - Class—a class or struct
+            - Struct—a struct, which is treated as a subtype of Class
+            - TemplateClass—a C++ class template
+
+## Tutorial: Analyzing data flow in C/C++ 
+
+
+
