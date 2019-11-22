@@ -43,7 +43,7 @@ nav:
         # - virtualization:
         #     - qemu: module/virtualization/qemu.md
         - semmel-ql:
-            - CodeQL: module/semmel-ql/codeql.md
+            - CodeQL: module/semmle-ql/codeql.md
 theme: 
         name: 'material'
         language: 'zh'

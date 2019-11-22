@@ -4,7 +4,7 @@ https://semmle.com/codeql
 
 ## How does CodeQL work
 
-### Create database
+### 一 Create database
 
 1. 提取代码库中每个源文件的单一关系表示
     - 对于编译型语言，通过监视构建过程提取。每次调用编译器来处理源文件时，都会生成该文件的副本，并收集关于源代码的所有相关信息。
@@ -20,7 +20,7 @@ https://semmle.com/codeql
 
 将查询结果以更可解释的方式展示。
 
-## CodeQL for Visual Studio Code
+## 二 CodeQL for Visual Studio Code
 
 ### Installing the extension
 
@@ -48,8 +48,8 @@ CodeQL CLI 在Linux/Mac叫做 `codeql`，在Windows中叫做 `codeql.cmd`
 #### Using the “starter” workspace
 
 1. Clone the https://github.com/github/vscode-codeql-starter/ repository to your computer:
-    - Make sure you include the submodules, either by using git clone --recursive, or using by git submodule update --init --remote after cloning.
-    - Use git submodule update --remote regularly to keep the submodules up to date.
+    - Make sure you include the submodules, either by using `git clone --recursive`, or using by `git submodule update --init --remote` after cloning.
+    - Use `git submodule update` --remote regularly to keep the submodules up to date.
 2. In VS Code, use the File > Open Workspace option to open the vscode-codeql-starter.code-workspace file from your checkout of the workspace repository.
 
 #### Updating an existing workspace for CodeQL
@@ -71,7 +71,7 @@ Dowload [the CodeQL libraries](https://github.com/semmle/ql)
 
 vscode 打开 `*.ql` 右键 **CodeQL: Run Query**
 
-## CodeQL CLI
+## 三 CodeQL CLI
 
 前一节的vscode的大部分工作最后都是调用CodeQL CLI完成的
 
@@ -142,3 +142,150 @@ codeql database upgrade <database>
 ### Others
 
 见 https://help.semmle.com/codeql/codeql-cli/commands.html
+
+
+## 四 CodeQL for C/C++
+
+### Basic C/C++ query example
+
+查找冗余的if语句
+
+```c
+if (error) { }
+```
+
+查询语句
+
+```sql
+import cpp
+
+from IfStmt ifstmt, Block block
+where ifstmt.getThen() = block
+  and block.getNumStmt() = 0
+select ifstmt, "This 'if' statement is redundant."
+```
+
+
+`import cpp` 导入C/C++标准查询库
+
+`from IfStmt ifstmt, Block block `	定义变量，语法是 `<type> <variable name>`. 这里定义了 **IfStmt** 类型`ifstmt`， **Block** 类型`block`
+
+`where ifstmt.getThen() = block and block.getNumStmt() = 0`	条件. `ifstmt.getThen() = block` block必须是if语句的分支并且这个block中statements数量为0
+
+`select ifstmt, "This 'if' statement is redundant."` 定义每个匹配报告的内容, 格式 `select <program element>, "<alert message>"`
+
+### the CodeQL libraries for C/C++ 
+
+关于C/C++标准查询库
+
+https://help.semmle.com/QL/learn-ql/cpp/introduce-libraries-cpp.html
+
+### Tutorial: Function classes
+
+#### 寻找静态函数
+
+```sql
+import cpp
+
+from Function f
+where f.isStatic()
+select f, "This is a static function."
+```
+
+#### 寻找未被调用的函数
+
+```sql
+from Function f
+where not exists(FunctionCall fc | fc.getTarget() = f)
+select f, "This function is never called."
+```
+
+#### 排除使用函数指针引用的函数
+
+```sql
+import cpp
+
+from Function f
+where not exists(FunctionCall fc | fc.getTarget() = f)
+  and not exists(FunctionAccess fa | fa.getTarget() = f)
+select f, "This function is never called, or referenced with a function pointer."
+```
+
+#### 寻找特定行数
+
+```sql
+import cpp
+
+from FunctionCall fc
+where fc.getTarget().getQualifiedName() = "sprintf"
+  and not fc.getArgument(1) instanceof StringLiteral
+select fc, "sprintf called with variable format string."
+```
+
+### Tutorial: Expressions, types and statements 
+
+Stmt - C/C++ statements
+
+- Loop
+    - WhileStmt
+    - ForStmt
+    - DoStmt
+- ConditionalStmt
+    - IfStmt
+    - SwitchStmt
+- TryStmt
+- ExprStmt - expressions used as a statement; for example, an assignment
+- Block - { } blocks containing more statements
+
+#### 查找赋值为0的表达式
+
+```sql
+import cpp
+
+from AssignExpr e
+where e.getRValue().getValue().toInt() = 0
+select e, "Assigning the value 0 to something."
+```
+
+#### 查找赋值0给IntegralType变量的表达式
+
+注意 `Type.getUnspecifiedType()`. 它会把 `typedef` 展开成底层类型
+
+```sql
+import cpp
+
+from AssignExpr e
+where e.getRValue().getValue().toInt() = 0
+  and e.getLValue().getType().getUnspecifiedType() instanceof IntegralType
+select e, "Assigning the value 0 to an integer."
+```
+
+#### 在'for'循环初始化中查找赋值为0
+
+由于`for`的初始化通常是一个`Stmt`而不是`Expr`, 使用`getEnclosingStmt` 获取Expr最接近的Smt（类 AssignExpr 被类 ExprStmt 封装）
+
+```sql
+import cpp
+
+from AssignExpr e, ForStmt f
+// the assignment is in the 'for' loop initialization statement
+where e.getEnclosingStmt() = f.getInitialization()
+  and e.getRValue().getValue().toInt() = 0
+  and e.getLValue().getType().getUnspecifiedType() instanceof IntegralType
+select e, "Assigning the value 0 to an integer, inside a for loop initialization."
+```
+
+#### 在'for'循环的循环体中查找赋值为0
+
+`*`表示0次或多次，即这个 Stmt 本身，它的 父Stmt，父Stmt的父Stmt 等等
+
+```sql
+import cpp
+
+from AssignExpr e, ForStmt f
+// the assignment is in the for loop body
+where e.getEnclosingStmt().getParentStmt*() = f.getStmt()
+  and e.getRValue().getValue().toInt() = 0
+  and e.getLValue().getType().getUnderlyingType() instanceof IntegralType
+select e, "Assigning the value 0 to an integer, inside a for loop body."
+```
