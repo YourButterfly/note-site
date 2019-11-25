@@ -49,7 +49,7 @@ CodeQL CLI 在Linux/Mac叫做 `codeql`，在Windows中叫做 `codeql.cmd`
 
 1. Clone the https://github.com/github/vscode-codeql-starter/ repository to your computer:
     - Make sure you include the submodules, either by using `git clone --recursive`, or using by `git submodule update --init --remote` after cloning.
-    - Use `git submodule update` --remote regularly to keep the submodules up to date.
+    - Use `git submodule update --remote` regularly to keep the submodules up to date.
 2. In VS Code, use the File > Open Workspace option to open the vscode-codeql-starter.code-workspace file from your checkout of the workspace repository.
 
 #### Updating an existing workspace for CodeQL
@@ -315,5 +315,187 @@ Classes
 
 ## Tutorial: Analyzing data flow in C/C++ 
 
+### Local data flow
+
+单个函数内部的数据流。在 `DataFlow` 模块中定义了类 `Node`, 表示数据可以经过的任何元素。Node 分 `ExprNode` 和 `ParameterNode`。
+
+predicates `asExpr` and `asParameter`
+
+```cpp
+class Node {
+  /** Gets the expression corresponding to this node, if any. */
+  Expr asExpr() { ... }
+
+  /** Gets the parameter corresponding to this node, if any. */
+  Parameter asParameter() { ... }
+
+  ...
+}
+
+```
+
+或者使用 predicates `exprNode` 和 `parameterNode`
+
+```cpp
+/**
+ * Gets the node corresponding to expression `e`.
+ */
+ExprNode exprNode(Expr e) { ... }
+
+/**
+ * Gets the node corresponding to the value of parameter `p` at function entry.
+ */
+ParameterNode parameterNode(Parameter p) { ... }
+```
+
+`localFlowStep(Node nodeFrom, Node nodeTo)`, 可以使用'*'和'+'递归，`localFlow` 相当于 `localFlowStep*`。比如
+
+```cpp
+DataFlow::localFlow(DataFlow::parameterNode(source), DataFlow::exprNode(sink))
+```
+
+### Using local taint tracking
+
+局部污点跟踪通过包含非保存值的流步骤扩展了局部数据流。例如下面，这种情况下malloc的参数被会被污染。
+
+```cpp
+int i = tainted_user_input();
+some_big_struct *array = malloc(i * sizeof(some_big_struct));
+```
+
+本地污点跟踪在模块 `TaintTracking` 中, `localTaintStep(DataFlow::Node nodeFrom, DataFlow::Node nodeTo)` 意味着（?）从节点`nodeFrom`到节点`nodeTo`有一个立即污染传递边，`localTaint` 想当于 `localTaintStep*`
+
+```
+TaintTracking::localTaint(DataFlow::parameterNode(source), DataFlow::exprNode(sink))
+```
+
+### Using global data flow
+
+全局数据流跟踪整个程序中的数据流，因此比本地数据流更强大。但是，全局数据流不如本地数据流精确，而且执行分析通常需要大量的时间和内存。
+
+使用全局数据流库扩展类 `DataFlow::Configuration`，如下所示
+
+```cpp
+import semmle.code.cpp.dataflow.DataFlow
+
+class MyDataFlowConfiguration extends DataFlow::Configuration {
+  MyDataFlowConfiguration() { this = "MyDataFlowConfiguration" }
+
+  override predicate isSource(DataFlow::Node source) {
+    ...
+  }
+
+  override predicate isSink(DataFlow::Node sink) {
+    ...
+  }
+}
+```
+
+定义以下配置
+
+- `isSource` 定义数据可能流自何处
+- `isSink` 定义数据可能流向某处
+- `isBarrier` 可选，限制数据流
+- `isBarrierGuard` 可选，限制数据流
+- `isAdditionalFlowStep` 可选，添加额外的流步骤
+
+使用谓词`hasFlow(DataFlow::Node source, DataFlow::Node sink)`进行数据流分析:
+
+```sql
+from MyDataFlowConfiguration dataflow, DataFlow::Node source, DataFlow::Node sink
+where dataflow.hasFlow(source, sink)
+select source, "Data flow to $@.", sink, sink.toString()
+```
+
+### Using global taint tracking
+
+全局污点跟踪使用附加的非保存值的步骤扩展了全局数据流。通过扩展`TaintTracking::Configuration`类来使用全局污染跟踪库，具体如下:
+
+```cpp
+import semmle.code.cpp.dataflow.TaintTracking
+
+class MyTaintTrackingConfiguration extends TaintTracking::Configuration {
+  MyTaintTrackingConfiguration() { this = "MyTaintTrackingConfiguration" }
+
+  override predicate isSource(DataFlow::Node source) {
+    ...
+  }
+
+  override predicate isSink(DataFlow::Node sink) {
+    ...
+  }
+}
+```
+
+### Examples
+
+查找所有传入 fopen 参数1 的表达式:
+
+```sql
+import cpp
+import semmle.code.cpp.dataflow.DataFlow
+
+from Function fopen, FunctionCall fc, Expr src
+where fopen.hasQualifiedName("fopen")
+  and fc.getTarget() = fopen
+  and DataFlow::localFlow(DataFlow::exprNode(src), DataFlow::exprNode(fc.getArgument(0)))
+select src
+```
+
+查找传入 fopen 参数1 的 publi parameter (这个函数接收的参数，比如`main(int argc, char **argv, char **envp)`中的argc， argv, envp):
+
+```sql
+import cpp
+import semmle.code.cpp.dataflow.DataFlow
+
+from Function fopen, FunctionCall fc, Parameter p
+where fopen.hasQualifiedName("fopen")
+  and fc.getTarget() = fopen
+  and DataFlow::localFlow(DataFlow::parameterNode(p), DataFlow::exprNode(fc.getArgument(0)))
+select p
+```
+
+查找对格式字符串没有硬编码的格式化函数的调用。
+
+```sql
+import semmle.code.cpp.dataflow.DataFlow
+import semmle.code.cpp.commons.Printf
+
+from FormattingFunction format, FunctionCall call, Expr formatString
+where call.getTarget() = format
+  and call.getArgument(format.getFormatParameterIndex()) = formatString
+  and not exists(DataFlow::Node source, DataFlow::Node sink |
+    DataFlow::localFlow(source, sink) and
+    source.asExpr() instanceof StringLiteral and
+    sink.asExpr() = formatString
+  )
+select call, "Argument to " + format.getQualifiedName() + " isn't hard-coded."
+```
 
 
+```sql
+import semmle.code.cpp.dataflow.DataFlow
+
+class EnvironmentToFileConfiguration extends DataFlow::Configuration {
+  EnvironmentToFileConfiguration() { this = "EnvironmentToFileConfiguration" }
+
+  override predicate isSource(DataFlow::Node source) {
+    exists (Function getenv |
+      source.asExpr().(FunctionCall).getTarget() = getenv and
+      getenv.hasQualifiedName("getenv")
+    )
+  }
+
+  override predicate isSink(DataFlow::Node sink) {
+    exists (FunctionCall fc |
+      sink.asExpr() = fc.getArgument(0) and
+      fc.getTarget().hasQualifiedName("fopen")
+    )
+  }
+}
+
+from Expr getenv, Expr fopen, EnvironmentToFileConfiguration config
+where config.hasFlow(DataFlow::exprNode(getenv), DataFlow::exprNode(fopen))
+select fopen, "This 'fopen' uses data from $@.",
+  getenv, "call to 'getenv'"
+  ```
