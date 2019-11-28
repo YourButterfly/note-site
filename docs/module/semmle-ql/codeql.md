@@ -211,7 +211,7 @@ where not exists(FunctionCall fc | fc.getTarget() = f)
 select f, "This function is never called, or referenced with a function pointer."
 ```
 
-#### 寻找特定行数
+#### 寻找特定函数
 
 ```sql
 import cpp
@@ -498,4 +498,4 @@ from Expr getenv, Expr fopen, EnvironmentToFileConfiguration config
 where config.hasFlow(DataFlow::exprNode(getenv), DataFlow::exprNode(fopen))
 select fopen, "This 'fopen' uses data from $@.",
   getenv, "call to 'getenv'"
-  ```
+```
