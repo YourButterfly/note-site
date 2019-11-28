@@ -1,0 +1,1963 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/semmle-ql/codeql/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>CodeQL - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#codeql" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              
+                CodeQL
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      文件格式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        文件格式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      符号执行
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        符号执行
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/honggfuzz/" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-debug/" title="kernel-debug" class="md-nav__link">
+      kernel-debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-kvm/" title="kernel-kvm" class="md-nav__link">
+      kernel-kvm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ndays
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ndays
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
+      cve-2016-6258
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+    
+    <label class="md-nav__link" for="nav-11">
+      semmel-ql
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        semmel-ql
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CodeQL
+      </label>
+    
+    <a href="./" title="CodeQL" class="md-nav__link md-nav__link--active">
+      CodeQL
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-codeql-work" class="md-nav__link">
+    How does CodeQL work
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-database" class="md-nav__link">
+    一 Create database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-queries" class="md-nav__link">
+    Run queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpret-query-results" class="md-nav__link">
+    Interpret query results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-for-visual-studio-code" class="md-nav__link">
+    二 CodeQL for Visual Studio Code
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-extension" class="md-nav__link">
+    Installing the extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-access-to-the-codeql-cli" class="md-nav__link">
+    Configuring access to the CodeQL CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-codeql-workspace" class="md-nav__link">
+    Setting up a CodeQL workspace
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-starter-workspace" class="md-nav__link">
+    Using the “starter” workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-an-existing-workspace-for-codeql" class="md-nav__link">
+    Updating an existing workspace for CodeQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-database" class="md-nav__link">
+    Choosing a database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-query" class="md-nav__link">
+    Run a query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-cli" class="md-nav__link">
+    三 CodeQL CLI
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-codeql-cli" class="md-nav__link">
+    Setting up the CodeQL CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-database" class="md-nav__link">
+    Create a database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-codeql-database-analyze" class="md-nav__link">
+    Running codeql database analyze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-database" class="md-nav__link">
+    Upgrade database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    Others
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-for-cc" class="md-nav__link">
+    四 CodeQL for C/C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-cc-query-example" class="md-nav__link">
+    Basic C/C++ query example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-codeql-libraries-for-cc" class="md-nav__link">
+    the CodeQL libraries for C/C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-function-classes" class="md-nav__link">
+    Tutorial: Function classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    寻找静态函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    寻找未被调用的函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    排除使用函数指针引用的函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    寻找特定函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-expressions-types-and-statements" class="md-nav__link">
+    Tutorial: Expressions, types and statements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    查找赋值为0的表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0integraltype" class="md-nav__link">
+    查找赋值0给IntegralType变量的表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for0" class="md-nav__link">
+    在'for'循环初始化中查找赋值为0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for0_1" class="md-nav__link">
+    在'for'循环的循环体中查找赋值为0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-conversions-and-classes" class="md-nav__link">
+    Tutorial: Conversions and classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-analyzing-data-flow-in-cc" class="md-nav__link">
+    Tutorial: Analyzing data flow in C/C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-data-flow" class="md-nav__link">
+    Local data flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-local-taint-tracking" class="md-nav__link">
+    Using local taint tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-global-data-flow" class="md-nav__link">
+    Using global data flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-global-taint-tracking" class="md-nav__link">
+    Using global taint tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-codeql-work" class="md-nav__link">
+    How does CodeQL work
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-database" class="md-nav__link">
+    一 Create database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-queries" class="md-nav__link">
+    Run queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpret-query-results" class="md-nav__link">
+    Interpret query results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-for-visual-studio-code" class="md-nav__link">
+    二 CodeQL for Visual Studio Code
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-extension" class="md-nav__link">
+    Installing the extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-access-to-the-codeql-cli" class="md-nav__link">
+    Configuring access to the CodeQL CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-codeql-workspace" class="md-nav__link">
+    Setting up a CodeQL workspace
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-starter-workspace" class="md-nav__link">
+    Using the “starter” workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-an-existing-workspace-for-codeql" class="md-nav__link">
+    Updating an existing workspace for CodeQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-database" class="md-nav__link">
+    Choosing a database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-query" class="md-nav__link">
+    Run a query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-cli" class="md-nav__link">
+    三 CodeQL CLI
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-codeql-cli" class="md-nav__link">
+    Setting up the CodeQL CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-database" class="md-nav__link">
+    Create a database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-codeql-database-analyze" class="md-nav__link">
+    Running codeql database analyze
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-database" class="md-nav__link">
+    Upgrade database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    Others
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codeql-for-cc" class="md-nav__link">
+    四 CodeQL for C/C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-cc-query-example" class="md-nav__link">
+    Basic C/C++ query example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-codeql-libraries-for-cc" class="md-nav__link">
+    the CodeQL libraries for C/C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-function-classes" class="md-nav__link">
+    Tutorial: Function classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    寻找静态函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    寻找未被调用的函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    排除使用函数指针引用的函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    寻找特定函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-expressions-types-and-statements" class="md-nav__link">
+    Tutorial: Expressions, types and statements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    查找赋值为0的表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0integraltype" class="md-nav__link">
+    查找赋值0给IntegralType变量的表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for0" class="md-nav__link">
+    在'for'循环初始化中查找赋值为0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for0_1" class="md-nav__link">
+    在'for'循环的循环体中查找赋值为0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-conversions-and-classes" class="md-nav__link">
+    Tutorial: Conversions and classes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-analyzing-data-flow-in-cc" class="md-nav__link">
+    Tutorial: Analyzing data flow in C/C++
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-data-flow" class="md-nav__link">
+    Local data flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-local-taint-tracking" class="md-nav__link">
+    Using local taint tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-global-data-flow" class="md-nav__link">
+    Using global data flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-global-taint-tracking" class="md-nav__link">
+    Using global taint tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/semmle-ql/codeql.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="codeql">CodeQL<a class="headerlink" href="#codeql" title="Permanent link">&para;</a></h1>
+<p><a href="https://semmle.com/codeql">https://semmle.com/codeql</a></p>
+<h2 id="how-does-codeql-work">How does CodeQL work<a class="headerlink" href="#how-does-codeql-work" title="Permanent link">&para;</a></h2>
+<h3 id="create-database">一 Create database<a class="headerlink" href="#create-database" title="Permanent link">&para;</a></h3>
+<ol>
+<li>提取代码库中每个源文件的单一关系表示<ul>
+<li>对于编译型语言，通过监视构建过程提取。每次调用编译器来处理源文件时，都会生成该文件的副本，并收集关于源代码的所有相关信息。</li>
+<li>对于解释型语言，提取器直接在源代码上运行，解析依赖以提供准确的代码库表示。</li>
+<li>对于多语言代码库，数据库每次生成一种语言。</li>
+</ul>
+</li>
+<li>提取之后，分析所需的所有数据被导入到单个目录中，即CodeQL数据库。</li>
+</ol>
+<h3 id="run-queries">Run queries<a class="headerlink" href="#run-queries" title="Permanent link">&para;</a></h3>
+<p>用专门设计的面向对象查询语言--QL,对数据库执行一个或多个查询。</p>
+<h3 id="interpret-query-results">Interpret query results<a class="headerlink" href="#interpret-query-results" title="Permanent link">&para;</a></h3>
+<p>将查询结果以更可解释的方式展示。</p>
+<h2 id="codeql-for-visual-studio-code">二 CodeQL for Visual Studio Code<a class="headerlink" href="#codeql-for-visual-studio-code" title="Permanent link">&para;</a></h2>
+<h3 id="installing-the-extension">Installing the extension<a class="headerlink" href="#installing-the-extension" title="Permanent link">&para;</a></h3>
+<p>3种方式</p>
+<ol>
+<li>Go to the Visual Studio Code Marketplace in your browser and click Install.</li>
+<li>In the Extensions view (Ctrl+Shift+X or Cmd+Shift+X), search for CodeQL, then select Install.</li>
+<li>Download the CodeQL VSIX file. Then, in the Extensions view, click More actions &gt; Install from VSIX, and select the CodeQL VSIX file.</li>
+</ol>
+<h3 id="configuring-access-to-the-codeql-cli">Configuring access to the CodeQL CLI<a class="headerlink" href="#configuring-access-to-the-codeql-cli" title="Permanent link">&para;</a></h3>
+<p>CodeQL使用CodeQL CLI来编译和运行查询，细节另外介绍。CodeQL CLI <a href="https://github.com/github/codeql-cli-binaries/releases/latest/download/codeql.zip">下载</a></p>
+<p>CodeQL CLI 在Linux/Mac叫做 <code>codeql</code>，在Windows中叫做 <code>codeql.cmd</code></p>
+<p>需要在vscode CodeQL Extension配置其路径（codeQL.cli.executablePath）</p>
+<h3 id="setting-up-a-codeql-workspace">Setting up a CodeQL workspace<a class="headerlink" href="#setting-up-a-codeql-workspace" title="Permanent link">&para;</a></h3>
+<p>使用CodeQL时，需要访问标准CodeQL库。不然无法查询。两种方式：</p>
+<ol>
+<li>use the “starter” workspace(建议)</li>
+<li>add the CodeQL libraries and queries to an existing workspace.</li>
+</ol>
+<h4 id="using-the-starter-workspace">Using the “starter” workspace<a class="headerlink" href="#using-the-starter-workspace" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Clone the <a href="https://github.com/github/vscode-codeql-starter/">https://github.com/github/vscode-codeql-starter/</a> repository to your computer:<ul>
+<li>Make sure you include the submodules, either by using <code>git clone --recursive</code>, or using by <code>git submodule update --init --remote</code> after cloning.</li>
+<li>Use <code>git submodule update --remote</code> regularly to keep the submodules up to date.</li>
+</ul>
+</li>
+<li>In VS Code, use the File &gt; Open Workspace option to open the vscode-codeql-starter.code-workspace file from your checkout of the workspace repository.</li>
+</ol>
+<h4 id="updating-an-existing-workspace-for-codeql">Updating an existing workspace for CodeQL<a class="headerlink" href="#updating-an-existing-workspace-for-codeql" title="Permanent link">&para;</a></h4>
+<p>Dowload <a href="https://github.com/semmle/ql">the CodeQL libraries</a></p>
+<ol>
+<li>Select <strong>File</strong> &gt; <strong>Add Folder</strong> to Workspace, and choose your local checkout of the <code>Semmle/ql</code> repository.</li>
+<li>Create one new folder per target language, using either the <strong>New Folder</strong> or <strong>Add Folder</strong> to Workspace options, to hold custom queries and libraries.</li>
+<li>Create a <code>qlpack.yml</code> file in each target language folder. This tells the CodeQL CLI the target language for that folder and what its dependencies are. (The master branch of Semmle/ql already has these files.) CodeQL will look for the dependencies in all the open workspace folders, or on the user’s search path.</li>
+</ol>
+<h3 id="choosing-a-database">Choosing a database<a class="headerlink" href="#choosing-a-database" title="Permanent link">&para;</a></h3>
+<p>关于如何创建测试目标的database，看 CodeQL Cli</p>
+<p>打开vscode，选择CodeQL扩展，可以看到 <strong>DATABASES</strong> 和 <strong>QUERY HISTORY</strong>，并且DATABASES有一个 <strong>+</strong> 符号，点击并选择database</p>
+<h3 id="run-a-query">Run a query<a class="headerlink" href="#run-a-query" title="Permanent link">&para;</a></h3>
+<p>vscode 打开 <code>*.ql</code> 右键 <strong>CodeQL: Run Query</strong></p>
+<h2 id="codeql-cli">三 CodeQL CLI<a class="headerlink" href="#codeql-cli" title="Permanent link">&para;</a></h2>
+<p>前一节的vscode的大部分工作最后都是调用CodeQL CLI完成的</p>
+<h3 id="setting-up-the-codeql-cli">Setting up the CodeQL CLI<a class="headerlink" href="#setting-up-the-codeql-cli" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># Download the CodeQL CLI zip package</span>
+wget https://github.com/github/codeql-cli-binaries/releases/latest/download/codeql.zip
+<span class="c1"># Create a new CodeQL directory, For example</span>
+mkdir <span class="nv">$HOME</span>/codeql-home
+<span class="c1"># Obtain a local copy of the CodeQL queries, For example</span>
+git clone https://github.com/Semmle/ql  <span class="nv">$HOME</span>/codeql-home/codeql-repo
+git clone https://github.com/github/codeql-go/ <span class="nv">$HOME</span>/codeql-home/codeql-go-repo
+<span class="c1"># Extract the zip archive</span>
+unzip codeql.zip
+mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
+<span class="c1"># validate</span>
+<span class="nv">$HOME</span>/codeql-home/codeql-cli/codeql resolve languages
+<span class="c1"># outputs</span>
+<span class="c1">## cpp (/home/pwd/codeql-home/codeql-cli/cpp)</span>
+<span class="c1">## go (/home/pwd/codeql-home/codeql-cli/go)</span>
+<span class="c1">## ...</span>
+<span class="c1">## python (/home/pwd/codeql-home/codeql-cli/python)</span>
+<span class="nv">$HOME</span>/codeql-home/codeql-cli/codeql resolve qlpacks
+<span class="c1"># outputs</span>
+<span class="c1">## codeql-cpp (/home/pwd/codeql-home/codeql-repo/cpp/ql/src)</span>
+<span class="c1">## codeql-cpp-tests (/home/pwd/codeql-home/codeql-repo/cpp/ql/test)</span>
+<span class="c1">## ...</span>
+<span class="c1">## legacy-upgrades (/home/pwd/codeql-home/codeql-cli/legacy-upgrades)</span>
+</pre></div>
+
+<h3 id="create-a-database">Create a database<a class="headerlink" href="#create-a-database" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>codeql database create &lt;database&gt; --language<span class="o">=</span>&lt;language-identifier&gt;
+</pre></div>
+
+<p>必须指定</p>
+<ul>
+<li><code>&lt;database&gt;</code>: 新建数据库的路径，不能是一个已有的文件夹</li>
+<li><code>--language</code>: 为其创建数据库的语言的标识符, <code>codeql resolve languages</code> 查看支持的语言</li>
+</ul>
+<p>可选</p>
+<ul>
+<li><code>--source-root</code>: 数据库创建中使用的主要源文件的根文件夹。默认情况下，该命令假设当前目录是源根目录</li>
+<li><code>--command</code>: 用于编译型语言，调用编译器的构建命令，比如<code>--command='make all'</code>。如果未指定该命令，CodeQL将尝试使用内置的autobuilder自动检测构建系统。</li>
+</ul>
+<h3 id="running-codeql-database-analyze">Running codeql database analyze<a class="headerlink" href="#running-codeql-database-analyze" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>codeql database analyze &lt;database&gt; &lt;queries&gt; --format<span class="o">=</span>&lt;format&gt; --output<span class="o">=</span>&lt;output&gt;
+</pre></div>
+
+<p>必须指定</p>
+<ul>
+<li><code>&lt;database&gt;</code>: database的路径</li>
+<li><code>&lt;queries&gt;</code>: 运行 ql文件，如果是目录会递归搜索执行</li>
+<li><code>--format</code>: 生成结果的文件格式. 支持 csv, sarif-latest, sarifv1, sarifv2, sarifv2.1.0, graphtext, dgml.</li>
+<li><code>--output</code>: 生成结果到目录</li>
+</ul>
+<h3 id="upgrade-database">Upgrade database<a class="headerlink" href="#upgrade-database" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>codeql database upgrade &lt;database&gt;
+</pre></div>
+
+<h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<p>见 <a href="https://help.semmle.com/codeql/codeql-cli/commands.html">https://help.semmle.com/codeql/codeql-cli/commands.html</a></p>
+<h2 id="codeql-for-cc">四 CodeQL for C/C++<a class="headerlink" href="#codeql-for-cc" title="Permanent link">&para;</a></h2>
+<h3 id="basic-cc-query-example">Basic C/C++ query example<a class="headerlink" href="#basic-cc-query-example" title="Permanent link">&para;</a></h3>
+<p>查找冗余的if语句</p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+<p>查询语句</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">IfStmt</span> <span class="n">ifstmt</span><span class="p">,</span> <span class="n">Block</span> <span class="n">block</span>
+<span class="k">where</span> <span class="n">ifstmt</span><span class="p">.</span><span class="n">getThen</span><span class="p">()</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="k">and</span> <span class="n">block</span><span class="p">.</span><span class="n">getNumStmt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">select</span> <span class="n">ifstmt</span><span class="p">,</span> <span class="ss">&quot;This &#39;if&#39; statement is redundant.&quot;</span>
+</pre></div>
+
+<p><code>import cpp</code> 导入C/C++标准查询库</p>
+<p><code>from IfStmt ifstmt, Block block</code>  定义变量，语法是 <code>&lt;type&gt; &lt;variable name&gt;</code>. 这里定义了 <strong>IfStmt</strong> 类型<code>ifstmt</code>， <strong>Block</strong> 类型<code>block</code></p>
+<p><code>where ifstmt.getThen() = block and block.getNumStmt() = 0</code> 条件. <code>ifstmt.getThen() = block</code> block必须是if语句的分支并且这个block中statements数量为0</p>
+<p><code>select ifstmt, "This 'if' statement is redundant."</code> 定义每个匹配报告的内容, 格式 <code>select &lt;program element&gt;, "&lt;alert message&gt;"</code></p>
+<h3 id="the-codeql-libraries-for-cc">the CodeQL libraries for C/C++<a class="headerlink" href="#the-codeql-libraries-for-cc" title="Permanent link">&para;</a></h3>
+<p>关于C/C++标准查询库</p>
+<p><a href="https://help.semmle.com/QL/learn-ql/cpp/introduce-libraries-cpp.html">https://help.semmle.com/QL/learn-ql/cpp/introduce-libraries-cpp.html</a></p>
+<h3 id="tutorial-function-classes">Tutorial: Function classes<a class="headerlink" href="#tutorial-function-classes" title="Permanent link">&para;</a></h3>
+<h4 id="_1">寻找静态函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
+<span class="k">where</span> <span class="n">f</span><span class="p">.</span><span class="n">isStatic</span><span class="p">()</span>
+<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This is a static function.&quot;</span>
+</pre></div>
+
+<h4 id="_2">寻找未被调用的函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
+<span class="k">where</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This function is never called.&quot;</span>
+</pre></div>
+
+<h4 id="_3">排除使用函数指针引用的函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
+<span class="k">where</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
+  <span class="k">and</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionAccess</span> <span class="n">fa</span> <span class="o">|</span> <span class="n">fa</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This function is never called, or referenced with a function pointer.&quot;</span>
+</pre></div>
+
+<h4 id="_4">寻找特定函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">FunctionCall</span> <span class="n">fc</span>
+<span class="k">where</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">().</span><span class="n">getQualifiedName</span><span class="p">()</span> <span class="o">=</span> <span class="ss">&quot;sprintf&quot;</span>
+  <span class="k">and</span> <span class="k">not</span> <span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">instanceof</span> <span class="n">StringLiteral</span>
+<span class="k">select</span> <span class="n">fc</span><span class="p">,</span> <span class="ss">&quot;sprintf called with variable format string.&quot;</span>
+</pre></div>
+
+<h3 id="tutorial-expressions-types-and-statements">Tutorial: Expressions, types and statements<a class="headerlink" href="#tutorial-expressions-types-and-statements" title="Permanent link">&para;</a></h3>
+<p>Stmt - C/C++ statements</p>
+<ul>
+<li>Loop<ul>
+<li>WhileStmt</li>
+<li>ForStmt</li>
+<li>DoStmt</li>
+</ul>
+</li>
+<li>ConditionalStmt<ul>
+<li>IfStmt</li>
+<li>SwitchStmt</li>
+</ul>
+</li>
+<li>TryStmt</li>
+<li>ExprStmt - expressions used as a statement; for example, an assignment</li>
+<li>Block - { } blocks containing more statements</li>
+</ul>
+<h4 id="0">查找赋值为0的表达式<a class="headerlink" href="#0" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span>
+<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to something.&quot;</span>
+</pre></div>
+
+<h4 id="0integraltype">查找赋值0给IntegralType变量的表达式<a class="headerlink" href="#0integraltype" title="Permanent link">&para;</a></h4>
+<p>注意 <code>Type.getUnspecifiedType()</code>. 它会把 <code>typedef</code> 展开成底层类型</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span>
+<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnspecifiedType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
+<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer.&quot;</span>
+</pre></div>
+
+<h4 id="for0">在'for'循环初始化中查找赋值为0<a class="headerlink" href="#for0" title="Permanent link">&para;</a></h4>
+<p>由于<code>for</code>的初始化通常是一个<code>Stmt</code>而不是<code>Expr</code>, 使用<code>getEnclosingStmt</code> 获取Expr最接近的Smt（类 AssignExpr 被类 ExprStmt 封装）</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span><span class="p">,</span> <span class="n">ForStmt</span> <span class="n">f</span>
+<span class="o">//</span> <span class="n">the</span> <span class="k">assignment</span> <span class="k">is</span> <span class="k">in</span> <span class="n">the</span> <span class="s1">&#39;for&#39;</span> <span class="n">loop</span> <span class="n">initialization</span> <span class="k">statement</span>
+<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getEnclosingStmt</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">getInitialization</span><span class="p">()</span>
+  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnspecifiedType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
+<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer, inside a for loop initialization.&quot;</span>
+</pre></div>
+
+<h4 id="for0_1">在'for'循环的循环体中查找赋值为0<a class="headerlink" href="#for0_1" title="Permanent link">&para;</a></h4>
+<p><code>*</code>表示0次或多次，即这个 Stmt 本身，它的 父Stmt，父Stmt的父Stmt 等等</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+
+<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span><span class="p">,</span> <span class="n">ForStmt</span> <span class="n">f</span>
+<span class="o">//</span> <span class="n">the</span> <span class="k">assignment</span> <span class="k">is</span> <span class="k">in</span> <span class="n">the</span> <span class="k">for</span> <span class="n">loop</span> <span class="n">body</span>
+<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getEnclosingStmt</span><span class="p">().</span><span class="n">getParentStmt</span><span class="o">*</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">getStmt</span><span class="p">()</span>
+  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnderlyingType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
+<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer, inside a for loop body.&quot;</span>
+</pre></div>
+
+<h3 id="tutorial-conversions-and-classes">Tutorial: Conversions and classes<a class="headerlink" href="#tutorial-conversions-and-classes" title="Permanent link">&para;</a></h3>
+<p>Conversions, 所有转换都会更改表达式的类型。它们可以是隐式转换(由编译器生成)，也可以是显式转换(由用户请求)。</p>
+<ul>
+<li>Expr<ul>
+<li>Conversion</li>
+<li>Cast<ul>
+<li>CStyleCast</li>
+<li>StaticCast</li>
+<li>ConstCastReinterpretCast</li>
+<li>DynamicCast</li>
+</ul>
+</li>
+<li>ArrayToPointerConversion</li>
+<li>VirtualMemberToFunctionPointerConversion</li>
+</ul>
+</li>
+</ul>
+<p>Classes</p>
+<ul>
+<li>Type<ul>
+<li>UserType—includes classes, typedefs, and enums<ul>
+<li>Class—a class or struct<ul>
+<li>Struct—a struct, which is treated as a subtype of Class</li>
+<li>TemplateClass—a C++ class template</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tutorial-analyzing-data-flow-in-cc">Tutorial: Analyzing data flow in C/C++<a class="headerlink" href="#tutorial-analyzing-data-flow-in-cc" title="Permanent link">&para;</a></h2>
+<h3 id="local-data-flow">Local data flow<a class="headerlink" href="#local-data-flow" title="Permanent link">&para;</a></h3>
+<p>单个函数内部的数据流。在 <code>DataFlow</code> 模块中定义了类 <code>Node</code>, 表示数据可以经过的任何元素。Node 分 <code>ExprNode</code> 和 <code>ParameterNode</code>。</p>
+<p>predicates <code>asExpr</code> and <code>asParameter</code></p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="cm">/** Gets the expression corresponding to this node, if any. */</span>
+  <span class="n">Expr</span> <span class="n">asExpr</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+
+  <span class="cm">/** Gets the parameter corresponding to this node, if any. */</span>
+  <span class="n">Parameter</span> <span class="n">asParameter</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>或者使用 predicates <code>exprNode</code> 和 <code>parameterNode</code></p>
+<div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Gets the node corresponding to expression `e`.</span>
+<span class="cm"> */</span>
+<span class="n">ExprNode</span> <span class="nf">exprNode</span><span class="p">(</span><span class="n">Expr</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Gets the node corresponding to the value of parameter `p` at function entry.</span>
+<span class="cm"> */</span>
+<span class="n">ParameterNode</span> <span class="nf">parameterNode</span><span class="p">(</span><span class="n">Parameter</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</pre></div>
+
+<p><code>localFlowStep(Node nodeFrom, Node nodeTo)</code>, 可以使用'*'和'+'递归，<code>localFlow</code> 相当于 <code>localFlowStep*</code>。比如</p>
+<div class="codehilite"><pre><span></span><span class="n">DataFlow</span><span class="o">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">parameterNode</span><span class="p">(</span><span class="n">source</span><span class="p">),</span> <span class="n">DataFlow</span><span class="o">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">sink</span><span class="p">))</span>
+</pre></div>
+
+<h3 id="using-local-taint-tracking">Using local taint tracking<a class="headerlink" href="#using-local-taint-tracking" title="Permanent link">&para;</a></h3>
+<p>局部污点跟踪通过包含非保存值的流步骤扩展了局部数据流。例如下面，这种情况下malloc的参数被会被污染。</p>
+<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">tainted_user_input</span><span class="p">();</span>
+<span class="n">some_big_struct</span> <span class="o">*</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">some_big_struct</span><span class="p">));</span>
+</pre></div>
+
+<p>本地污点跟踪在模块 <code>TaintTracking</code> 中, <code>localTaintStep(DataFlow::Node nodeFrom, DataFlow::Node nodeTo)</code> 意味着（?）从节点<code>nodeFrom</code>到节点<code>nodeTo</code>有一个立即污染传递边，<code>localTaint</code> 想当于 <code>localTaintStep*</code></p>
+<div class="codehilite"><pre><span></span>TaintTracking::localTaint(DataFlow::parameterNode(source), DataFlow::exprNode(sink))
+</pre></div>
+
+<h3 id="using-global-data-flow">Using global data flow<a class="headerlink" href="#using-global-data-flow" title="Permanent link">&para;</a></h3>
+<p>全局数据流跟踪整个程序中的数据流，因此比本地数据流更强大。但是，全局数据流不如本地数据流精确，而且执行分析通常需要大量的时间和内存。</p>
+<p>使用全局数据流库扩展类 <code>DataFlow::Configuration</code>，如下所示</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+
+<span class="k">class</span> <span class="nc">MyDataFlowConfiguration</span> <span class="n">extends</span> <span class="n">DataFlow</span><span class="o">::</span><span class="n">Configuration</span> <span class="p">{</span>
+  <span class="n">MyDataFlowConfiguration</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span> <span class="o">=</span> <span class="s">&quot;MyDataFlowConfiguration&quot;</span> <span class="p">}</span>
+
+  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">source</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>定义以下配置</p>
+<ul>
+<li><code>isSource</code> 定义数据可能流自何处</li>
+<li><code>isSink</code> 定义数据可能流向某处</li>
+<li><code>isBarrier</code> 可选，限制数据流</li>
+<li><code>isBarrierGuard</code> 可选，限制数据流</li>
+<li><code>isAdditionalFlowStep</code> 可选，添加额外的流步骤</li>
+</ul>
+<p>使用谓词<code>hasFlow(DataFlow::Node source, DataFlow::Node sink)</code>进行数据流分析:</p>
+<div class="codehilite"><pre><span></span><span class="k">from</span> <span class="n">MyDataFlowConfiguration</span> <span class="n">dataflow</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span>
+<span class="k">where</span> <span class="n">dataflow</span><span class="p">.</span><span class="n">hasFlow</span><span class="p">(</span><span class="k">source</span><span class="p">,</span> <span class="n">sink</span><span class="p">)</span>
+<span class="k">select</span> <span class="k">source</span><span class="p">,</span> <span class="ss">&quot;Data flow to $@.&quot;</span><span class="p">,</span> <span class="n">sink</span><span class="p">,</span> <span class="n">sink</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
+</pre></div>
+
+<h3 id="using-global-taint-tracking">Using global taint tracking<a class="headerlink" href="#using-global-taint-tracking" title="Permanent link">&para;</a></h3>
+<p>全局污点跟踪使用附加的非保存值的步骤扩展了全局数据流。通过扩展<code>TaintTracking::Configuration</code>类来使用全局污染跟踪库，具体如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">TaintTracking</span>
+
+<span class="k">class</span> <span class="nc">MyTaintTrackingConfiguration</span> <span class="n">extends</span> <span class="n">TaintTracking</span><span class="o">::</span><span class="n">Configuration</span> <span class="p">{</span>
+  <span class="n">MyTaintTrackingConfiguration</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span> <span class="o">=</span> <span class="s">&quot;MyTaintTrackingConfiguration&quot;</span> <span class="p">}</span>
+
+  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">source</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+
+  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<p>查找所有传入 fopen 参数1 的表达式:</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+
+<span class="k">from</span> <span class="k">Function</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="n">fc</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">src</span>
+<span class="k">where</span> <span class="n">fopen</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
+  <span class="k">and</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">fopen</span>
+  <span class="k">and</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">src</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+<span class="k">select</span> <span class="n">src</span>
+</pre></div>
+
+<p>查找传入 fopen 参数1 的 publi parameter (这个函数接收的参数，比如<code>main(int argc, char **argv, char **envp)</code>中的argc， argv, envp):</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+
+<span class="k">from</span> <span class="k">Function</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="n">fc</span><span class="p">,</span> <span class="k">Parameter</span> <span class="n">p</span>
+<span class="k">where</span> <span class="n">fopen</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
+  <span class="k">and</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">fopen</span>
+  <span class="k">and</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">parameterNode</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+<span class="k">select</span> <span class="n">p</span>
+</pre></div>
+
+<p>查找对格式字符串没有硬编码的格式化函数的调用。</p>
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">commons</span><span class="p">.</span><span class="n">Printf</span>
+
+<span class="k">from</span> <span class="n">FormattingFunction</span> <span class="n">format</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="k">call</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">formatString</span>
+<span class="k">where</span> <span class="k">call</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">format</span>
+  <span class="k">and</span> <span class="k">call</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="n">format</span><span class="p">.</span><span class="n">getFormatParameterIndex</span><span class="p">())</span> <span class="o">=</span> <span class="n">formatString</span>
+  <span class="k">and</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span> <span class="o">|</span>
+    <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="k">source</span><span class="p">,</span> <span class="n">sink</span><span class="p">)</span> <span class="k">and</span>
+    <span class="k">source</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">StringLiteral</span> <span class="k">and</span>
+    <span class="n">sink</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="o">=</span> <span class="n">formatString</span>
+  <span class="p">)</span>
+<span class="k">select</span> <span class="k">call</span><span class="p">,</span> <span class="ss">&quot;Argument to &quot;</span> <span class="o">+</span> <span class="n">format</span><span class="p">.</span><span class="n">getQualifiedName</span><span class="p">()</span> <span class="o">+</span> <span class="ss">&quot; isn&#39;t hard-coded.&quot;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+
+<span class="k">class</span> <span class="n">EnvironmentToFileConfiguration</span> <span class="n">extends</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Configuration</span> <span class="err">{</span>
+  <span class="n">EnvironmentToFileConfiguration</span><span class="p">()</span> <span class="err">{</span> <span class="n">this</span> <span class="o">=</span> <span class="ss">&quot;EnvironmentToFileConfiguration&quot;</span> <span class="err">}</span>
+
+  <span class="n">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">)</span> <span class="err">{</span>
+    <span class="k">exists</span> <span class="p">(</span><span class="k">Function</span> <span class="n">getenv</span> <span class="o">|</span>
+      <span class="k">source</span><span class="p">.</span><span class="n">asExpr</span><span class="p">().(</span><span class="n">FunctionCall</span><span class="p">).</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">getenv</span> <span class="k">and</span>
+      <span class="n">getenv</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;getenv&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="err">}</span>
+
+  <span class="n">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="err">{</span>
+    <span class="k">exists</span> <span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span>
+      <span class="n">sink</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="o">=</span> <span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span>
+      <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">().</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="k">from</span> <span class="n">Expr</span> <span class="n">getenv</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">EnvironmentToFileConfiguration</span> <span class="n">config</span>
+<span class="k">where</span> <span class="n">config</span><span class="p">.</span><span class="n">hasFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">getenv</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fopen</span><span class="p">))</span>
+<span class="k">select</span> <span class="n">fopen</span><span class="p">,</span> <span class="ss">&quot;This &#39;fopen&#39; uses data from $@.&quot;</span><span class="p">,</span>
+  <span class="n">getenv</span><span class="p">,</span> <span class="ss">&quot;call to &#39;getenv&#39;&quot;</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../python/python-flask/" title="flask" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                flask
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
