@@ -126,6 +126,7 @@ $ ./luadec/luadec -pn  workspace/lua.luac
 
 solution 1
 
-http://sourceforge.net/projects/unluac/?source=directory
-
+```shell
+# http://sourceforge.net/projects/unluac/?source=directory
 java -jar unluac_2015_06_13.jar workspace/lua.luac > myfile_decompiled.lua
+```
