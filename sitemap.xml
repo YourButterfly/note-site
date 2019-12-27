@@ -111,6 +111,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://yourbutterfly.github.io/note-site/module/lua/lua/</loc>
+     <lastmod>2019-12-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://yourbutterfly.github.io/note-site/module/semmle-ql/codeql/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
