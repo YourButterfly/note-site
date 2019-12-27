@@ -120,7 +120,7 @@ luadec -fc test.lua
 ### issue 1
 
 ```shell
-$ ./luadec/luadec -pn  workspace/lua.luac 
+$ ./luadec/luadec -pn  workspace/lua.luac
 ./luadec/luadec: workspace/lua.luac: bad header in precompiled chunk
 ```
 
