@@ -1,0 +1,1056 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/lua/lua/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>lua - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#lua" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              
+                lua
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      文件格式
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        文件格式
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      符号执行
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        符号执行
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/honggfuzz/" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-debug/" title="kernel-debug" class="md-nav__link">
+      kernel-debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-kvm/" title="kernel-kvm" class="md-nav__link">
+      kernel-kvm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      ndays
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        ndays
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
+      cve-2016-6258
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      semmel-ql
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        semmel-ql
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
+      CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cgilua" class="md-nav__link">
+    cgilua
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-cgilua" class="md-nav__link">
+    installing cgilua
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    api
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-api" class="md-nav__link">
+    Server API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#luadec" class="md-nav__link">
+    luadec
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-luadec" class="md-nav__link">
+    installing luadec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luadec-usage" class="md-nav__link">
+    luadec usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-1" class="md-nav__link">
+    issue 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/lua/lua.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="lua">lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h1>
+<h2 id="syntax">syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<p>require("&lt;模块名&gt;")</p>
+<div class="codehilite"><pre><span></span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;&lt;模块名&gt;&quot;</span><span class="p">)</span>
+<span class="c1">-- 用来加载模块</span>
+<span class="kd">local</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;&lt;模块名&gt;&quot;</span><span class="p">)</span>
+<span class="c1">-- 可以给加载的模块定义一个别名变量</span>
+
+<span class="c1">-- Lua启动时，会以环境变量 LUA_PATH 的值来初始全局变量 package.path，用于require搜索 Lua 文件</span>
+
+<span class="c1">-- 加载C</span>
+<span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/local/lua/lib/libluasocket.so&quot;</span>
+<span class="c1">-- 或者 path = &quot;C:\\windows\\luasocket.dll&quot;，这是 Window 平台下</span>
+<span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">assert</span><span class="p">(</span><span class="n">loadlib</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;luaopen_socket&quot;</span><span class="p">))</span>
+<span class="n">f</span><span class="p">()</span>  <span class="c1">-- 真正打开库</span>
+</pre></div>
+
+<h2 id="cgilua">cgilua<a class="headerlink" href="#cgilua" title="Permanent link">&para;</a></h2>
+<h3 id="installing-cgilua">installing cgilua<a class="headerlink" href="#installing-cgilua" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>luarocks install cgilua
+<span class="c1"># Lua包管理工具Luarocks</span>
+</pre></div>
+
+<h3 id="api">api<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<h4 id="server-api">Server API<a class="headerlink" href="#server-api" title="Permanent link">&para;</a></h4>
+<p>Server API (SAPI)允许抽象一系列内部web服务器细节，并允许在WSAPI上使用CGILua。</p>
+<p>Kepler是WSAPI的参考实现，目前支持Apache、Microsoft IIS和Xavante作为Web服务器，支持CGI、FastCGI作为WSAPI连接器。</p>
+<p>SAPI.Request</p>
+<div class="codehilite"><pre><span></span><span class="n">SAPI</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">getpostdata</span> <span class="p">([</span><span class="n">n</span><span class="p">])</span>
+    <span class="err">获取一块</span><span class="n">post数据</span><span class="p">.</span> <span class="err">可选参数</span><span class="n">n指定n字节的读入数据</span> <span class="p">(</span><span class="err">无参数则使用默认块大小</span><span class="p">).</span>
+    <span class="err">以</span><span class="n">lua</span> <span class="n">String的形式返回这块post数据</span>
+
+<span class="n">SAPI</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">servervariable</span> <span class="p">(</span><span class="n">varname</span><span class="p">)</span>
+    <span class="err">获取服务器环境变量的值</span><span class="p">.</span> <span class="err">参数</span><span class="n">varname可以是定义的CGI变量之一</span><span class="err">，尽管不是所有服务器都实现了全部的变量集。这集合包括</span><span class="p">:</span>
+    <span class="n">AUTH_TYPE</span> <span class="o">-</span> <span class="n">I如果服务器支持用户身份验证</span><span class="err">，并且脚本受到保护</span><span class="p">,</span> <span class="err">这就是用于验证用户的特定协议验证方法</span><span class="p">.</span>
+    <span class="n">CONTENT_LENGTH</span> <span class="o">-</span> <span class="err">客户端提供的</span><span class="n">content自身的长度</span><span class="p">.</span>
+    <span class="n">CONTENT_TYPE</span> <span class="o">-</span> <span class="err">对于附加信息的查询，如</span><span class="n">HTTP</span> <span class="n">POST和PUT</span><span class="err">，这是数据的</span><span class="n">content类型</span><span class="err">。</span>
+    <span class="n">GATEWAY_INTERFACE</span> <span class="o">-</span> <span class="err">此服务器遵守的</span><span class="n">CGI规范的修订</span><span class="p">.</span> <span class="err">格式</span><span class="p">:</span> <span class="n">CGI</span><span class="o">/</span><span class="n">revision</span>
+    <span class="n">PATH_INFO</span> <span class="o">-</span> <span class="n">client提供的额外路径信息</span><span class="p">.</span> <span class="err">换句话说，脚本可以通过它们的虚拟路径名访问，在路径的末尾加上额外的信息。</span> <span class="err">额外信息作为</span><span class="n">PATH_INFO发送</span><span class="p">.</span> <span class="err">如果信息来自</span><span class="n">URL</span><span class="err">，它将在传递给</span><span class="n">CGI脚本时</span><span class="err">，被服务器解码</span>
+    <span class="n">PATH_TRANSLATED</span> <span class="o">-</span> <span class="err">服务器提供了</span><span class="n">PATH_INFO的翻译版本</span><span class="p">,</span> <span class="err">包含</span><span class="n">virtual</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">physical的映射</span>
+    <span class="n">QUERY_STRING</span> <span class="o">-</span> <span class="err">引用此脚本的</span><span class="n">URL中的</span><span class="err">“?”后面的信息</span><span class="p">.</span> <span class="err">它不应该被解码，不管什么方式</span><span class="p">.</span> <span class="err">当有查询信息时，无论命令行解码与否，都应该设置此变量。</span>
+    <span class="n">REMOTE_ADDR</span> <span class="o">-</span> <span class="err">发起请求的远程主机地址</span><span class="p">.</span>
+    <span class="n">REMOTE_HOST</span> <span class="o">-</span> <span class="n">The</span> <span class="n">hostname</span> <span class="n">making</span> <span class="n">the</span> <span class="n">request</span><span class="p">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">server</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">this</span> <span class="n">information</span><span class="p">,</span> <span class="n">it</span> <span class="n">should</span> <span class="n">set</span> <span class="n">REMOTE_ADDR</span> <span class="ow">and</span> <span class="n">leave</span> <span class="n">this</span> <span class="n">unset</span><span class="p">.</span>
+    <span class="n">REMOTE_IDENT</span> <span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">HTTP</span> <span class="n">server</span> <span class="n">supports</span> <span class="n">RFC</span> <span class="mi">931</span> <span class="n">identification</span><span class="p">,</span> <span class="kr">then</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">will</span> <span class="n">be</span> <span class="n">set</span> <span class="n">to</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">user</span> <span class="n">name</span> <span class="n">retrieved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">server</span><span class="p">.</span> <span class="n">Usage</span> <span class="n">of</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">should</span> <span class="n">be</span> <span class="n">limited</span> <span class="n">to</span> <span class="n">logging</span> <span class="n">only</span><span class="p">.</span>
+    <span class="n">REMOTE_USER</span> <span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">server</span> <span class="n">supports</span> <span class="n">user</span> <span class="n">authentication</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">script</span> <span class="n">is</span> <span class="n">protected</span><span class="p">,</span> <span class="n">this</span> <span class="n">is</span> <span class="n">the</span> <span class="n">username</span> <span class="n">they</span> <span class="n">have</span> <span class="n">authenticated</span> <span class="n">as</span><span class="p">.</span>
+    <span class="n">REQUEST_METHOD</span> <span class="o">-</span> <span class="err">请求方法</span><span class="p">.</span> <span class="n">For</span> <span class="n">HTTP</span><span class="p">,</span> <span class="n">this</span> <span class="n">is</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">etc</span><span class="p">.</span>
+    <span class="n">SCRIPT_NAME</span> <span class="o">-</span> <span class="n">A</span> <span class="n">virtual</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">script</span> <span class="n">being</span> <span class="n">executed</span><span class="p">,</span> <span class="n">used</span> <span class="kr">for</span> <span class="n">self</span><span class="o">-</span><span class="n">referencing</span> <span class="n">URLs</span><span class="p">.</span>
+    <span class="n">SERVER_NAME</span> <span class="o">-</span> <span class="n">The</span> <span class="n">server</span><span class="s1">&#39;s hostname, DNS alias, or IP address as it would appear in self-referencing URLs.</span>
+<span class="s1">    SERVER_PORT - The port number to which the request was sent.</span>
+<span class="s1">    SERVER_PROTOCOL - The name and revision of the information protcol this request came in with. Format: protocol/revision</span>
+<span class="s1">    SERVER_SOFTWARE - The name and version of the web server software answering the request (and running the gateway). Format: name/version</span>
+</pre></div>
+
+<p>SAPI.Response</p>
+<div class="codehilite"><pre><span></span><span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">contenttype</span> <span class="p">(</span><span class="n">header</span><span class="p">)</span>
+    <span class="n">Sends</span> <span class="n">the</span> <span class="n">Content</span><span class="o">-</span><span class="nb">type</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">given</span> <span class="n">header</span> <span class="n">should</span> <span class="n">be</span> <span class="kr">in</span> <span class="n">the</span> <span class="n">form</span> <span class="s2">&quot;type/subtype&quot;</span><span class="p">.</span> <span class="err">在使用</span><span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">write发送任何输出之前</span><span class="err">，必须调用这个函数。</span>
+    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">errorlog</span> <span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">Generates</span> <span class="nb">error</span> <span class="n">output</span> <span class="n">using</span> <span class="n">the</span> <span class="n">given</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">number</span><span class="p">.</span>
+    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">header</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="n">Sends</span> <span class="n">a</span> <span class="n">generic</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">argument</span> <span class="n">must</span> <span class="n">be</span> <span class="n">the</span> <span class="n">header</span> <span class="n">name</span><span class="p">,</span> <span class="n">such</span> <span class="n">as</span> <span class="s2">&quot;Set-Cookie&quot;</span><span class="p">.</span> <span class="n">The</span> <span class="n">second</span> <span class="n">argument</span> <span class="n">should</span> <span class="n">be</span> <span class="n">its</span> <span class="n">value</span><span class="p">.</span> <span class="err">这个函数不应该用来代替</span> <span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">contenttype</span> <span class="err">或者</span> <span class="n">the</span> <span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">redirect</span><span class="p">.</span>
+    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">redirect</span> <span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">Sends</span> <span class="n">the</span> <span class="n">Location</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">given</span> <span class="n">url</span> <span class="n">should</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span><span class="p">.</span>
+    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">write</span> <span class="p">(...)</span>
+    <span class="n">Generates</span> <span class="n">output</span> <span class="n">using</span> <span class="n">the</span> <span class="n">given</span> <span class="n">arguments</span><span class="p">.</span> <span class="n">The</span> <span class="n">arguments</span> <span class="n">must</span> <span class="n">be</span> <span class="n">strings</span> <span class="ow">or</span> <span class="n">numbers</span><span class="p">.</span>
+    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+</pre></div>
+
+<h2 id="luadec">luadec<a class="headerlink" href="#luadec" title="Permanent link">&para;</a></h2>
+<h3 id="installing-luadec">installing luadec<a class="headerlink" href="#installing-luadec" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>git clone https://github.com/viruscamp/luadec
+<span class="nb">cd</span> luadec
+git submodule update --init lua-5.1
+<span class="nb">cd</span> lua-5.1
+make linux
+<span class="nb">cd</span> ../luadec
+make <span class="nv">LUAVER</span><span class="o">=</span><span class="m">5</span>.1
+</pre></div>
+
+<h3 id="luadec-usage">luadec usage<a class="headerlink" href="#luadec-usage" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># decompile lua binary file:  </span>
+luadec abc.luac  
+<span class="c1">#decompile lua source file for testing and comparing:  </span>
+luadec abc.lua  
+<span class="c1"># disassemble lua source or binary  </span>
+luadec -dis abc.lua  
+<span class="c1"># -pn print nested functions structure, could be used by -fn  </span>
+luadec -pn test.lua
+<span class="c1"># -f decompile only specific nested function  </span>
+luadec -f 0_1 test.lua  
+<span class="c1"># -ns donot process sub functions  </span>
+luadec -ns -f 0_1 test.lua  
+<span class="c1"># -fc perform a instruction-by-instruction compare for each function  </span>
+luadec -fc test.lua  
+</pre></div>
+
+<h3 id="issue-1">issue 1<a class="headerlink" href="#issue-1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ ./luadec/luadec -pn  workspace/lua.luac 
+./luadec/luadec: workspace/lua.luac: bad header in precompiled chunk
+</pre></div>
+
+<p>solution 1</p>
+<div class="codehilite"><pre><span></span><span class="c1"># http://sourceforge.net/projects/unluac/?source=directory</span>
+java -jar unluac_2015_06_13.jar workspace/lua.luac &gt; myfile_decompiled.lua
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
