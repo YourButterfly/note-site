@@ -8,56 +8,60 @@ remote_branch: gh-pages
 remote_name: origin
 nav:
         - 首页: index.md
-        - 文件格式:
-                - PDF: module/fileformat/pdf.md
-                - DOT: module/fileformat/dot.md
-        - 符号执行:
+        - assembly:
+            assembly: module/assembly/assembly.md
+        - concolic:
                 - angr:
                         - angr-introduce: module/angr/introduce.md
-                        - DDG: module/angr/ddg.md
                         - CFG: module/angr/cfg.md
+                        - DDG: module/angr/ddg.md
                         - fast-questions: module/angr/fast-question.md
                         - program-state: module/angr/program-state.md
                         - sim_action: module/angr/sim_action.md
-        - IOT:
-                - binwalk: module/iot/binwalk.md
+        - file format:
+                - DOT: module/fileformat/dot.md
+                - PDF: module/fileformat/pdf.md
         - fuzzing:
             # - asan: module/fuzzing/asan.md
             - GUI: module/fuzzing/gui.md
-            - honggfuzz: module\fuzzing\honggfuzz.md
+            - honggfuzz: module/fuzzing/honggfuzz.md
+        - IOT:
+                - binwalk: module/iot/binwalk.md
         - kernel:
-            - kernel-header: module/kernel/kernel-header.md
-            - kernel-hook: module/kernel/kernel-hook.md
             - kernel-debug: module/kernel/kernel-debug.md
             - kernel-kvm: module/kernel/kernel-kvm.md
+            - kernel-header: module/kernel/kernel-header.md
+            - kernel-hook: module/kernel/kernel-hook.md
         - llvm:
             - pass: module/llvm/pass.md
-        - makefile:
-            - cmake: module/makefile/cmake.md
-        - ndays:
-            - cve-2016-6258: module/ndays/cve-2016-6258.md
-        - python:
-            - python-prompt-toolkit: module/python/python-prompt-toolkit.md
-            - easyfunction: module/python/easyfunction.md
-            - flask: module/python/python-flask.md
-        # - virtualization:
-        #     - qemu: module/virtualization/qemu.md
         - lua:
             - lua: module/lua/lua.md
+        - makefile:
+            - cmake: module/makefile/cmake.md
+        - python:
+            - easyfunction: module/python/easyfunction.md
+            - flask: module/python/python-flask.md
+            - GooglePythonStyleGuide: module/python/GooglePythonStyleGuide.md
+            - python-prompt-toolkit: module/python/python-prompt-toolkit.md
         - semmel-ql:
             - CodeQL: module/semmle-ql/codeql.md
+        # - virtualization:
+        #     - qemu: module/virtualization/qemu.md
+        - webs:
+            - webs: module/webs/webs.md
+        - wireshark:
+            - wireshark: module/wireshark/tshark.md
+        - others:
+            - others: module/others/others.md
 theme: 
         name: 'material'
         language: 'zh'
         featuree:
                 tabs: true
-        palette:
-                primary: 'blue grey'
-# 自定义css
 extra_css:
+- 'stylesheets/extra.css'
 - 'stylesheets/custom.css'
 - 'stylesheets/simpleLightbox.min.css'
-# 自定义js
 extra_javascript:
 - 'javascripts/jquery-3.4.1.min.js'
 - 'javascripts/simpleLightbox.min.js'
@@ -66,9 +70,12 @@ extra_javascript:
 markdown_extensions:
 - markdown.extensions.attr_list # 允许在MarkDown链接/图片后用括号指明任意标签的字段
 - admonition
+# use dark theme <https://github.com/fmaida/mkdocs-material-dark-theme>
 - codehilite:
-    guess_lang: false
-    linenums: false
+    guess_lang: False
+    use_pygments: True
+    noclasses: True
+    pygments_style: monokai 
 - toc:
     permalink: true
 - footnotes
