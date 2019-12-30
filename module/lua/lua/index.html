@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -244,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -259,20 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -292,11 +274,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,8 +320,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -350,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -412,11 +394,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -427,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -496,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -511,23 +505,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -553,6 +559,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -565,13 +595,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -598,150 +628,18 @@
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      makefile
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        makefile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
-      cmake
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      ndays
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      python
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        python
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
-      python-prompt-toolkit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
-      easyfunction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
-      flask
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-9">
       lua
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-9">
         lua
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -883,6 +781,114 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
     <label class="md-nav__link" for="nav-12">
@@ -903,6 +909,114 @@
   <li class="md-nav__item">
     <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
       CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
     </a>
   </li>
 
@@ -1035,24 +1149,24 @@
                 <h1 id="lua">lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h1>
 <h2 id="syntax">syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
 <p>require("&lt;模块名&gt;")</p>
-<div class="codehilite"><pre><span></span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;&lt;模块名&gt;&quot;</span><span class="p">)</span>
-<span class="c1">-- 用来加载模块</span>
-<span class="kd">local</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;&lt;模块名&gt;&quot;</span><span class="p">)</span>
-<span class="c1">-- 可以给加载的模块定义一个别名变量</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">require(</span><span style="color: #e6db74">&quot;&lt;模块名&gt;&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">-- 用来加载模块</span>
+<span style="color: #66d9ef">local</span> <span style="color: #f8f8f2">v</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">require(</span><span style="color: #e6db74">&quot;&lt;模块名&gt;&quot;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">-- 可以给加载的模块定义一个别名变量</span>
 
-<span class="c1">-- Lua启动时，会以环境变量 LUA_PATH 的值来初始全局变量 package.path，用于require搜索 Lua 文件</span>
+<span style="color: #75715e">-- Lua启动时，会以环境变量 LUA_PATH 的值来初始全局变量 package.path，用于require搜索 Lua 文件</span>
 
-<span class="c1">-- 加载C</span>
-<span class="kd">local</span> <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/usr/local/lua/lib/libluasocket.so&quot;</span>
-<span class="c1">-- 或者 path = &quot;C:\\windows\\luasocket.dll&quot;，这是 Window 平台下</span>
-<span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">assert</span><span class="p">(</span><span class="n">loadlib</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;luaopen_socket&quot;</span><span class="p">))</span>
-<span class="n">f</span><span class="p">()</span>  <span class="c1">-- 真正打开库</span>
+<span style="color: #75715e">-- 加载C</span>
+<span style="color: #66d9ef">local</span> <span style="color: #f8f8f2">path</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;/usr/local/lua/lib/libluasocket.so&quot;</span>
+<span style="color: #75715e">-- 或者 path = &quot;C:\\windows\\luasocket.dll&quot;，这是 Window 平台下</span>
+<span style="color: #66d9ef">local</span> <span style="color: #f8f8f2">f</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">assert(loadlib(path,</span> <span style="color: #e6db74">&quot;luaopen_socket&quot;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">f()</span>  <span style="color: #75715e">-- 真正打开库</span>
 </pre></div>
 
 <h2 id="cgilua">cgilua<a class="headerlink" href="#cgilua" title="Permanent link">&para;</a></h2>
 <h3 id="installing-cgilua">installing cgilua<a class="headerlink" href="#installing-cgilua" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>luarocks install cgilua
-<span class="c1"># Lua包管理工具Luarocks</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>luarocks install cgilua
+<span style="color: #75715e"># Lua包管理工具Luarocks</span>
 </pre></div>
 
 <h3 id="api">api<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
@@ -1060,84 +1174,84 @@
 <p>Server API (SAPI)允许抽象一系列内部web服务器细节，并允许在WSAPI上使用CGILua。</p>
 <p>Kepler是WSAPI的参考实现，目前支持Apache、Microsoft IIS和Xavante作为Web服务器，支持CGI、FastCGI作为WSAPI连接器。</p>
 <p>SAPI.Request</p>
-<div class="codehilite"><pre><span></span><span class="n">SAPI</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">getpostdata</span> <span class="p">([</span><span class="n">n</span><span class="p">])</span>
-    <span class="err">获取一块</span><span class="n">post数据</span><span class="p">.</span> <span class="err">可选参数</span><span class="n">n指定n字节的读入数据</span> <span class="p">(</span><span class="err">无参数则使用默认块大小</span><span class="p">).</span>
-    <span class="err">以</span><span class="n">lua</span> <span class="n">String的形式返回这块post数据</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">SAPI.Request.getpostdata</span> <span style="color: #f8f8f2">([n])</span>
+    <span style="color: #960050; background-color: #1e0010">获取一块</span><span style="color: #f8f8f2">post数据.</span> <span style="color: #960050; background-color: #1e0010">可选参数</span><span style="color: #f8f8f2">n指定n字节的读入数据</span> <span style="color: #f8f8f2">(</span><span style="color: #960050; background-color: #1e0010">无参数则使用默认块大小</span><span style="color: #f8f8f2">).</span>
+    <span style="color: #960050; background-color: #1e0010">以</span><span style="color: #f8f8f2">lua</span> <span style="color: #f8f8f2">String的形式返回这块post数据</span>
 
-<span class="n">SAPI</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">servervariable</span> <span class="p">(</span><span class="n">varname</span><span class="p">)</span>
-    <span class="err">获取服务器环境变量的值</span><span class="p">.</span> <span class="err">参数</span><span class="n">varname可以是定义的CGI变量之一</span><span class="err">，尽管不是所有服务器都实现了全部的变量集。这集合包括</span><span class="p">:</span>
-    <span class="n">AUTH_TYPE</span> <span class="o">-</span> <span class="n">I如果服务器支持用户身份验证</span><span class="err">，并且脚本受到保护</span><span class="p">,</span> <span class="err">这就是用于验证用户的特定协议验证方法</span><span class="p">.</span>
-    <span class="n">CONTENT_LENGTH</span> <span class="o">-</span> <span class="err">客户端提供的</span><span class="n">content自身的长度</span><span class="p">.</span>
-    <span class="n">CONTENT_TYPE</span> <span class="o">-</span> <span class="err">对于附加信息的查询，如</span><span class="n">HTTP</span> <span class="n">POST和PUT</span><span class="err">，这是数据的</span><span class="n">content类型</span><span class="err">。</span>
-    <span class="n">GATEWAY_INTERFACE</span> <span class="o">-</span> <span class="err">此服务器遵守的</span><span class="n">CGI规范的修订</span><span class="p">.</span> <span class="err">格式</span><span class="p">:</span> <span class="n">CGI</span><span class="o">/</span><span class="n">revision</span>
-    <span class="n">PATH_INFO</span> <span class="o">-</span> <span class="n">client提供的额外路径信息</span><span class="p">.</span> <span class="err">换句话说，脚本可以通过它们的虚拟路径名访问，在路径的末尾加上额外的信息。</span> <span class="err">额外信息作为</span><span class="n">PATH_INFO发送</span><span class="p">.</span> <span class="err">如果信息来自</span><span class="n">URL</span><span class="err">，它将在传递给</span><span class="n">CGI脚本时</span><span class="err">，被服务器解码</span>
-    <span class="n">PATH_TRANSLATED</span> <span class="o">-</span> <span class="err">服务器提供了</span><span class="n">PATH_INFO的翻译版本</span><span class="p">,</span> <span class="err">包含</span><span class="n">virtual</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">physical的映射</span>
-    <span class="n">QUERY_STRING</span> <span class="o">-</span> <span class="err">引用此脚本的</span><span class="n">URL中的</span><span class="err">“?”后面的信息</span><span class="p">.</span> <span class="err">它不应该被解码，不管什么方式</span><span class="p">.</span> <span class="err">当有查询信息时，无论命令行解码与否，都应该设置此变量。</span>
-    <span class="n">REMOTE_ADDR</span> <span class="o">-</span> <span class="err">发起请求的远程主机地址</span><span class="p">.</span>
-    <span class="n">REMOTE_HOST</span> <span class="o">-</span> <span class="n">The</span> <span class="n">hostname</span> <span class="n">making</span> <span class="n">the</span> <span class="n">request</span><span class="p">.</span> <span class="n">If</span> <span class="n">the</span> <span class="n">server</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">this</span> <span class="n">information</span><span class="p">,</span> <span class="n">it</span> <span class="n">should</span> <span class="n">set</span> <span class="n">REMOTE_ADDR</span> <span class="ow">and</span> <span class="n">leave</span> <span class="n">this</span> <span class="n">unset</span><span class="p">.</span>
-    <span class="n">REMOTE_IDENT</span> <span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">HTTP</span> <span class="n">server</span> <span class="n">supports</span> <span class="n">RFC</span> <span class="mi">931</span> <span class="n">identification</span><span class="p">,</span> <span class="kr">then</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">will</span> <span class="n">be</span> <span class="n">set</span> <span class="n">to</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">user</span> <span class="n">name</span> <span class="n">retrieved</span> <span class="n">from</span> <span class="n">the</span> <span class="n">server</span><span class="p">.</span> <span class="n">Usage</span> <span class="n">of</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">should</span> <span class="n">be</span> <span class="n">limited</span> <span class="n">to</span> <span class="n">logging</span> <span class="n">only</span><span class="p">.</span>
-    <span class="n">REMOTE_USER</span> <span class="o">-</span> <span class="n">If</span> <span class="n">the</span> <span class="n">server</span> <span class="n">supports</span> <span class="n">user</span> <span class="n">authentication</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">script</span> <span class="n">is</span> <span class="n">protected</span><span class="p">,</span> <span class="n">this</span> <span class="n">is</span> <span class="n">the</span> <span class="n">username</span> <span class="n">they</span> <span class="n">have</span> <span class="n">authenticated</span> <span class="n">as</span><span class="p">.</span>
-    <span class="n">REQUEST_METHOD</span> <span class="o">-</span> <span class="err">请求方法</span><span class="p">.</span> <span class="n">For</span> <span class="n">HTTP</span><span class="p">,</span> <span class="n">this</span> <span class="n">is</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">etc</span><span class="p">.</span>
-    <span class="n">SCRIPT_NAME</span> <span class="o">-</span> <span class="n">A</span> <span class="n">virtual</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">script</span> <span class="n">being</span> <span class="n">executed</span><span class="p">,</span> <span class="n">used</span> <span class="kr">for</span> <span class="n">self</span><span class="o">-</span><span class="n">referencing</span> <span class="n">URLs</span><span class="p">.</span>
-    <span class="n">SERVER_NAME</span> <span class="o">-</span> <span class="n">The</span> <span class="n">server</span><span class="s1">&#39;s hostname, DNS alias, or IP address as it would appear in self-referencing URLs.</span>
-<span class="s1">    SERVER_PORT - The port number to which the request was sent.</span>
-<span class="s1">    SERVER_PROTOCOL - The name and revision of the information protcol this request came in with. Format: protocol/revision</span>
-<span class="s1">    SERVER_SOFTWARE - The name and version of the web server software answering the request (and running the gateway). Format: name/version</span>
+<span style="color: #f8f8f2">SAPI.Request.servervariable</span> <span style="color: #f8f8f2">(varname)</span>
+    <span style="color: #960050; background-color: #1e0010">获取服务器环境变量的值</span><span style="color: #f8f8f2">.</span> <span style="color: #960050; background-color: #1e0010">参数</span><span style="color: #f8f8f2">varname可以是定义的CGI变量之一</span><span style="color: #960050; background-color: #1e0010">，尽管不是所有服务器都实现了全部的变量集。这集合包括</span><span style="color: #f8f8f2">:</span>
+    <span style="color: #f8f8f2">AUTH_TYPE</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">I如果服务器支持用户身份验证</span><span style="color: #960050; background-color: #1e0010">，并且脚本受到保护</span><span style="color: #f8f8f2">,</span> <span style="color: #960050; background-color: #1e0010">这就是用于验证用户的特定协议验证方法</span><span style="color: #f8f8f2">.</span>
+    <span style="color: #f8f8f2">CONTENT_LENGTH</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">客户端提供的</span><span style="color: #f8f8f2">content自身的长度.</span>
+    <span style="color: #f8f8f2">CONTENT_TYPE</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">对于附加信息的查询，如</span><span style="color: #f8f8f2">HTTP</span> <span style="color: #f8f8f2">POST和PUT</span><span style="color: #960050; background-color: #1e0010">，这是数据的</span><span style="color: #f8f8f2">content类型</span><span style="color: #960050; background-color: #1e0010">。</span>
+    <span style="color: #f8f8f2">GATEWAY_INTERFACE</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">此服务器遵守的</span><span style="color: #f8f8f2">CGI规范的修订.</span> <span style="color: #960050; background-color: #1e0010">格式</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">CGI</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">revision</span>
+    <span style="color: #f8f8f2">PATH_INFO</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">client提供的额外路径信息.</span> <span style="color: #960050; background-color: #1e0010">换句话说，脚本可以通过它们的虚拟路径名访问，在路径的末尾加上额外的信息。</span> <span style="color: #960050; background-color: #1e0010">额外信息作为</span><span style="color: #f8f8f2">PATH_INFO发送.</span> <span style="color: #960050; background-color: #1e0010">如果信息来自</span><span style="color: #f8f8f2">URL</span><span style="color: #960050; background-color: #1e0010">，它将在传递给</span><span style="color: #f8f8f2">CGI脚本时</span><span style="color: #960050; background-color: #1e0010">，被服务器解码</span>
+    <span style="color: #f8f8f2">PATH_TRANSLATED</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">服务器提供了</span><span style="color: #f8f8f2">PATH_INFO的翻译版本,</span> <span style="color: #960050; background-color: #1e0010">包含</span><span style="color: #f8f8f2">virtual</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">to</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">physical的映射</span>
+    <span style="color: #f8f8f2">QUERY_STRING</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">引用此脚本的</span><span style="color: #f8f8f2">URL中的</span><span style="color: #960050; background-color: #1e0010">“?”后面的信息</span><span style="color: #f8f8f2">.</span> <span style="color: #960050; background-color: #1e0010">它不应该被解码，不管什么方式</span><span style="color: #f8f8f2">.</span> <span style="color: #960050; background-color: #1e0010">当有查询信息时，无论命令行解码与否，都应该设置此变量。</span>
+    <span style="color: #f8f8f2">REMOTE_ADDR</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">发起请求的远程主机地址</span><span style="color: #f8f8f2">.</span>
+    <span style="color: #f8f8f2">REMOTE_HOST</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">hostname</span> <span style="color: #f8f8f2">making</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">request.</span> <span style="color: #f8f8f2">If</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">server</span> <span style="color: #f8f8f2">does</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">have</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">information,</span> <span style="color: #f8f8f2">it</span> <span style="color: #f8f8f2">should</span> <span style="color: #f8f8f2">set</span> <span style="color: #f8f8f2">REMOTE_ADDR</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">leave</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">unset.</span>
+    <span style="color: #f8f8f2">REMOTE_IDENT</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">If</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">HTTP</span> <span style="color: #f8f8f2">server</span> <span style="color: #f8f8f2">supports</span> <span style="color: #f8f8f2">RFC</span> <span style="color: #ae81ff">931</span> <span style="color: #f8f8f2">identification,</span> <span style="color: #66d9ef">then</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">variable</span> <span style="color: #f8f8f2">will</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">set</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">remote</span> <span style="color: #f8f8f2">user</span> <span style="color: #f8f8f2">name</span> <span style="color: #f8f8f2">retrieved</span> <span style="color: #f8f8f2">from</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">server.</span> <span style="color: #f8f8f2">Usage</span> <span style="color: #f8f8f2">of</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">variable</span> <span style="color: #f8f8f2">should</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">limited</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">logging</span> <span style="color: #f8f8f2">only.</span>
+    <span style="color: #f8f8f2">REMOTE_USER</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">If</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">server</span> <span style="color: #f8f8f2">supports</span> <span style="color: #f8f8f2">user</span> <span style="color: #f8f8f2">authentication,</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">script</span> <span style="color: #f8f8f2">is</span> <span style="color: #f8f8f2">protected,</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">is</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">username</span> <span style="color: #f8f8f2">they</span> <span style="color: #f8f8f2">have</span> <span style="color: #f8f8f2">authenticated</span> <span style="color: #f8f8f2">as.</span>
+    <span style="color: #f8f8f2">REQUEST_METHOD</span> <span style="color: #f92672">-</span> <span style="color: #960050; background-color: #1e0010">请求方法</span><span style="color: #f8f8f2">.</span> <span style="color: #f8f8f2">For</span> <span style="color: #f8f8f2">HTTP,</span> <span style="color: #f8f8f2">this</span> <span style="color: #f8f8f2">is</span> <span style="color: #e6db74">&quot;GET&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;HEAD&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;POST&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">etc.</span>
+    <span style="color: #f8f8f2">SCRIPT_NAME</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">A</span> <span style="color: #f8f8f2">virtual</span> <span style="color: #f8f8f2">path</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">script</span> <span style="color: #f8f8f2">being</span> <span style="color: #f8f8f2">executed,</span> <span style="color: #f8f8f2">used</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">self</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">referencing</span> <span style="color: #f8f8f2">URLs.</span>
+    <span style="color: #f8f8f2">SERVER_NAME</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">server</span><span style="color: #e6db74">&#39;s hostname, DNS alias, or IP address as it would appear in self-referencing URLs.</span>
+<span style="color: #e6db74">    SERVER_PORT - The port number to which the request was sent.</span>
+<span style="color: #e6db74">    SERVER_PROTOCOL - The name and revision of the information protcol this request came in with. Format: protocol/revision</span>
+<span style="color: #e6db74">    SERVER_SOFTWARE - The name and version of the web server software answering the request (and running the gateway). Format: name/version</span>
 </pre></div>
 
 <p>SAPI.Response</p>
-<div class="codehilite"><pre><span></span><span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">contenttype</span> <span class="p">(</span><span class="n">header</span><span class="p">)</span>
-    <span class="n">Sends</span> <span class="n">the</span> <span class="n">Content</span><span class="o">-</span><span class="nb">type</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">given</span> <span class="n">header</span> <span class="n">should</span> <span class="n">be</span> <span class="kr">in</span> <span class="n">the</span> <span class="n">form</span> <span class="s2">&quot;type/subtype&quot;</span><span class="p">.</span> <span class="err">在使用</span><span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">write发送任何输出之前</span><span class="err">，必须调用这个函数。</span>
-    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
-<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">errorlog</span> <span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="n">Generates</span> <span class="nb">error</span> <span class="n">output</span> <span class="n">using</span> <span class="n">the</span> <span class="n">given</span> <span class="n">string</span> <span class="ow">or</span> <span class="n">number</span><span class="p">.</span>
-    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
-<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">header</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-    <span class="n">Sends</span> <span class="n">a</span> <span class="n">generic</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">argument</span> <span class="n">must</span> <span class="n">be</span> <span class="n">the</span> <span class="n">header</span> <span class="n">name</span><span class="p">,</span> <span class="n">such</span> <span class="n">as</span> <span class="s2">&quot;Set-Cookie&quot;</span><span class="p">.</span> <span class="n">The</span> <span class="n">second</span> <span class="n">argument</span> <span class="n">should</span> <span class="n">be</span> <span class="n">its</span> <span class="n">value</span><span class="p">.</span> <span class="err">这个函数不应该用来代替</span> <span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">contenttype</span> <span class="err">或者</span> <span class="n">the</span> <span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">redirect</span><span class="p">.</span>
-    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
-<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">redirect</span> <span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="n">Sends</span> <span class="n">the</span> <span class="n">Location</span> <span class="n">header</span> <span class="n">to</span> <span class="n">the</span> <span class="n">client</span><span class="p">.</span> <span class="n">The</span> <span class="n">given</span> <span class="n">url</span> <span class="n">should</span> <span class="n">be</span> <span class="n">a</span> <span class="n">string</span><span class="p">.</span>
-    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
-<span class="n">SAPI</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">write</span> <span class="p">(...)</span>
-    <span class="n">Generates</span> <span class="n">output</span> <span class="n">using</span> <span class="n">the</span> <span class="n">given</span> <span class="n">arguments</span><span class="p">.</span> <span class="n">The</span> <span class="n">arguments</span> <span class="n">must</span> <span class="n">be</span> <span class="n">strings</span> <span class="ow">or</span> <span class="n">numbers</span><span class="p">.</span>
-    <span class="n">Returns</span> <span class="n">nothing</span><span class="p">.</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">SAPI.Response.contenttype</span> <span style="color: #f8f8f2">(header)</span>
+    <span style="color: #f8f8f2">Sends</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">Content</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">type</span> <span style="color: #f8f8f2">header</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">client.</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">given</span> <span style="color: #f8f8f2">header</span> <span style="color: #f8f8f2">should</span> <span style="color: #f8f8f2">be</span> <span style="color: #66d9ef">in</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">form</span> <span style="color: #e6db74">&quot;type/subtype&quot;</span><span style="color: #f8f8f2">.</span> <span style="color: #960050; background-color: #1e0010">在使用</span><span style="color: #f8f8f2">SAPI.Response.write发送任何输出之前</span><span style="color: #960050; background-color: #1e0010">，必须调用这个函数。</span>
+    <span style="color: #f8f8f2">Returns</span> <span style="color: #f8f8f2">nothing.</span>
+<span style="color: #f8f8f2">SAPI.Response.errorlog</span> <span style="color: #f8f8f2">(message)</span>
+    <span style="color: #f8f8f2">Generates</span> <span style="color: #f8f8f2">error</span> <span style="color: #f8f8f2">output</span> <span style="color: #f8f8f2">using</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">given</span> <span style="color: #f8f8f2">string</span> <span style="color: #f92672">or</span> <span style="color: #f8f8f2">number.</span>
+    <span style="color: #f8f8f2">Returns</span> <span style="color: #f8f8f2">nothing.</span>
+<span style="color: #f8f8f2">SAPI.Response.header</span> <span style="color: #f8f8f2">(header,</span> <span style="color: #f8f8f2">value)</span>
+    <span style="color: #f8f8f2">Sends</span> <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">generic</span> <span style="color: #f8f8f2">header</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">client.</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">first</span> <span style="color: #f8f8f2">argument</span> <span style="color: #f8f8f2">must</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">header</span> <span style="color: #f8f8f2">name,</span> <span style="color: #f8f8f2">such</span> <span style="color: #f8f8f2">as</span> <span style="color: #e6db74">&quot;Set-Cookie&quot;</span><span style="color: #f8f8f2">.</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">second</span> <span style="color: #f8f8f2">argument</span> <span style="color: #f8f8f2">should</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">its</span> <span style="color: #f8f8f2">value.</span> <span style="color: #960050; background-color: #1e0010">这个函数不应该用来代替</span> <span style="color: #f8f8f2">SAPI.Response.contenttype</span> <span style="color: #960050; background-color: #1e0010">或者</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">SAPI.Response.redirect.</span>
+    <span style="color: #f8f8f2">Returns</span> <span style="color: #f8f8f2">nothing.</span>
+<span style="color: #f8f8f2">SAPI.Response.redirect</span> <span style="color: #f8f8f2">(url)</span>
+    <span style="color: #f8f8f2">Sends</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">Location</span> <span style="color: #f8f8f2">header</span> <span style="color: #f8f8f2">to</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">client.</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">given</span> <span style="color: #f8f8f2">url</span> <span style="color: #f8f8f2">should</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">string.</span>
+    <span style="color: #f8f8f2">Returns</span> <span style="color: #f8f8f2">nothing.</span>
+<span style="color: #f8f8f2">SAPI.Response.write</span> <span style="color: #f8f8f2">(...)</span>
+    <span style="color: #f8f8f2">Generates</span> <span style="color: #f8f8f2">output</span> <span style="color: #f8f8f2">using</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">given</span> <span style="color: #f8f8f2">arguments.</span> <span style="color: #f8f8f2">The</span> <span style="color: #f8f8f2">arguments</span> <span style="color: #f8f8f2">must</span> <span style="color: #f8f8f2">be</span> <span style="color: #f8f8f2">strings</span> <span style="color: #f92672">or</span> <span style="color: #f8f8f2">numbers.</span>
+    <span style="color: #f8f8f2">Returns</span> <span style="color: #f8f8f2">nothing.</span>
 </pre></div>
 
 <h2 id="luadec">luadec<a class="headerlink" href="#luadec" title="Permanent link">&para;</a></h2>
 <h3 id="installing-luadec">installing luadec<a class="headerlink" href="#installing-luadec" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>git clone https://github.com/viruscamp/luadec
-<span class="nb">cd</span> luadec
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>git clone https://github.com/viruscamp/luadec
+<span style="color: #f8f8f2">cd</span> luadec
 git submodule update --init lua-5.1
-<span class="nb">cd</span> lua-5.1
+<span style="color: #f8f8f2">cd</span> lua-5.1
 make linux
-<span class="nb">cd</span> ../luadec
-make <span class="nv">LUAVER</span><span class="o">=</span><span class="m">5</span>.1
+<span style="color: #f8f8f2">cd</span> ../luadec
+make <span style="color: #f8f8f2">LUAVER</span><span style="color: #f92672">=</span><span style="color: #ae81ff">5</span>.1
 </pre></div>
 
 <h3 id="luadec-usage">luadec usage<a class="headerlink" href="#luadec-usage" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="c1"># decompile lua binary file:  </span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># decompile lua binary file:  </span>
 luadec abc.luac  
-<span class="c1">#decompile lua source file for testing and comparing:  </span>
+<span style="color: #75715e">#decompile lua source file for testing and comparing:  </span>
 luadec abc.lua  
-<span class="c1"># disassemble lua source or binary  </span>
+<span style="color: #75715e"># disassemble lua source or binary  </span>
 luadec -dis abc.lua  
-<span class="c1"># -pn print nested functions structure, could be used by -fn  </span>
+<span style="color: #75715e"># -pn print nested functions structure, could be used by -fn  </span>
 luadec -pn test.lua
-<span class="c1"># -f decompile only specific nested function  </span>
+<span style="color: #75715e"># -f decompile only specific nested function  </span>
 luadec -f 0_1 test.lua  
-<span class="c1"># -ns donot process sub functions  </span>
+<span style="color: #75715e"># -ns donot process sub functions  </span>
 luadec -ns -f 0_1 test.lua  
-<span class="c1"># -fc perform a instruction-by-instruction compare for each function  </span>
+<span style="color: #75715e"># -fc perform a instruction-by-instruction compare for each function  </span>
 luadec -fc test.lua  
 </pre></div>
 
 <h3 id="issue-1">issue 1<a class="headerlink" href="#issue-1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ ./luadec/luadec -pn  workspace/lua.luac
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>$ ./luadec/luadec -pn  workspace/lua.luac
 ./luadec/luadec: workspace/lua.luac: bad header in precompiled chunk
 </pre></div>
 
 <p>solution 1</p>
-<div class="codehilite"><pre><span></span><span class="c1"># http://sourceforge.net/projects/unluac/?source=directory</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># http://sourceforge.net/projects/unluac/?source=directory</span>
 java -jar unluac_2015_06_13.jar workspace/lua.luac &gt; myfile_decompiled.lua
 </pre></div>
                 
@@ -1160,7 +1274,7 @@ java -jar unluac_2015_06_13.jar workspace/lua.luac &gt; myfile_decompiled.lua
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../python/python-flask/" title="flask" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../llvm/pass/" title="pass" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1169,19 +1283,19 @@ java -jar unluac_2015_06_13.jar workspace/lua.luac &gt; myfile_decompiled.lua
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                flask
+                pass
               </span>
             </div>
           </a>
         
         
-          <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../makefile/cmake/" title="cmake" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                CodeQL
+                cmake
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

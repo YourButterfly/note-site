@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
       <link rel="stylesheet" href="stylesheets/custom.css">
     
       <link rel="stylesheet" href="stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -323,11 +317,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,20 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="module/fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="module/fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="module/assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -371,11 +353,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -417,8 +399,8 @@
 
 
   <li class="md-nav__item">
-    <a href="module/angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="module/angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -429,8 +411,8 @@
 
 
   <li class="md-nav__item">
-    <a href="module/angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="module/angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -491,11 +473,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -506,8 +488,20 @@
 
 
   <li class="md-nav__item">
-    <a href="module/iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="module/fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -575,11 +569,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -590,23 +584,35 @@
 
 
   <li class="md-nav__item">
-    <a href="module/kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="module/iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="module/kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -632,6 +638,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -644,13 +674,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -680,13 +710,49 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
       makefile
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-10">
         makefile
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -716,65 +782,17 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-9">
-      ndays
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="module/ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="module/python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
-      python-prompt-toolkit
-    </a>
-  </li>
-
         
           
           
@@ -800,29 +818,17 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      lua
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        lua
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -830,8 +836,8 @@
 
 
   <li class="md-nav__item">
-    <a href="module/lua/lua/" title="lua" class="md-nav__link">
-      lua
+    <a href="module/python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
     </a>
   </li>
 
@@ -868,6 +874,114 @@
   <li class="md-nav__item">
     <a href="module/semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
       CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="module/others/others/" title="others" class="md-nav__link">
+      others
     </a>
   </li>
 
@@ -967,7 +1081,7 @@
                 <h1 id="_1">随笔和笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>--to神莱</p>
 <h2 id="_2">环境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>os:         linux 64位
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>os:         linux 64位
 tools:      pip3 mkdocs mkdocs-material git
 language:   python3
 </pre></div>
@@ -976,17 +1090,17 @@ language:   python3
 <h3 id="python-pip3">python pip3 安装<a class="headerlink" href="#python-pip3" title="Permanent link">&para;</a></h3>
 <p>略</p>
 <h3 id="mkdocs-mkdocs-material">mkdocs mkdocs-material安装<a class="headerlink" href="#mkdocs-mkdocs-material" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>sudo pip3 install mkdocs mkdocs-material
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>sudo pip3 install mkdocs mkdocs-material
 </pre></div>
 
 <p>mkdocs-material 是主题</p>
 <h3 id="mkdocs">mkdocs 搭建<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h3>
 <p>git clone</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/YourButterfly/note-site.git
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>git clone https://github.com/YourButterfly/note-site.git
 </pre></div>
 
 <p>解释一下项目目录</p>
-<div class="codehilite"><pre><span></span>.
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>.
 ├── docs //md文档，用来写的
 │   ├── index.md
 │   └── pdf
@@ -999,13 +1113,13 @@ language:   python3
 </pre></div>
 
 <p>介绍一下mkdocs命令</p>
-<div class="codehilite"><pre><span></span>mkdocs -h
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>mkdocs -h
 
 Commands:
   build      Build the MkDocs documentation，这里不需要
   gh-deploy  Deploy your documentation to GitHub Pages，推送到github，已经配置好了，直接用‘mkdocs gh-deploy’
   new        Create a new MkDocs project，这里不需要
-  serve      Run the <span class="nb">builtin</span> development server，预览页面
+  serve      Run the <span style="color: #f8f8f2">builtin</span> development server，预览页面
 </pre></div>
 
 <h3 id="_3">编写文档<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -1028,25 +1142,25 @@ Commands:
 </ol>
 <p>配置mkdocs.yml</p>
 <p>照着加就行</p>
-<div class="codehilite"><pre><span></span>nav:
-        <span class="k">-</span> 首页: index.md
-        <span class="k">-</span> 文件格式:
-                <span class="k">-</span> PDF:
-                        <span class="k">-</span> 简介: pdf/introduce.md
-                        <span class="k">-</span> PageBox: pdf/page-boxes.md
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>nav:
+        <span style="color: #66d9ef">-</span> 首页: index.md
+        <span style="color: #66d9ef">-</span> 文件格式:
+                <span style="color: #66d9ef">-</span> PDF:
+                        <span style="color: #66d9ef">-</span> 简介: pdf/introduce.md
+                        <span style="color: #66d9ef">-</span> PageBox: pdf/page-boxes.md
 </pre></div>
 
 <p>预览</p>
-<div class="codehilite"><pre><span></span>mkdocs serve
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>mkdocs serve
 </pre></div>
 
 <p>推送</p>
-<div class="codehilite"><pre><span></span>$ mkdocs gh-deploy
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>$ mkdocs gh-deploy
 INFO    -  Cleaning site directory
 INFO    -  Building documentation to directory: /home/pwd/myMkDocs/first-project/site
-INFO    -  Copying <span class="s1">&#39;/home/pwd/myMkDocs/first-project/site&#39;</span> to <span class="s1">&#39;gh-pages&#39;</span> branch and pushing to GitHub.
-Username <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span>: yourbutterfly
-Password <span class="k">for</span> <span class="s1">&#39;https://yourbutterfly@github.com&#39;</span>:
+INFO    -  Copying <span style="color: #e6db74">&#39;/home/pwd/myMkDocs/first-project/site&#39;</span> to <span style="color: #e6db74">&#39;gh-pages&#39;</span> branch and pushing to GitHub.
+Username <span style="color: #66d9ef">for</span> <span style="color: #e6db74">&#39;https://github.com&#39;</span>: yourbutterfly
+Password <span style="color: #66d9ef">for</span> <span style="color: #e6db74">&#39;https://yourbutterfly@github.com&#39;</span>:
 INFO    -  Your documentation should shortly be available at: https://YourButterfly.github.io/note-site/
 </pre></div>
                 
@@ -1070,13 +1184,13 @@ INFO    -  Your documentation should shortly be available at: https://YourButter
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="module/fileformat/pdf/" title="PDF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="module/assembly/assembly/" title="assembly" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                PDF
+                assembly
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

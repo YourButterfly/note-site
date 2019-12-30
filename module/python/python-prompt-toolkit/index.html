@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -244,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -259,20 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -292,11 +274,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,8 +320,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -350,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -412,11 +394,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -427,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -496,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -511,23 +505,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -553,6 +559,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -565,13 +595,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -601,13 +631,49 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
       makefile
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-10">
         makefile
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -634,17 +700,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
     
-    <label class="md-nav__link" for="nav-9">
-      ndays
+    <label class="md-nav__link" for="nav-11">
+      python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
+      <label class="md-nav__title" for="nav-11">
+        python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -655,37 +723,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
+    <a href="../easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
     </a>
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
   </li>
 
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
-    
-    <label class="md-nav__link" for="nav-10">
-      python
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        python
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
+  </li>
+
         
           
           
@@ -1127,66 +1193,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../easyfunction/" title="easyfunction" class="md-nav__link">
-      easyfunction
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../python-flask/" title="flask" class="md-nav__link">
-      flask
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      lua
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        lua
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../lua/lua/" title="lua" class="md-nav__link">
-      lua
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1219,6 +1225,114 @@
   <li class="md-nav__item">
     <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
       CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
     </a>
   </li>
 
@@ -1680,10 +1794,10 @@
 </ul>
 <h2 id="_1">打印(和使用)格式化文本<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">打印纯文本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="c1">#from __future__ import unicode_literals</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">print_formatted_text</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#from __future__ import unicode_literals</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_formatted_text</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">print_formatted_text(</span><span style="color: #e6db74">&#39;Hello world&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="_3">格式化文本<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -1695,403 +1809,403 @@
 <li>By creating a list of (pygments.Token, text) tuples, and wrapping it in PygmentsTokens.</li>
 </ul>
 <h4 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">print_formatted_text</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">__future__</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">unicode_literals,</span> <span style="color: #f8f8f2">print_function</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_formatted_text,</span> <span style="color: #f8f8f2">HTML</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;This is bold&lt;/b&gt;&#39;</span><span class="p">))</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;i&gt;This is italic&lt;/i&gt;&#39;</span><span class="p">))</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;u&gt;This is underlined&lt;/u&gt;&#39;</span><span class="p">))</span>
-<span class="c1"># Colors from the ANSI palette.</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;ansired&gt;This is red&lt;/ansired&gt;&#39;</span><span class="p">))</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;ansigreen&gt;This is green&lt;/ansigreen&gt;&#39;</span><span class="p">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;b&gt;This is bold&lt;/b&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;i&gt;This is italic&lt;/i&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;u&gt;This is underlined&lt;/u&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #75715e"># Colors from the ANSI palette.</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;ansired&gt;This is red&lt;/ansired&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;ansigreen&gt;This is green&lt;/ansigreen&gt;&#39;</span><span style="color: #f8f8f2">))</span>
 
-<span class="c1"># Named colors (256 color palette, or true color, depending on the output).</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;skyblue&gt;This is sky blue&lt;/skyblue&gt;&#39;</span><span class="p">))</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;seagreen&gt;This is sea green&lt;/seagreen&gt;&#39;</span><span class="p">))</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;violet&gt;This is violet&lt;/violet&gt;&#39;</span><span class="p">))</span>
+<span style="color: #75715e"># Named colors (256 color palette, or true color, depending on the output).</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;skyblue&gt;This is sky blue&lt;/skyblue&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;seagreen&gt;This is sea green&lt;/seagreen&gt;&#39;</span><span style="color: #f8f8f2">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;violet&gt;This is violet&lt;/violet&gt;&#39;</span><span style="color: #f8f8f2">))</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;aaa fg=&quot;ansiwhite&quot; bg=&quot;ansigreen&quot;&gt;White on green&lt;/aaa&gt;&#39;</span><span class="p">))</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;aaa fg=&quot;ansiwhite&quot; bg=&quot;ansigreen&quot;&gt;White on green&lt;/aaa&gt;&#39;</span><span style="color: #f8f8f2">))</span>
 
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;aaa&#39;</span><span class="p">:</span> <span class="s1">&#39;#ff0066&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;bbb&#39;</span><span class="p">:</span> <span class="s1">&#39;#44ff00 italic&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;aaa&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#ff0066&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;bbb&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#44ff00 italic&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;aaa&gt;Hello&lt;/aaa&gt; &lt;bbb&gt;world&lt;/bbb&gt;!&#39;</span><span class="p">),</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
+<span style="color: #f8f8f2">print_formatted_text(HTML(</span><span style="color: #e6db74">&#39;&lt;aaa&gt;Hello&lt;/aaa&gt; &lt;bbb&gt;world&lt;/bbb&gt;!&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">style)</span>
 </pre></div>
 
 <h4 id="ansi">ANSI<a class="headerlink" href="#ansi" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">print_formatted_text</span><span class="p">,</span> <span class="n">ANSI</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_formatted_text,</span> <span style="color: #f8f8f2">ANSI</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">ANSI</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[31mhello </span><span class="se">\x1b</span><span class="s1">[32mworld&#39;</span><span class="p">))</span>
+<span style="color: #f8f8f2">print_formatted_text(ANSI(</span><span style="color: #e6db74">&#39;</span><span style="color: #ae81ff">\x1b</span><span style="color: #e6db74">[31mhello </span><span style="color: #ae81ff">\x1b</span><span style="color: #e6db74">[32mworld&#39;</span><span style="color: #f8f8f2">))</span>
 </pre></div>
 
 <h4 id="style-text-tuples">(style, text) tuples<a class="headerlink" href="#style-text-tuples" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span><span class="p">,</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">print_formatted_text</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.formatted_text</span> <span class="kn">import</span> <span class="n">FormattedText</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">__future__</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">unicode_literals,</span> <span style="color: #f8f8f2">print_function</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_formatted_text</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.formatted_text</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">FormattedText</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">FormattedText</span><span class="p">([</span>
-    <span class="p">(</span><span class="s1">&#39;#ff0066&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;#44ff00 italic&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">),</span>
-<span class="p">])</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">FormattedText([</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;#ff0066&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;Hello&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;#44ff00 italic&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;World&#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">])</span>
+<span style="color: #f8f8f2">print_formatted_text(text)</span>
 
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="c1"># The text.</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">FormattedText</span><span class="p">([</span>
-    <span class="p">(</span><span class="s1">&#39;class:aaa&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:bbb&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">),</span>
-<span class="p">])</span>
-<span class="c1"># The style sheet.</span>
-<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;aaa&#39;</span><span class="p">:</span> <span class="s1">&#39;#ff0066&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;bbb&#39;</span><span class="p">:</span> <span class="s1">&#39;#44ff00 italic&#39;</span><span class="p">,</span>
-<span class="p">})</span>
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
+<span style="color: #75715e"># The text.</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">FormattedText([</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:aaa&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;Hello&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:bbb&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;World&#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">])</span>
+<span style="color: #75715e"># The style sheet.</span>
+<span style="color: #f8f8f2">style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;aaa&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#ff0066&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;bbb&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#44ff00 italic&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
+<span style="color: #f8f8f2">print_formatted_text(text,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">style)</span>
 </pre></div>
 
 <h4 id="pygments-token-text-tuples">Pygments (Token, text) tuples<a class="headerlink" href="#pygments-token-text-tuples" title="Permanent link">&para;</a></h4>
 <p><a href="https://python-prompt-toolkit.readthedocs.io/en/stable/pages/printing_text.html#pygments-token-text-tuples">Pygments</a></p>
 <h4 id="to_formatted_text">to_formatted_text<a class="headerlink" href="#to_formatted_text" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.formatted_text</span> <span class="kn">import</span> <span class="n">to_formatted_text</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">print_formatted_text</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.formatted_text</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">to_formatted_text,</span> <span style="color: #f8f8f2">HTML</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">print_formatted_text</span>
 
-<span class="n">html</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;aaa&gt;Hello&lt;/aaa&gt; &lt;bbb&gt;world&lt;/bbb&gt;!&#39;</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">to_formatted_text</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:my_html bg:#00ff00 italic&#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">html</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39;&lt;aaa&gt;Hello&lt;/aaa&gt; &lt;bbb&gt;world&lt;/bbb&gt;!&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">to_formatted_text(html,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:my_html bg:#00ff00 italic&#39;</span><span style="color: #f8f8f2">)</span>
 
-<span class="n">print_formatted_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">print_formatted_text(text)</span>
 </pre></div>
 
 <h2 id="prompts">如何输入 (prompts)<a class="headerlink" href="#prompts" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Give me some input: &#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Give me some input: &#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <h3 id="promptsession">PromptSession 对象<a class="headerlink" href="#promptsession" title="Permanent link">&para;</a></h3>
 <p>prompt是PromptSession实例的prompt方法</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">PromptSession</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PromptSession</span>
 
-<span class="c1"># Create prompt object.</span>
-<span class="n">session</span> <span class="o">=</span> <span class="n">PromptSession</span><span class="p">()</span>
+<span style="color: #75715e"># Create prompt object.</span>
+<span style="color: #f8f8f2">session</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">PromptSession()</span>
 
-<span class="c1"># Do multiple input calls.</span>
-<span class="n">text1</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">prompt</span><span class="p">()</span>
-<span class="n">text2</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">prompt</span><span class="p">()</span>
+<span style="color: #75715e"># Do multiple input calls.</span>
+<span style="color: #f8f8f2">text1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">session</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">prompt()</span>
+<span style="color: #f8f8f2">text2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">session</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">prompt()</span>
 </pre></div>
 
 <h3 id="_4">语法高亮<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>使用了pygments这个库，除了html还有python，shell等等</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pygments.lexers.html</span> <span class="kn">import</span> <span class="n">HtmlLexer</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.lexers</span> <span class="kn">import</span> <span class="n">PygmentsLexer</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">pygments.lexers.html</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HtmlLexer</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.lexers</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PygmentsLexer</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter HTML: &#39;</span><span class="p">,</span> <span class="n">lexer</span><span class="o">=</span><span class="n">PygmentsLexer</span><span class="p">(</span><span class="n">HtmlLexer</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter HTML: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">lexer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">PygmentsLexer(HtmlLexer))</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <h3 id="_5">颜色<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>跟语法高亮接近，但还是有区别</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pygments.lexers.html</span> <span class="kn">import</span> <span class="n">HtmlLexer</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.lexers</span> <span class="kn">import</span> <span class="n">PygmentsLexer</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">pygments.lexers.html</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HtmlLexer</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.lexers</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PygmentsLexer</span>
 
-<span class="n">our_style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;pygments.comment&#39;</span><span class="p">:</span>   <span class="s1">&#39;#888888 bold&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;pygments.keyword&#39;</span><span class="p">:</span>   <span class="s1">&#39;#ff88ff bold&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">our_style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;pygments.comment&#39;</span><span style="color: #f8f8f2">:</span>   <span style="color: #e6db74">&#39;#888888 bold&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;pygments.keyword&#39;</span><span style="color: #f8f8f2">:</span>   <span style="color: #e6db74">&#39;#ff88ff bold&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter HTML: &#39;</span><span class="p">,</span> <span class="n">lexer</span><span class="o">=</span><span class="n">PygmentsLexer</span><span class="p">(</span><span class="n">HtmlLexer</span><span class="p">),</span>
-              <span class="n">style</span><span class="o">=</span><span class="n">our_style</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter HTML: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">lexer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">PygmentsLexer(HtmlLexer),</span>
+              <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">our_style)</span>
 </pre></div>
 
 <h4 id="pygments-style">使用Pygments style<a class="headerlink" href="#pygments-style" title="Permanent link">&para;</a></h4>
 <p>All Pygments style classes can be used as well, when they are wrapped through style_from_pygments_cls()</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">style_from_pygments_cls</span><span class="p">,</span> <span class="n">merge_styles</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.lexers</span> <span class="kn">import</span> <span class="n">PygmentsLexer</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">style_from_pygments_cls,</span> <span style="color: #f8f8f2">merge_styles</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.lexers</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PygmentsLexer</span>
 
-<span class="kn">from</span> <span class="nn">pygments.styles.tango</span> <span class="kn">import</span> <span class="n">TangoStyle</span>
-<span class="kn">from</span> <span class="nn">pygments.lexers.html</span> <span class="kn">import</span> <span class="n">HtmlLexer</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">pygments.styles.tango</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">TangoStyle</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">pygments.lexers.html</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HtmlLexer</span>
 
-<span class="n">our_style</span> <span class="o">=</span> <span class="n">merge_styles</span><span class="p">([</span>
-    <span class="n">style_from_pygments_cls</span><span class="p">(</span><span class="n">TangoStyle</span><span class="p">),</span>
-    <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-        <span class="s1">&#39;pygments.comment&#39;</span><span class="p">:</span> <span class="s1">&#39;#888888 bold&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;pygments.keyword&#39;</span><span class="p">:</span> <span class="s1">&#39;#ff88ff bold&#39;</span><span class="p">,</span>
-    <span class="p">})</span>
-<span class="p">])</span>
+<span style="color: #f8f8f2">our_style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">merge_styles([</span>
+    <span style="color: #f8f8f2">style_from_pygments_cls(TangoStyle),</span>
+    <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+        <span style="color: #e6db74">&#39;pygments.comment&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#888888 bold&#39;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&#39;pygments.keyword&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#ff88ff bold&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">})</span>
+<span style="color: #f8f8f2">])</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter HTML: &#39;</span><span class="p">,</span> <span class="n">lexer</span><span class="o">=</span><span class="n">PygmentsLexer</span><span class="p">(</span><span class="n">HtmlLexer</span><span class="p">),</span>
-              <span class="n">style</span><span class="o">=</span><span class="n">our_style</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter HTML: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">lexer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">PygmentsLexer(HtmlLexer),</span>
+              <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">our_style)</span>
 </pre></div>
 
 <h4 id="_6">着色提示<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="c1"># User input (default text).</span>
-    <span class="s1">&#39;&#39;</span><span class="p">:</span>          <span class="s1">&#39;#ff0066&#39;</span><span class="p">,</span>
+<span style="color: #f8f8f2">style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #75715e"># User input (default text).</span>
+    <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">:</span>          <span style="color: #e6db74">&#39;#ff0066&#39;</span><span style="color: #f8f8f2">,</span>
 
-    <span class="c1"># Prompt.</span>
-    <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;#884444&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;at&#39;</span><span class="p">:</span>       <span class="s1">&#39;#00aa00&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;colon&#39;</span><span class="p">:</span>    <span class="s1">&#39;#0000aa&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;pound&#39;</span><span class="p">:</span>    <span class="s1">&#39;#00aa00&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;host&#39;</span><span class="p">:</span>     <span class="s1">&#39;#00ffff bg:#444400&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;path&#39;</span><span class="p">:</span>     <span class="s1">&#39;ansicyan underline&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+    <span style="color: #75715e"># Prompt.</span>
+    <span style="color: #e6db74">&#39;username&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#884444&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;at&#39;</span><span style="color: #f8f8f2">:</span>       <span style="color: #e6db74">&#39;#00aa00&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;colon&#39;</span><span style="color: #f8f8f2">:</span>    <span style="color: #e6db74">&#39;#0000aa&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;pound&#39;</span><span style="color: #f8f8f2">:</span>    <span style="color: #e6db74">&#39;#00aa00&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;host&#39;</span><span style="color: #f8f8f2">:</span>     <span style="color: #e6db74">&#39;#00ffff bg:#444400&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;path&#39;</span><span style="color: #f8f8f2">:</span>     <span style="color: #e6db74">&#39;ansicyan underline&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">message</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;class:username&#39;</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:at&#39;</span><span class="p">,</span>       <span class="s1">&#39;@&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:host&#39;</span><span class="p">,</span>     <span class="s1">&#39;localhost&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:colon&#39;</span><span class="p">,</span>    <span class="s1">&#39;:&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:path&#39;</span><span class="p">,</span>     <span class="s1">&#39;/user/john&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;class:pound&#39;</span><span class="p">,</span>    <span class="s1">&#39;# &#39;</span><span class="p">),</span>
-<span class="p">]</span>
-<span class="c1"># If you want to have 24bit true color, this is possible by adding the true_color=True option to the prompt() function.</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
+<span style="color: #f8f8f2">message</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:username&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;john&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:at&#39;</span><span style="color: #f8f8f2">,</span>       <span style="color: #e6db74">&#39;@&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:host&#39;</span><span style="color: #f8f8f2">,</span>     <span style="color: #e6db74">&#39;localhost&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:colon&#39;</span><span style="color: #f8f8f2">,</span>    <span style="color: #e6db74">&#39;:&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:path&#39;</span><span style="color: #f8f8f2">,</span>     <span style="color: #e6db74">&#39;/user/john&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:pound&#39;</span><span style="color: #f8f8f2">,</span>    <span style="color: #e6db74">&#39;# &#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">]</span>
+<span style="color: #75715e"># If you want to have 24bit true color, this is possible by adding the true_color=True option to the prompt() function.</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(message,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">style)</span>
 </pre></div>
 
 <h3 id="_7">自动补全<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.completion</span> <span class="kn">import</span> <span class="n">WordCompleter</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.completion</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">WordCompleter</span>
 
-<span class="n">html_completer</span> <span class="o">=</span> <span class="n">WordCompleter</span><span class="p">([</span><span class="s1">&#39;&lt;html&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;body&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;head&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;title&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;pengweidang&#39;</span><span class="p">])</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter HTML: &#39;</span><span class="p">,</span> <span class="n">completer</span><span class="o">=</span><span class="n">html_completer</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">html_completer</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">WordCompleter([</span><span style="color: #e6db74">&#39;&lt;html&gt;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;&lt;body&gt;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;&lt;head&gt;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;&lt;title&gt;&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39;pengweidang&#39;</span><span style="color: #f8f8f2">])</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter HTML: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">completer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">html_completer)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <h4 id="_8">个性化补全<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.completion</span> <span class="kn">import</span> <span class="n">Completer</span><span class="p">,</span> <span class="n">Completion</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.completion</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Completer,</span> <span style="color: #f8f8f2">Completion</span>
 
-<span class="k">class</span> <span class="nc">MyCustomCompleter</span><span class="p">(</span><span class="n">Completer</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get_completions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">,</span> <span class="n">complete_event</span><span class="p">):</span>
-        <span class="c1"># Display this completion, black on yellow.</span>
-        <span class="k">yield</span> <span class="n">Completion</span><span class="p">(</span><span class="s1">&#39;completion1&#39;</span><span class="p">,</span> <span class="n">start_position</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;bg:ansiyellow fg:ansiblack&#39;</span><span class="p">)</span>
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">MyCustomCompleter</span><span style="color: #f8f8f2">(Completer):</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_completions</span><span style="color: #f8f8f2">(self,</span> <span style="color: #f8f8f2">document,</span> <span style="color: #f8f8f2">complete_event):</span>
+        <span style="color: #75715e"># Display this completion, black on yellow.</span>
+        <span style="color: #66d9ef">yield</span> <span style="color: #f8f8f2">Completion(</span><span style="color: #e6db74">&#39;completion1&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">start_position</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
+                         <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;bg:ansiyellow fg:ansiblack&#39;</span><span style="color: #f8f8f2">)</span>
 
-        <span class="c1"># Underline completion.</span>
-        <span class="k">yield</span> <span class="n">Completion</span><span class="p">(</span><span class="s1">&#39;completion2&#39;</span><span class="p">,</span> <span class="n">start_position</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;underline&#39;</span><span class="p">)</span>
+        <span style="color: #75715e"># Underline completion.</span>
+        <span style="color: #66d9ef">yield</span> <span style="color: #f8f8f2">Completion(</span><span style="color: #e6db74">&#39;completion2&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">start_position</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
+                         <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;underline&#39;</span><span style="color: #f8f8f2">)</span>
 
-        <span class="c1"># Specify class name, which will be looked up in the style sheet.</span>
-        <span class="k">yield</span> <span class="n">Completion</span><span class="p">(</span><span class="s1">&#39;completion3&#39;</span><span class="p">,</span> <span class="n">start_position</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:special-completion&#39;</span><span class="p">)</span>
+        <span style="color: #75715e"># Specify class name, which will be looked up in the style sheet.</span>
+        <span style="color: #66d9ef">yield</span> <span style="color: #f8f8f2">Completion(</span><span style="color: #e6db74">&#39;completion3&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">start_position</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
+                         <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:special-completion&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.completion</span> <span class="kn">import</span> <span class="n">Completer</span><span class="p">,</span> <span class="n">Completion</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.formatted_text</span> <span class="kn">import</span> <span class="n">HTML</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.completion</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Completer,</span> <span style="color: #f8f8f2">Completion</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.formatted_text</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HTML</span>
 
-<span class="k">class</span> <span class="nc">MyCustomCompleter</span><span class="p">(</span><span class="n">Completer</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get_completions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">,</span> <span class="n">complete_event</span><span class="p">):</span>
-        <span class="k">yield</span> <span class="n">Completion</span><span class="p">(</span>
-            <span class="s1">&#39;completion1&#39;</span><span class="p">,</span> <span class="n">start_position</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-            <span class="n">display</span><span class="o">=</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;completion&lt;/b&gt;&lt;ansired&gt;1&lt;/ansired&gt;&#39;</span><span class="p">),</span>
-            <span class="n">style</span><span class="o">=</span><span class="s1">&#39;bg:ansiyellow&#39;</span><span class="p">)</span>
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">MyCustomCompleter</span><span style="color: #f8f8f2">(Completer):</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_completions</span><span style="color: #f8f8f2">(self,</span> <span style="color: #f8f8f2">document,</span> <span style="color: #f8f8f2">complete_event):</span>
+        <span style="color: #66d9ef">yield</span> <span style="color: #f8f8f2">Completion(</span>
+            <span style="color: #e6db74">&#39;completion1&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">start_position</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #f8f8f2">display</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39;&lt;b&gt;completion&lt;/b&gt;&lt;ansired&gt;1&lt;/ansired&gt;&#39;</span><span style="color: #f8f8f2">),</span>
+            <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;bg:ansiyellow&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h4 id="_9">模糊补全<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>Prompt_toolkit附带了FuzzyCompleter和FuzzyWordCompleter类。</p>
 <h4 id="complete-while-typing">Complete while typing<a class="headerlink" href="#complete-while-typing" title="Permanent link">&para;</a></h4>
 <p>自动补全可以在键入时或用户按下Tab键时自动生成，注意会与‘enable_history_search’冲突。</p>
-<div class="codehilite"><pre><span></span><span class="n">ext</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter HTML: &#39;</span><span class="p">,</span> <span class="n">completer</span><span class="o">=</span><span class="n">my_completer</span><span class="p">,</span>
-              <span class="n">complete_while_typing</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">ext</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter HTML: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">completer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">my_completer,</span>
+              <span style="color: #f8f8f2">complete_while_typing</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 </pre></div>
 
 <h4 id="_10">异步补全<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>如果生成补全会花费很多时间，最好在后台线程中完成。</p>
-<div class="codehilite"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">completer</span><span class="o">=</span><span class="n">MyCustomCompleter</span><span class="p">(),</span> <span class="n">complete_in_thread</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">completer</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">MyCustomCompleter(),</span> <span style="color: #f8f8f2">complete_in_thread</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 </pre></div>
 
 <h3 id="_11">输入验证<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.validation</span> <span class="kn">import</span> <span class="n">Validator</span><span class="p">,</span> <span class="n">ValidationError</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.validation</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Validator,</span> <span style="color: #f8f8f2">ValidationError</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="k">class</span> <span class="nc">NumberValidator</span><span class="p">(</span><span class="n">Validator</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">text</span>
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">NumberValidator</span><span style="color: #f8f8f2">(Validator):</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">validate</span><span style="color: #f8f8f2">(self,</span> <span style="color: #f8f8f2">document):</span>
+        <span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">document</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">text</span>
 
-        <span class="k">if</span> <span class="n">text</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">text</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">text</span> <span style="color: #f92672">and</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">isdigit():</span>
+            <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
 
-            <span class="c1"># Get index of fist non numeric character.</span>
-            <span class="c1"># We want to move the cursor here.</span>
-            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-                <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
-                    <span class="k">break</span>
+            <span style="color: #75715e"># Get index of fist non numeric character.</span>
+            <span style="color: #75715e"># We want to move the cursor here.</span>
+            <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">c</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(text):</span>
+                <span style="color: #66d9ef">if</span> <span style="color: #f92672">not</span> <span style="color: #f8f8f2">c</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">isdigit():</span>
+                    <span style="color: #66d9ef">break</span>
 
-            <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s1">&#39;This input contains non-numeric characters&#39;</span><span class="p">,</span>
-                                  <span class="n">cursor_position</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+            <span style="color: #66d9ef">raise</span> <span style="color: #f8f8f2">ValidationError(message</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;This input contains non-numeric characters&#39;</span><span style="color: #f8f8f2">,</span>
+                                  <span style="color: #f8f8f2">cursor_position</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">i)</span>
 
-<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Give a number: &#39;</span><span class="p">,</span> <span class="n">validator</span><span class="o">=</span><span class="n">NumberValidator</span><span class="p">()))</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">number</span><span class="p">)</span>
+<span style="color: #f8f8f2">number</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(prompt(</span><span style="color: #e6db74">&#39;Give a number: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">validator</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">NumberValidator()))</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %i&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">number)</span>
 </pre></div>
 
 <p>实时验证： 在prompt函数中，validate_while_typing=True</p>
 <p>通过回调函数验证</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.validation</span> <span class="kn">import</span> <span class="n">Validator</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.validation</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Validator</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="k">def</span> <span class="nf">is_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">is_number</span><span style="color: #f8f8f2">(text):</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">text</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">isdigit()</span>
 
-<span class="n">validator</span> <span class="o">=</span> <span class="n">Validator</span><span class="o">.</span><span class="n">from_callable</span><span class="p">(</span>
-    <span class="n">is_number</span><span class="p">,</span>
-    <span class="n">error_message</span><span class="o">=</span><span class="s1">&#39;This input contains non-numeric characters&#39;</span><span class="p">,</span>
-    <span class="n">move_cursor_to_end</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span style="color: #f8f8f2">validator</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Validator</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_callable(</span>
+    <span style="color: #f8f8f2">is_number,</span>
+    <span style="color: #f8f8f2">error_message</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;This input contains non-numeric characters&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">move_cursor_to_end</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 
-<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Give a number: &#39;</span><span class="p">,</span> <span class="n">validator</span><span class="o">=</span><span class="n">validator</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">number</span><span class="p">)</span>
+<span style="color: #f8f8f2">number</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">int(prompt(</span><span style="color: #e6db74">&#39;Give a number: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">validator</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">validator))</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %i&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">number)</span>
 </pre></div>
 
 <h3 id="_12">历史记录<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>如果需要保存到文件</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">PromptSession</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.history</span> <span class="kn">import</span> <span class="n">FileHistory</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PromptSession</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.history</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">FileHistory</span>
 
-<span class="n">session</span> <span class="o">=</span> <span class="n">PromptSession</span><span class="p">(</span><span class="n">history</span><span class="o">=</span><span class="n">FileHistory</span><span class="p">(</span><span class="s1">&#39;~/.myhistory&#39;</span><span class="p">))</span>
+<span style="color: #f8f8f2">session</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">PromptSession(history</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">FileHistory(</span><span style="color: #e6db74">&#39;~/.myhistory&#39;</span><span style="color: #f8f8f2">))</span>
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">session</span><span class="o">.</span><span class="n">prompt</span><span class="p">()</span>
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">True:</span>
+    <span style="color: #f8f8f2">session</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">prompt()</span>
 </pre></div>
 
 <h3 id="_13">自动提示<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>从历史记录中自动提示</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">PromptSession</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.history</span> <span class="kn">import</span> <span class="n">InMemoryHistory</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.auto_suggest</span> <span class="kn">import</span> <span class="n">AutoSuggestFromHistory</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">PromptSession</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.history</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">InMemoryHistory</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.auto_suggest</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">AutoSuggestFromHistory</span>
 
-<span class="n">session</span> <span class="o">=</span> <span class="n">PromptSession</span><span class="p">()</span>
+<span style="color: #f8f8f2">session</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">PromptSession()</span>
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">auto_suggest</span><span class="o">=</span><span class="n">AutoSuggestFromHistory</span><span class="p">())</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">True:</span>
+    <span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">session</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">auto_suggest</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">AutoSuggestFromHistory())</span>
+    <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <h3 id="_14">添加底部工具栏<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="k">def</span> <span class="nf">bottom_toolbar</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">[(</span><span class="s1">&#39;class:bottom-toolbar&#39;</span><span class="p">,</span> <span class="s1">&#39; This is a toolbar. &#39;</span><span class="p">)]</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">bottom_toolbar</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">[(</span><span style="color: #e6db74">&#39;class:bottom-toolbar&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39; This is a toolbar. &#39;</span><span style="color: #f8f8f2">)]</span>
 
-<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;bottom-toolbar&#39;</span><span class="p">:</span> <span class="s1">&#39;#ffffff bg:#333333&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;bottom-toolbar&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#ffffff bg:#333333&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">bottom_toolbar</span><span class="o">=</span><span class="n">bottom_toolbar</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">bottom_toolbar</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bottom_toolbar,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">style)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <p>默认的类名是bottom-toolbar，它也将用于填充工具栏的背景。</p>
 <h3 id="prompt">添加右侧prompt<a class="headerlink" href="#prompt" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="n">example_style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;rprompt&#39;</span><span class="p">:</span> <span class="s1">&#39;bg:#ff0066 #ffffff&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">example_style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;rprompt&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;bg:#ff0066 #ffffff&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="k">def</span> <span class="nf">get_rprompt</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;&lt;rprompt&gt;&#39;</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get_rprompt</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&#39;&lt;rprompt&gt;&#39;</span>
 
-<span class="n">answer</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">rprompt</span><span class="o">=</span><span class="n">get_rprompt</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">example_style</span><span class="p">)</span>
+<span style="color: #f8f8f2">answer</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">rprompt</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">get_rprompt,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">example_style)</span>
 </pre></div>
 
 <h3 id="vi">Vi 输入模式<a class="headerlink" href="#vi" title="Permanent link">&para;</a></h3>
 <p>Vi模式</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">vi_mode</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">vi_mode</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 </pre></div>
 
 <h3 id="_15">自定义键绑定<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.application</span> <span class="kn">import</span> <span class="n">run_in_terminal</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.key_binding</span> <span class="kn">import</span> <span class="n">KeyBindings</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.application</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">run_in_terminal</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.key_binding</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">KeyBindings</span>
 
-<span class="n">bindings</span> <span class="o">=</span> <span class="n">KeyBindings</span><span class="p">()</span>
+<span style="color: #f8f8f2">bindings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">KeyBindings()</span>
 
-<span class="nd">@bindings.add</span><span class="p">(</span><span class="s1">&#39;c-t&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-    <span class="s2">&quot; Say &#39;hello&#39; when `c-t` is pressed. &quot;</span>
-    <span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
-    <span class="n">run_in_terminal</span><span class="p">(</span><span class="n">print_hello</span><span class="p">)</span>
+<span style="color: #a6e22e">@bindings.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;c-t&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+    <span style="color: #e6db74">&quot; Say &#39;hello&#39; when `c-t` is pressed. &quot;</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">print_hello</span><span style="color: #f8f8f2">():</span>
+        <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;hello world&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">run_in_terminal(print_hello)</span>
 
-<span class="nd">@bindings.add</span><span class="p">(</span><span class="s1">&#39;c-x&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-    <span class="s2">&quot; Exit when `c-x` is pressed. &quot;</span>
-    <span class="n">event</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span style="color: #a6e22e">@bindings.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;c-x&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+    <span style="color: #e6db74">&quot; Exit when `c-x` is pressed. &quot;</span>
+    <span style="color: #f8f8f2">event</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">exit()</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">key_bindings</span><span class="o">=</span><span class="n">bindings</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;You said: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">key_bindings</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bindings)</span>
+<span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You said: %s&#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
 </pre></div>
 
 <h4 id="_16">根据条件启用键绑定<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.filters</span> <span class="kn">import</span> <span class="n">Condition</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.key_binding</span> <span class="kn">import</span> <span class="n">KeyBindings</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">import</span> <span style="color: #f8f8f2">datetime</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.filters</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Condition</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.key_binding</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">KeyBindings</span>
 
-<span class="n">bindings</span> <span class="o">=</span> <span class="n">KeyBindings</span><span class="p">()</span>
+<span style="color: #f8f8f2">bindings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">KeyBindings()</span>
 
-<span class="nd">@Condition</span>
-<span class="k">def</span> <span class="nf">is_active</span><span class="p">():</span>
-    <span class="s2">&quot; Only activate key binding on the second half of each minute. &quot;</span>
-    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="mi">30</span>
+<span style="color: #a6e22e">@Condition</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">is_active</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #e6db74">&quot; Only activate key binding on the second half of each minute. &quot;</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">datetime</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">datetime</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">now()</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">second</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">30</span>
 
-<span class="nd">@bindings.add</span><span class="p">(</span><span class="s1">&#39;c-t&#39;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="n">is_active</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-    <span class="c1"># ...</span>
-    <span class="k">pass</span>
+<span style="color: #a6e22e">@bindings.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;c-t&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">filter</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">is_active)</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+    <span style="color: #75715e"># ...</span>
+    <span style="color: #66d9ef">pass</span>
 
-<span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">key_bindings</span><span class="o">=</span><span class="n">bindings</span><span class="p">)</span>
+<span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">key_bindings</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bindings)</span>
 </pre></div>
 
 <h4 id="emacsvi">在Emacs和Vi模式中动态切换<a class="headerlink" href="#emacsvi" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.application.current</span> <span class="kn">import</span> <span class="n">get_app</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.filters</span> <span class="kn">import</span> <span class="n">Condition</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.key_binding</span> <span class="kn">import</span> <span class="n">KeyBindings</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.application.current</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">get_app</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.filters</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Condition</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.key_binding</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">KeyBindings</span>
 
-<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
-    <span class="c1"># Create a set of key bindings.</span>
-    <span class="n">bindings</span> <span class="o">=</span> <span class="n">KeyBindings</span><span class="p">()</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">run</span><span style="color: #f8f8f2">():</span>
+    <span style="color: #75715e"># Create a set of key bindings.</span>
+    <span style="color: #f8f8f2">bindings</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">KeyBindings()</span>
 
-    <span class="c1"># Add an additional key binding for toggling this flag.</span>
-    <span class="nd">@bindings.add</span><span class="p">(</span><span class="s1">&#39;f4&#39;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-        <span class="s2">&quot; Toggle between Emacs and Vi mode. &quot;</span>
-        <span class="n">app</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">app</span>
+    <span style="color: #75715e"># Add an additional key binding for toggling this flag.</span>
+    <span style="color: #a6e22e">@bindings.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;f4&#39;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+        <span style="color: #e6db74">&quot; Toggle between Emacs and Vi mode. &quot;</span>
+        <span style="color: #f8f8f2">app</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">event</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">app</span>
 
-        <span class="k">if</span> <span class="n">app</span><span class="o">.</span><span class="n">editing_mode</span> <span class="o">==</span> <span class="n">EditingMode</span><span class="o">.</span><span class="n">VI</span><span class="p">:</span>
-            <span class="n">app</span><span class="o">.</span><span class="n">editing_mode</span> <span class="o">=</span> <span class="n">EditingMode</span><span class="o">.</span><span class="n">EMACS</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">app</span><span class="o">.</span><span class="n">editing_mode</span> <span class="o">=</span> <span class="n">EditingMode</span><span class="o">.</span><span class="n">VI</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">editing_mode</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">EditingMode</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">VI:</span>
+            <span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">editing_mode</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">EditingMode</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">EMACS</span>
+        <span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>
+            <span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">editing_mode</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">EditingMode</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">VI</span>
 
-    <span class="c1"># Add a toolbar at the bottom to display the current input mode.</span>
-    <span class="k">def</span> <span class="nf">bottom_toolbar</span><span class="p">():</span>
-        <span class="s2">&quot; Display the current input mode. &quot;</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Vi&#39;</span> <span class="k">if</span> <span class="n">get_app</span><span class="p">()</span><span class="o">.</span><span class="n">editing_mode</span> <span class="o">==</span> <span class="n">EditingMode</span><span class="o">.</span><span class="n">VI</span> <span class="k">else</span> <span class="s1">&#39;Emacs&#39;</span>
-        <span class="k">return</span> <span class="p">[</span>
-            <span class="p">(</span><span class="s1">&#39;class:toolbar&#39;</span><span class="p">,</span> <span class="s1">&#39; [F4] </span><span class="si">%s</span><span class="s1"> &#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">)</span>
-        <span class="p">]</span>
+    <span style="color: #75715e"># Add a toolbar at the bottom to display the current input mode.</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">bottom_toolbar</span><span style="color: #f8f8f2">():</span>
+        <span style="color: #e6db74">&quot; Display the current input mode. &quot;</span>
+        <span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&#39;Vi&#39;</span> <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">get_app()</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">editing_mode</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">EditingMode</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">VI</span> <span style="color: #66d9ef">else</span> <span style="color: #e6db74">&#39;Emacs&#39;</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">[</span>
+            <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;class:toolbar&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&#39; [F4] %s &#39;</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">text)</span>
+        <span style="color: #f8f8f2">]</span>
 
-    <span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">key_bindings</span><span class="o">=</span><span class="n">bindings</span><span class="p">,</span> <span class="n">bottom_toolbar</span><span class="o">=</span><span class="n">bottom_toolbar</span><span class="p">)</span>
+    <span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">key_bindings</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bindings,</span> <span style="color: #f8f8f2">bottom_toolbar</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bottom_toolbar)</span>
 
-<span class="n">run</span><span class="p">()</span>
+<span style="color: #f8f8f2">run()</span>
 </pre></div>
 
 <h4 id="control-space">使用control-space补全<a class="headerlink" href="#control-space" title="Permanent link">&para;</a></h4>
@@ -2099,16 +2213,16 @@
 <h3 id="_17">其他选项<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="_18">多行输入<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>Meta+Enter 或者 Escape，Enter</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">,</span> <span class="n">multiline</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">multiline</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 
-<span class="k">def</span> <span class="nf">prompt_continuation</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">line_number</span><span class="p">,</span> <span class="n">is_soft_wrap</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;.&#39;</span> <span class="o">*</span> <span class="n">width</span>
-    <span class="c1"># Or: return [(&#39;&#39;, &#39;.&#39; * width)]</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">prompt_continuation</span><span style="color: #f8f8f2">(width,</span> <span style="color: #f8f8f2">line_number,</span> <span style="color: #f8f8f2">is_soft_wrap):</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #e6db74">&#39;.&#39;</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">width</span>
+    <span style="color: #75715e"># Or: return [(&#39;&#39;, &#39;.&#39; * width)]</span>
 
-<span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;multiline input&gt; &#39;</span><span class="p">,</span> <span class="n">multiline</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-       <span class="n">prompt_continuation</span><span class="o">=</span><span class="n">prompt_continuation</span><span class="p">)</span>
+<span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;multiline input&gt; &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">multiline</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True,</span>
+       <span style="color: #f8f8f2">prompt_continuation</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">prompt_continuation)</span>
 </pre></div>
 
 <h4 id="_19">默认值<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
@@ -2120,209 +2234,209 @@
 <p>默认换行</p>
 <p><code>prompt('What is your name: ', wrap_lines=False)</code></p>
 <h4 id="_22">密码输入<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">prompt</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">prompt</span>
 
-<span class="n">prompt</span><span class="p">(</span><span class="s1">&#39;Enter password: &#39;</span><span class="p">,</span> <span class="n">is_password</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span style="color: #f8f8f2">prompt(</span><span style="color: #e6db74">&#39;Enter password: &#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">is_password</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 </pre></div>
 
 <h3 id="_23">异步<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
 <p><a href="https://python-prompt-toolkit.readthedocs.io/en/stable/pages/asking_for_input.html#prompt-in-an-asyncio-application">link</a></p>
 <h2 id="dialogs">Dialogs<a class="headerlink" href="#dialogs" title="Permanent link">&para;</a></h2>
 <h3 id="message-box">Message box<a class="headerlink" href="#message-box" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">message_dialog</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">message_dialog</span>
 
-<span class="n">message_dialog</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Example dialog window&#39;</span><span class="p">,</span>
-    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Do you want to continue?</span><span class="se">\n</span><span class="s1">Press ENTER to quit.&#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">message_dialog(</span>
+    <span style="color: #f8f8f2">title</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Example dialog window&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">text</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Do you want to continue?</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Press ENTER to quit.&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="input-box">Input box<a class="headerlink" href="#input-box" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">input_dialog</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">input_dialog</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="n">input_dialog</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Input dialog example&#39;</span><span class="p">,</span>
-    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Please type your password:&#39;</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span style="color: #f8f8f2">text</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">input_dialog(</span>
+    <span style="color: #f8f8f2">title</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Input dialog example&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">text</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Please type your password:&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">password</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">True)</span>
 </pre></div>
 
 <h3 id="yesno-dialog">Yes/No dialog<a class="headerlink" href="#yesno-dialog" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">yes_no_dialog</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">yes_no_dialog</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">yes_no_dialog</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Yes/No dialog example&#39;</span><span class="p">,</span>
-    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Do you want to confirm?&#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">result</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">yes_no_dialog(</span>
+    <span style="color: #f8f8f2">title</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Yes/No dialog example&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">text</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Do you want to confirm?&#39;</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="button-dialog">Button dialog<a class="headerlink" href="#button-dialog" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">button_dialog</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">button_dialog</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">button_dialog</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Button dialog example&#39;</span><span class="p">,</span>
-    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Do you want to confirm?&#39;</span><span class="p">,</span>
-    <span class="n">buttons</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">&#39;Maybe...&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="p">],</span>
-<span class="p">)</span>
+<span style="color: #f8f8f2">result</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">button_dialog(</span>
+    <span style="color: #f8f8f2">title</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Button dialog example&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">text</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Do you want to confirm?&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">buttons</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">[</span>
+        <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;Yes&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">True),</span>
+        <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;No&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">False),</span>
+        <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;Maybe...&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">None)</span>
+    <span style="color: #f8f8f2">],</span>
+<span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="dialog">dialog 样式<a class="headerlink" href="#dialog" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.formatted_text</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">message_dialog</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.formatted_text</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HTML</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">message_dialog</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
 
-<span class="n">example_style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;dialog&#39;</span><span class="p">:</span>             <span class="s1">&#39;bg:#88ff88&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;dialog frame-label&#39;</span><span class="p">:</span> <span class="s1">&#39;bg:#ffffff #000000&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;dialog.body&#39;</span><span class="p">:</span>        <span class="s1">&#39;bg:#000000 #00ff00&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;dialog shadow&#39;</span><span class="p">:</span>      <span class="s1">&#39;bg:#00aa00&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">example_style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;dialog&#39;</span><span style="color: #f8f8f2">:</span>             <span style="color: #e6db74">&#39;bg:#88ff88&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;dialog frame-label&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;bg:#ffffff #000000&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;dialog.body&#39;</span><span style="color: #f8f8f2">:</span>        <span style="color: #e6db74">&#39;bg:#000000 #00ff00&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;dialog shadow&#39;</span><span style="color: #f8f8f2">:</span>      <span style="color: #e6db74">&#39;bg:#00aa00&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">message_dialog</span><span class="p">(</span>
-    <span class="n">title</span><span class="o">=</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style bg=&quot;blue&quot; fg=&quot;white&quot;&gt;Styled&lt;/style&gt; &#39;</span>
-               <span class="s1">&#39;&lt;style fg=&quot;ansired&quot;&gt;dialog&lt;/style&gt; window&#39;</span><span class="p">),</span>
-    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Do you want to continue?</span><span class="se">\n</span><span class="s1">Press ENTER to quit.&#39;</span><span class="p">,</span>
-    <span class="n">style</span><span class="o">=</span><span class="n">example_style</span><span class="p">)</span>
+<span style="color: #f8f8f2">message_dialog(</span>
+    <span style="color: #f8f8f2">title</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39;&lt;style bg=&quot;blue&quot; fg=&quot;white&quot;&gt;Styled&lt;/style&gt; &#39;</span>
+               <span style="color: #e6db74">&#39;&lt;style fg=&quot;ansired&quot;&gt;dialog&lt;/style&gt; window&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">text</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Do you want to continue?</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">Press ENTER to quit.&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">example_style)</span>
 </pre></div>
 
 <h2 id="_24">进度条<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
 <h3 id="_25">简单进度条<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">ProgressBar</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
 
 
-<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">()</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">800</span><span class="p">)):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">01</span><span class="p">)</span>
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">ProgressBar()</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">pb:</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">800</span><span style="color: #f8f8f2">)):</span>
+        <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">01</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="_26">多个并行任务<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">threading</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">ProgressBar</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">threading</span>
 
 
-<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">()</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-    <span class="c1"># Two parallel tasks.</span>
-    <span class="k">def</span> <span class="nf">task_1</span><span class="p">():</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)):</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">05</span><span class="p">)</span>
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">ProgressBar()</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">pb:</span>
+    <span style="color: #75715e"># Two parallel tasks.</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">task_1</span><span style="color: #f8f8f2">():</span>
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)):</span>
+            <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">05</span><span style="color: #f8f8f2">)</span>
 
-    <span class="k">def</span> <span class="nf">task_2</span><span class="p">():</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">150</span><span class="p">)):</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">08</span><span class="p">)</span>
+    <span style="color: #66d9ef">def</span> <span style="color: #a6e22e">task_2</span><span style="color: #f8f8f2">():</span>
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">150</span><span style="color: #f8f8f2">)):</span>
+            <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">08</span><span style="color: #f8f8f2">)</span>
 
-    <span class="c1"># Start threads.</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">task_1</span><span class="p">)</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">task_2</span><span class="p">)</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span style="color: #75715e"># Start threads.</span>
+    <span style="color: #f8f8f2">t1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">threading</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Thread(target</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">task_1)</span>
+    <span style="color: #f8f8f2">t2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">threading</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Thread(target</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">task_2)</span>
+    <span style="color: #f8f8f2">t1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">daemon</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">True</span>
+    <span style="color: #f8f8f2">t2</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">daemon</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">True</span>
+    <span style="color: #f8f8f2">t1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">start()</span>
+    <span style="color: #f8f8f2">t2</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">start()</span>
 
-    <span class="c1"># Wait for the threads to finish. We use a timeout for the join() call,</span>
-    <span class="c1"># because on Windows, join cannot be interrupted by Control-C or any other</span>
-    <span class="c1"># signal.</span>
-    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">]:</span>
-        <span class="k">while</span> <span class="n">t</span><span class="o">.</span><span class="n">is_alive</span><span class="p">():</span>
-            <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">timeout</span><span class="o">=.</span><span class="mi">5</span><span class="p">)</span>
+    <span style="color: #75715e"># Wait for the threads to finish. We use a timeout for the join() call,</span>
+    <span style="color: #75715e"># because on Windows, join cannot be interrupted by Control-C or any other</span>
+    <span style="color: #75715e"># signal.</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">t</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">[t1,</span> <span style="color: #f8f8f2">t2]:</span>
+        <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">t</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">is_alive():</span>
+            <span style="color: #f8f8f2">t</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">join(timeout</span><span style="color: #f92672">=.</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="_27">增加标题和标签<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.formatted_text</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">ProgressBar</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.formatted_text</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HTML</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
 
-<span class="n">title</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;Downloading &lt;style bg=&quot;yellow&quot; fg=&quot;black&quot;&gt;4 files...&lt;/style&gt;&#39;</span><span class="p">)</span>
-<span class="n">label</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;ansired&gt;some file&lt;/ansired&gt;: &#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">title</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39;Downloading &lt;style bg=&quot;yellow&quot; fg=&quot;black&quot;&gt;4 files...&lt;/style&gt;&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">label</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39;&lt;ansired&gt;some file&lt;/ansired&gt;: &#39;</span><span style="color: #f8f8f2">)</span>
 
-<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">800</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">01</span><span class="p">)</span>
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">ProgressBar(title</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">title)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">pb:</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">800</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">label</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">label):</span>
+        <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">01</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="_28">格式化<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
 <p>默认style</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts.progress_bar.formatters</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts.progress_bar.formatters</span> <span style="color: #f92672">import</span> <span style="color: #f92672">*</span>
 
-<span class="n">default_formatting</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">Label</span><span class="p">(),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="n">Percentage</span><span class="p">(),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="n">Bar</span><span class="p">(),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="n">Progress</span><span class="p">(),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;eta [&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:time-left&#39;</span><span class="p">),</span>
-    <span class="n">TimeLeft</span><span class="p">(),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:time-left&#39;</span><span class="p">),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-<span class="p">]</span>
+<span style="color: #f8f8f2">default_formatting</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+    <span style="color: #f8f8f2">Label(),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">Percentage(),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">Bar(),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">Progress(),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39;eta [&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:time-left&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">TimeLeft(),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39;]&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:time-left&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">]</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.styles</span> <span class="kn">import</span> <span class="n">Style</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts.progress_bar</span> <span class="kn">import</span> <span class="n">formatters</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">ProgressBar</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.styles</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Style</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts.progress_bar</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">formatters</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
 
-<span class="n">style</span> <span class="o">=</span> <span class="n">Style</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span>
-    <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;bg:#ffff00 #000000&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;percentage&#39;</span><span class="p">:</span> <span class="s1">&#39;bg:#ffff00 #000000&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;current&#39;</span><span class="p">:</span> <span class="s1">&#39;#448844&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-<span class="p">})</span>
+<span style="color: #f8f8f2">style</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Style</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">from_dict({</span>
+    <span style="color: #e6db74">&#39;label&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;bg:#ffff00 #000000&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;percentage&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;bg:#ffff00 #000000&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;current&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;#448844&#39;</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #e6db74">&#39;bar&#39;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&#39;&#39;</span><span style="color: #f8f8f2">,</span>
+<span style="color: #f8f8f2">})</span>
 
-<span class="n">custom_formatters</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Label</span><span class="p">(),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;: [&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:percentage&#39;</span><span class="p">),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Percentage</span><span class="p">(),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;]&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;class:percentage&#39;</span><span class="p">),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">sym_a</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">sym_b</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">sym_c</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">),</span>
-    <span class="n">formatters</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">),</span>
-<span class="p">]</span>
+<span style="color: #f8f8f2">custom_formatters</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Label(),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39;: [&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:percentage&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Percentage(),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39;]&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">style</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;class:percentage&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39; &#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Bar(sym_a</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;#&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sym_b</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;#&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sym_c</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;.&#39;</span><span style="color: #f8f8f2">),</span>
+    <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">Text(</span><span style="color: #e6db74">&#39;  &#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">]</span>
 
-<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="n">formatters</span><span class="o">=</span><span class="n">custom_formatters</span><span class="p">)</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1600</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Installing&#39;</span><span class="p">):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">01</span><span class="p">)</span>
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">ProgressBar(style</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">style,</span> <span style="color: #f8f8f2">formatters</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">custom_formatters)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">pb:</span>
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">1600</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">label</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Installing&#39;</span><span style="color: #f8f8f2">):</span>
+        <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">01</span><span style="color: #f8f8f2">)</span>
 </pre></div>
 
 <h3 id="_29">增加键绑定和工具栏<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">prompt_toolkit</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.key_binding</span> <span class="kn">import</span> <span class="n">KeyBindings</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.patch_stdout</span> <span class="kn">import</span> <span class="n">patch_stdout</span>
-<span class="kn">from</span> <span class="nn">prompt_toolkit.shortcuts</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">HTML</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.key_binding</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">KeyBindings</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.patch_stdout</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">patch_stdout</span>
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">prompt_toolkit.shortcuts</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">ProgressBar</span>
 
-<span class="kn">import</span> <span class="nn">time</span>
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">time</span>
 
-<span class="n">bottom_toolbar</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39; &lt;b&gt;[f]&lt;/b&gt; Print &quot;f&quot; &lt;b&gt;[x]&lt;/b&gt; Abort.&#39;</span><span class="p">)</span>
+<span style="color: #f8f8f2">bottom_toolbar</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">HTML(</span><span style="color: #e6db74">&#39; &lt;b&gt;[f]&lt;/b&gt; Print &quot;f&quot; &lt;b&gt;[x]&lt;/b&gt; Abort.&#39;</span><span style="color: #f8f8f2">)</span>
 
-<span class="c1"># Create custom key bindings first.</span>
-<span class="n">kb</span> <span class="o">=</span> <span class="n">KeyBindings</span><span class="p">()</span>
-<span class="n">cancel</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span>
+<span style="color: #75715e"># Create custom key bindings first.</span>
+<span style="color: #f8f8f2">kb</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">KeyBindings()</span>
+<span style="color: #f8f8f2">cancel</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[False]</span>
 
-<span class="nd">@kb.add</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;You pressed `f`.&#39;</span><span class="p">)</span>
+<span style="color: #a6e22e">@kb.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;f&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+    <span style="color: #66d9ef">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;You pressed `f`.&#39;</span><span style="color: #f8f8f2">)</span>
 
-<span class="nd">@kb.add</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-    <span class="s2">&quot; Send Abort (control-c) signal. &quot;</span>
-    <span class="n">cancel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">)</span>
+<span style="color: #a6e22e">@kb.add</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&#39;x&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">_</span><span style="color: #f8f8f2">(event):</span>
+    <span style="color: #e6db74">&quot; Send Abort (control-c) signal. &quot;</span>
+    <span style="color: #f8f8f2">cancel[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">True</span>
+    <span style="color: #f8f8f2">os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">kill(os</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">getpid(),</span> <span style="color: #f8f8f2">signal</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">SIGINT)</span>
 
-<span class="c1"># Use `patch_stdout`, to make sure that prints go above the</span>
-<span class="c1"># application.</span>
-<span class="k">with</span> <span class="n">patch_stdout</span><span class="p">():</span>
-    <span class="k">with</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">key_bindings</span><span class="o">=</span><span class="n">kb</span><span class="p">,</span> <span class="n">bottom_toolbar</span><span class="o">=</span><span class="n">bottom_toolbar</span><span class="p">)</span> <span class="k">as</span> <span class="n">pb</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pb</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">800</span><span class="p">)):</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mo">01</span><span class="p">)</span>
+<span style="color: #75715e"># Use `patch_stdout`, to make sure that prints go above the</span>
+<span style="color: #75715e"># application.</span>
+<span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">patch_stdout():</span>
+    <span style="color: #66d9ef">with</span> <span style="color: #f8f8f2">ProgressBar(key_bindings</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">kb,</span> <span style="color: #f8f8f2">bottom_toolbar</span><span style="color: #f92672">=</span><span style="color: #f8f8f2">bottom_toolbar)</span> <span style="color: #66d9ef">as</span> <span style="color: #f8f8f2">pb:</span>
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">pb(range(</span><span style="color: #ae81ff">800</span><span style="color: #f8f8f2">)):</span>
+            <span style="color: #f8f8f2">time</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sleep(</span><span style="color: #f92672">.</span><span style="color: #ae81ff">01</span><span style="color: #f8f8f2">)</span>
 
-            <span class="c1"># Stop when the cancel flag has been set.</span>
-            <span class="k">if</span> <span class="n">cancel</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-                <span class="k">break</span>
+            <span style="color: #75715e"># Stop when the cancel flag has been set.</span>
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cancel[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]:</span>
+                <span style="color: #66d9ef">break</span>
 </pre></div>
 
 <h3 id="_30">构建全屏应用<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
@@ -2347,7 +2461,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2356,19 +2470,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                cve-2016-6258
+                GooglePythonStyleGuide
               </span>
             </div>
           </a>
         
         
-          <a href="../easyfunction/" title="easyfunction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                easyfunction
+                CodeQL
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

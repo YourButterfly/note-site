@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -244,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -259,20 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -292,11 +274,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,8 +320,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -350,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -412,11 +394,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -427,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -536,11 +530,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -551,23 +545,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -593,6 +599,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -605,13 +635,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -641,13 +671,49 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
       makefile
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-10">
         makefile
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -677,65 +743,17 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-9">
-      ndays
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
-      python-prompt-toolkit
-    </a>
-  </li>
-
         
           
           
@@ -761,29 +779,17 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      lua
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        lua
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -791,8 +797,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lua/lua/" title="lua" class="md-nav__link">
-      lua
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
     </a>
   </li>
 
@@ -829,6 +835,114 @@
   <li class="md-nav__item">
     <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
       CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
     </a>
   </li>
 
@@ -896,11 +1010,11 @@
 <p>最近在Honggfuzz的代码库中引入的Honggfuzz网络驱动程序就试图实现这些。</p>
 <p>静态库 [libfhnetdriver/libhfnetdriver.a] <a href="https://github.com/google/honggfuzz/blob/master/libhfnetdriver/netdriver.c">源代码</a></p>
 <p>驱动程序将自己作为目标(提供符号)插入到最初由libFuzzer作者实现的接口中:</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">LLVMFuzzerTestOneInput</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">);</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">int</span> <span style="color: #a6e22e">LLVMFuzzerTestOneInput</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">const</span> <span style="color: #66d9ef">uint8_t</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">buf,</span> <span style="color: #66d9ef">size_t</span> <span style="color: #f8f8f2">len);</span>
 </pre></div>
 
 <p>这种选择使得不仅可以在honggfuzz中使用该驱动程序，还可以在AFL和libFuzzer中使用该驱动程序。从现在开始，Apache HTTPD项目需要做的唯一修改可以归结为以下差异:</p>
-<div class="codehilite"><pre><span></span>--- a/server/main.c
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>--- a/server/main.c
 +++ b/server/main.c
 @@ -484,8 +484,11 @@ static void usage(process_rec *process)
 destroy_and_exit_process(process, 1);
@@ -922,7 +1036,7 @@ const char *confname = SERVER_CONFIG_FILE;
 <p>在将TCP server 链接静态库libhfnetdriver.a(这一步由hfuzz-cc/*编译器执行)之后，fuzz引擎会运行自己的main函数，然后在一个单独的线程中运行TCP服务端代码</p>
 <p>之前提到的TCP server 接受到输入结束的信号问题（比如说在fuzzing输入缓冲中不再有数据时，如何通知到TCP server），可以通过向其建立的tcp流中发送TCP FIN 包。在现代操作系统中，shutdown(sock, SHUT_WR)这个syscall完成了这个工作</p>
 <p>我们要解决的最后一个要求是，能够使用相同的TCP端口启动多个TCP服务器。很遗憾，setsockopt(SO_REUSEPORT)不能用在这，因为混乱的输入可以分发到随机的fuzz进程的实例，不过这里有一个很好的方法：</p>
-<div class="codehilite"><pre><span></span>    Linux network namespaces，正如它的名字所说，只能用在linux操作系统中。在不同的网络名称空间中运行每个新的TCP服务器允许它绑定到任何它希望的TCP端口，因为每个服务器都将看到属于自己的全新loopback接口。NetDriver 利用Linux namespace的代码可以在HonggFuzz的libhfcommin库中发现。
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    Linux network namespaces，正如它的名字所说，只能用在linux操作系统中。在不同的网络名称空间中运行每个新的TCP服务器允许它绑定到任何它希望的TCP端口，因为每个服务器都将看到属于自己的全新loopback接口。NetDriver 利用Linux namespace的代码可以在HonggFuzz的libhfcommin库中发现。
 </pre></div>
 
 <p>一旦TCP server 启动并接受新的TCP连接，net dirver 将：</p>
@@ -936,14 +1050,14 @@ const char *confname = SERVER_CONFIG_FILE;
 <li>重复上述过程</li>
 </ol>
 <p>下面的命令集将帮助您开始使用NetDriver来Fuzz您的第一个项目(至少对于Apache HTTPD来说)。</p>
-<div class="codehilite"><pre><span></span><span class="o">(</span> <span class="nb">cd</span> httpd <span class="o">&amp;&amp;</span> ./hfuzz.compile_and_install.asan.sh <span class="o">)</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">(</span> <span style="color: #f8f8f2">cd</span> httpd <span style="color: #f92672">&amp;&amp;</span> ./hfuzz.compile_and_install.asan.sh <span style="color: #f92672">)</span>
 honggfuzz -v -Q -f IN/ -w ./httpd.wordlist -- ./httpd/httpd -X -f /home/jagger/fuzz/apache/dist/conf/httpd.conf.h2
 ...
 ...
-Honggfuzz Net Driver <span class="o">(</span><span class="nv">pid</span><span class="o">=</span><span class="m">21726</span><span class="o">)</span>: Waiting <span class="k">for</span> the TCP server process to start accepting TCP connections at <span class="m">127</span>.0.0.1:8080. Sleeping <span class="k">for</span> <span class="m">1</span> second....
-Honggfuzz Net Driver <span class="o">(</span><span class="nv">pid</span><span class="o">=</span><span class="m">21726</span><span class="o">)</span>: The TCP server process is ready to accept connections at <span class="m">127</span>.0.0.1:8080. TCP fuzzing starts now!
-Size:9378 <span class="o">(</span>i,b,hw,edge,ip,cmp<span class="o">)</span>: <span class="m">0</span>/0/0/4643/110/56364, Tot:0/0/0/4643/110/56364
-Size:40712 <span class="o">(</span>i,b,hw,edge,ip,cmp<span class="o">)</span>: <span class="m">0</span>/0/0/1971/104/21274, Tot:0/0/0/6614/214/77638
+Honggfuzz Net Driver <span style="color: #f92672">(</span><span style="color: #f8f8f2">pid</span><span style="color: #f92672">=</span><span style="color: #ae81ff">21726</span><span style="color: #f92672">)</span>: Waiting <span style="color: #66d9ef">for</span> the TCP server process to start accepting TCP connections at <span style="color: #ae81ff">127</span>.0.0.1:8080. Sleeping <span style="color: #66d9ef">for</span> <span style="color: #ae81ff">1</span> second....
+Honggfuzz Net Driver <span style="color: #f92672">(</span><span style="color: #f8f8f2">pid</span><span style="color: #f92672">=</span><span style="color: #ae81ff">21726</span><span style="color: #f92672">)</span>: The TCP server process is ready to accept connections at <span style="color: #ae81ff">127</span>.0.0.1:8080. TCP fuzzing starts now!
+Size:9378 <span style="color: #f92672">(</span>i,b,hw,edge,ip,cmp<span style="color: #f92672">)</span>: <span style="color: #ae81ff">0</span>/0/0/4643/110/56364, Tot:0/0/0/4643/110/56364
+Size:40712 <span style="color: #f92672">(</span>i,b,hw,edge,ip,cmp<span style="color: #f92672">)</span>: <span style="color: #ae81ff">0</span>/0/0/1971/104/21274, Tot:0/0/0/6614/214/77638
 ...
 </pre></div>
 
@@ -984,13 +1098,13 @@ Size:40712 <span class="o">(</span>i,b,hw,edge,ip,cmp<span class="o">)</span>: <
           </a>
         
         
-          <a href="../../kernel/kernel-header/" title="kernel-header" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../iot/binwalk/" title="binwalk" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                kernel-header
+                binwalk
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

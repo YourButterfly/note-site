@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -244,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -259,20 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -292,11 +274,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,8 +320,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -350,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -412,11 +394,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -427,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -496,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -511,23 +505,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -553,6 +559,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -565,13 +595,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -598,18 +628,54 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-10">
       makefile
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-10">
         makefile
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -684,65 +750,17 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-9">
-      ndays
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
-      python-prompt-toolkit
-    </a>
-  </li>
-
         
           
           
@@ -768,29 +786,17 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      lua
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        lua
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -798,8 +804,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lua/lua/" title="lua" class="md-nav__link">
-      lua
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
     </a>
   </li>
 
@@ -836,6 +842,114 @@
   <li class="md-nav__item">
     <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
       CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
     </a>
   </li>
 
@@ -901,18 +1015,18 @@
                 <h1 id="cmake">cmake<a class="headerlink" href="#cmake" title="Permanent link">&para;</a></h1>
 <p>cmake 语法</p>
 <h2 id="install-makefileinstall-target">install 指令（主要是生成Makefile中的install target）<a class="headerlink" href="#install-makefileinstall-target" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nb">install</span><span class="p">(</span><span class="s">FILES</span> <span class="s">flie</span> <span class="s">DESTINATION</span> <span class="s">dir_path</span><span class="p">)</span> <span class="c">#执行make install时，把file拷贝到dir_path</span>
-<span class="nb">install</span><span class="p">(</span><span class="s">PROGRAMS</span> <span class="s">file</span> <span class="s">DESTINATION</span> <span class="s">dir_path</span><span class="p">)</span> <span class="c">#执行make install时，把file拷贝到dir_path,并给予file可执行权限</span>
-<span class="nb">INSTALL</span><span class="p">(</span><span class="s">TARGETS</span>  <span class="s">ylib</span> <span class="s">ylib_s</span>
-    <span class="c">#RUNTIME DESTINATION xxx</span>
-    <span class="s">LIBRARY</span> <span class="s">DESTINATION</span> <span class="s">lib</span>
-    <span class="s">ARCHIVE</span> <span class="s">DESTINATION</span> <span class="s">lib</span>
-<span class="p">)</span><span class="c"># 安装libylib.so到lib目录，安装libylib_s.a到lib目录，RUNTIME 是安装可执行文件到xxx目录，注意这个指令有个坑，我后面会说明这个</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">install(</span><span style="color: #e6db74">FILES</span> <span style="color: #e6db74">flie</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">dir_path</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">#执行make install时，把file拷贝到dir_path</span>
+<span style="color: #f8f8f2">install(</span><span style="color: #e6db74">PROGRAMS</span> <span style="color: #e6db74">file</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">dir_path</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">#执行make install时，把file拷贝到dir_path,并给予file可执行权限</span>
+<span style="color: #f8f8f2">INSTALL(</span><span style="color: #e6db74">TARGETS</span>  <span style="color: #e6db74">ylib</span> <span style="color: #e6db74">ylib_s</span>
+    <span style="color: #75715e">#RUNTIME DESTINATION xxx</span>
+    <span style="color: #e6db74">LIBRARY</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">lib</span>
+    <span style="color: #e6db74">ARCHIVE</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">lib</span>
+<span style="color: #f8f8f2">)</span><span style="color: #75715e"># 安装libylib.so到lib目录，安装libylib_s.a到lib目录，RUNTIME 是安装可执行文件到xxx目录，注意这个指令有个坑，我后面会说明这个</span>
 </pre></div>
 
 <h2 id="configure_file">configure_file<a class="headerlink" href="#configure_file" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nb">configure_file</span><span class="p">(</span><span class="s">fileA</span> <span class="s">fileB</span> <span class="s">@ONLY</span><span class="p">)</span>
-<span class="c">#把fileA 复制并重命名为fileB,此时，fileA中的@var@的值会被替换为cmakelists.txt 中var的值。@ONLY是只转换@va@这种变量</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">configure_file(</span><span style="color: #e6db74">fileA</span> <span style="color: #e6db74">fileB</span> <span style="color: #e6db74">@ONLY</span><span style="color: #f8f8f2">)</span>
+<span style="color: #75715e">#把fileA 复制并重命名为fileB,此时，fileA中的@var@的值会被替换为cmakelists.txt 中var的值。@ONLY是只转换@va@这种变量</span>
 </pre></div>
                 
                   
@@ -934,7 +1048,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../llvm/pass/" title="pass" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../lua/lua/" title="lua" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -943,19 +1057,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                pass
+                lua
               </span>
             </div>
           </a>
         
         
-          <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../python/easyfunction/" title="easyfunction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                cve-2016-6258
+                easyfunction
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

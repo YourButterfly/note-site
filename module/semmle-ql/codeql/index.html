@@ -44,12 +44,6 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
-      
-      
-        
-        
-        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -65,6 +59,8 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
       <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
       <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
@@ -75,9 +71,7 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="">
+    <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
@@ -244,11 +238,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      文件格式
+      assembly
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        文件格式
+        assembly
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -259,20 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
-      PDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
-      DOT
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
     </a>
   </li>
 
@@ -292,11 +274,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      符号执行
+      concolic
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        符号执行
+        concolic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -338,8 +320,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
-      DDG
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
     </a>
   </li>
 
@@ -350,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
-      CFG
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
     </a>
   </li>
 
@@ -412,11 +394,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      IOT
+      file format
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        IOT
+        file format
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -427,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
-      binwalk
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
     </a>
   </li>
 
@@ -496,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      kernel
+      IOT
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        kernel
+        IOT
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -511,23 +505,35 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
-      kernel-header
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
-      kernel-hook
-    </a>
+      </ul>
+    </nav>
   </li>
 
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -553,6 +559,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -565,13 +595,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       llvm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         llvm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -601,13 +631,49 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
       makefile
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-10">
         makefile
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -637,65 +703,17 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-9">
-      ndays
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        ndays
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ndays/cve-2016-6258/" title="cve-2016-6258" class="md-nav__link">
-      cve-2016-6258
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
-      python-prompt-toolkit
-    </a>
-  </li>
-
         
           
           
@@ -721,29 +739,17 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      lua
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        lua
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -751,8 +757,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lua/lua/" title="lua" class="md-nav__link">
-      lua
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
     </a>
   </li>
 
@@ -1137,6 +1143,114 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
+    </a>
   </li>
 
         
@@ -1557,33 +1671,33 @@
 <h2 id="codeql-cli">三 CodeQL CLI<a class="headerlink" href="#codeql-cli" title="Permanent link">&para;</a></h2>
 <p>前一节的vscode的大部分工作最后都是调用CodeQL CLI完成的</p>
 <h3 id="setting-up-the-codeql-cli">Setting up the CodeQL CLI<a class="headerlink" href="#setting-up-the-codeql-cli" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="c1"># Download the CodeQL CLI zip package</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e"># Download the CodeQL CLI zip package</span>
 wget https://github.com/github/codeql-cli-binaries/releases/latest/download/codeql.zip
-<span class="c1"># Create a new CodeQL directory, For example</span>
-mkdir <span class="nv">$HOME</span>/codeql-home
-<span class="c1"># Obtain a local copy of the CodeQL queries, For example</span>
-git clone https://github.com/Semmle/ql  <span class="nv">$HOME</span>/codeql-home/codeql-repo
-git clone https://github.com/github/codeql-go/ <span class="nv">$HOME</span>/codeql-home/codeql-go-repo
-<span class="c1"># Extract the zip archive</span>
+<span style="color: #75715e"># Create a new CodeQL directory, For example</span>
+mkdir <span style="color: #f8f8f2">$HOME</span>/codeql-home
+<span style="color: #75715e"># Obtain a local copy of the CodeQL queries, For example</span>
+git clone https://github.com/Semmle/ql  <span style="color: #f8f8f2">$HOME</span>/codeql-home/codeql-repo
+git clone https://github.com/github/codeql-go/ <span style="color: #f8f8f2">$HOME</span>/codeql-home/codeql-go-repo
+<span style="color: #75715e"># Extract the zip archive</span>
 unzip codeql.zip
-mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
-<span class="c1"># validate</span>
-<span class="nv">$HOME</span>/codeql-home/codeql-cli/codeql resolve languages
-<span class="c1"># outputs</span>
-<span class="c1">## cpp (/home/pwd/codeql-home/codeql-cli/cpp)</span>
-<span class="c1">## go (/home/pwd/codeql-home/codeql-cli/go)</span>
-<span class="c1">## ...</span>
-<span class="c1">## python (/home/pwd/codeql-home/codeql-cli/python)</span>
-<span class="nv">$HOME</span>/codeql-home/codeql-cli/codeql resolve qlpacks
-<span class="c1"># outputs</span>
-<span class="c1">## codeql-cpp (/home/pwd/codeql-home/codeql-repo/cpp/ql/src)</span>
-<span class="c1">## codeql-cpp-tests (/home/pwd/codeql-home/codeql-repo/cpp/ql/test)</span>
-<span class="c1">## ...</span>
-<span class="c1">## legacy-upgrades (/home/pwd/codeql-home/codeql-cli/legacy-upgrades)</span>
+mv codeql <span style="color: #f8f8f2">$HOME</span>/codeql-home/codeql-cli
+<span style="color: #75715e"># validate</span>
+<span style="color: #f8f8f2">$HOME</span>/codeql-home/codeql-cli/codeql resolve languages
+<span style="color: #75715e"># outputs</span>
+<span style="color: #75715e">## cpp (/home/pwd/codeql-home/codeql-cli/cpp)</span>
+<span style="color: #75715e">## go (/home/pwd/codeql-home/codeql-cli/go)</span>
+<span style="color: #75715e">## ...</span>
+<span style="color: #75715e">## python (/home/pwd/codeql-home/codeql-cli/python)</span>
+<span style="color: #f8f8f2">$HOME</span>/codeql-home/codeql-cli/codeql resolve qlpacks
+<span style="color: #75715e"># outputs</span>
+<span style="color: #75715e">## codeql-cpp (/home/pwd/codeql-home/codeql-repo/cpp/ql/src)</span>
+<span style="color: #75715e">## codeql-cpp-tests (/home/pwd/codeql-home/codeql-repo/cpp/ql/test)</span>
+<span style="color: #75715e">## ...</span>
+<span style="color: #75715e">## legacy-upgrades (/home/pwd/codeql-home/codeql-cli/legacy-upgrades)</span>
 </pre></div>
 
 <h3 id="create-a-database">Create a database<a class="headerlink" href="#create-a-database" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>codeql database create &lt;database&gt; --language<span class="o">=</span>&lt;language-identifier&gt;
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>codeql database create &lt;database&gt; --language<span style="color: #f92672">=</span>&lt;language-identifier&gt;
 </pre></div>
 
 <p>必须指定</p>
@@ -1597,7 +1711,7 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <li><code>--command</code>: 用于编译型语言，调用编译器的构建命令，比如<code>--command='make all'</code>。如果未指定该命令，CodeQL将尝试使用内置的autobuilder自动检测构建系统。</li>
 </ul>
 <h3 id="running-codeql-database-analyze">Running codeql database analyze<a class="headerlink" href="#running-codeql-database-analyze" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>codeql database analyze &lt;database&gt; &lt;queries&gt; --format<span class="o">=</span>&lt;format&gt; --output<span class="o">=</span>&lt;output&gt;
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>codeql database analyze &lt;database&gt; &lt;queries&gt; --format<span style="color: #f92672">=</span>&lt;format&gt; --output<span style="color: #f92672">=</span>&lt;output&gt;
 </pre></div>
 
 <p>必须指定</p>
@@ -1608,7 +1722,7 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <li><code>--output</code>: 生成结果到目录</li>
 </ul>
 <h3 id="upgrade-database">Upgrade database<a class="headerlink" href="#upgrade-database" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>codeql database upgrade &lt;database&gt;
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>codeql database upgrade &lt;database&gt;
 </pre></div>
 
 <h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
@@ -1616,16 +1730,16 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <h2 id="codeql-for-cc">四 CodeQL for C/C++<a class="headerlink" href="#codeql-for-cc" title="Permanent link">&para;</a></h2>
 <h3 id="basic-cc-query-example">Basic C/C++ query example<a class="headerlink" href="#basic-cc-query-example" title="Permanent link">&para;</a></h3>
 <p>查找冗余的if语句</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(error)</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">}</span>
 </pre></div>
 
 <p>查询语句</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">IfStmt</span> <span class="n">ifstmt</span><span class="p">,</span> <span class="n">Block</span> <span class="n">block</span>
-<span class="k">where</span> <span class="n">ifstmt</span><span class="p">.</span><span class="n">getThen</span><span class="p">()</span> <span class="o">=</span> <span class="n">block</span>
-  <span class="k">and</span> <span class="n">block</span><span class="p">.</span><span class="n">getNumStmt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">select</span> <span class="n">ifstmt</span><span class="p">,</span> <span class="ss">&quot;This &#39;if&#39; statement is redundant.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">IfStmt</span> <span style="color: #f8f8f2">ifstmt,</span> <span style="color: #f8f8f2">Block</span> <span style="color: #f8f8f2">block</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">ifstmt.getThen()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">block</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">block.getNumStmt()</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">ifstmt,</span> <span style="color: #e6db74">&quot;This &#39;if&#39; statement is redundant.&quot;</span>
 </pre></div>
 
 <p><code>import cpp</code> 导入C/C++标准查询库</p>
@@ -1637,35 +1751,35 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <p><a href="https://help.semmle.com/QL/learn-ql/cpp/introduce-libraries-cpp.html">https://help.semmle.com/QL/learn-ql/cpp/introduce-libraries-cpp.html</a></p>
 <h3 id="tutorial-function-classes">Tutorial: Function classes<a class="headerlink" href="#tutorial-function-classes" title="Permanent link">&para;</a></h3>
 <h4 id="_1">寻找静态函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
-<span class="k">where</span> <span class="n">f</span><span class="p">.</span><span class="n">isStatic</span><span class="p">()</span>
-<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This is a static function.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">f</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">f.isStatic()</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">f,</span> <span style="color: #e6db74">&quot;This is a static function.&quot;</span>
 </pre></div>
 
 <h4 id="_2">寻找未被调用的函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
-<span class="k">where</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
-<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This function is never called.&quot;</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">from</span> <span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">f</span>
+<span style="color: #66d9ef">where</span> <span style="color: #66d9ef">not</span> <span style="color: #66d9ef">exists</span><span style="color: #f8f8f2">(FunctionCall</span> <span style="color: #f8f8f2">fc</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">fc.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f)</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">f,</span> <span style="color: #e6db74">&quot;This function is never called.&quot;</span>
 </pre></div>
 
 <h4 id="_3">排除使用函数指针引用的函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="k">Function</span> <span class="n">f</span>
-<span class="k">where</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
-  <span class="k">and</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">FunctionAccess</span> <span class="n">fa</span> <span class="o">|</span> <span class="n">fa</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">)</span>
-<span class="k">select</span> <span class="n">f</span><span class="p">,</span> <span class="ss">&quot;This function is never called, or referenced with a function pointer.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">f</span>
+<span style="color: #66d9ef">where</span> <span style="color: #66d9ef">not</span> <span style="color: #66d9ef">exists</span><span style="color: #f8f8f2">(FunctionCall</span> <span style="color: #f8f8f2">fc</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">fc.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f)</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #66d9ef">not</span> <span style="color: #66d9ef">exists</span><span style="color: #f8f8f2">(FunctionAccess</span> <span style="color: #f8f8f2">fa</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">fa.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f)</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">f,</span> <span style="color: #e6db74">&quot;This function is never called, or referenced with a function pointer.&quot;</span>
 </pre></div>
 
 <h4 id="_4">寻找特定函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">FunctionCall</span> <span class="n">fc</span>
-<span class="k">where</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">().</span><span class="n">getQualifiedName</span><span class="p">()</span> <span class="o">=</span> <span class="ss">&quot;sprintf&quot;</span>
-  <span class="k">and</span> <span class="k">not</span> <span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">instanceof</span> <span class="n">StringLiteral</span>
-<span class="k">select</span> <span class="n">fc</span><span class="p">,</span> <span class="ss">&quot;sprintf called with variable format string.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">FunctionCall</span> <span style="color: #f8f8f2">fc</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">fc.getTarget().getQualifiedName()</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;sprintf&quot;</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #66d9ef">not</span> <span style="color: #f8f8f2">fc.getArgument(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">instanceof</span> <span style="color: #f8f8f2">StringLiteral</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">fc,</span> <span style="color: #e6db74">&quot;sprintf called with variable format string.&quot;</span>
 </pre></div>
 
 <h3 id="tutorial-expressions-types-and-statements">Tutorial: Expressions, types and statements<a class="headerlink" href="#tutorial-expressions-types-and-statements" title="Permanent link">&para;</a></h3>
@@ -1687,45 +1801,45 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <li>Block - { } blocks containing more statements</li>
 </ul>
 <h4 id="0">查找赋值为0的表达式<a class="headerlink" href="#0" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span>
-<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to something.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">AssignExpr</span> <span style="color: #f8f8f2">e</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">e.getRValue().getValue().toInt()</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">e,</span> <span style="color: #e6db74">&quot;Assigning the value 0 to something.&quot;</span>
 </pre></div>
 
 <h4 id="0integraltype">查找赋值0给IntegralType变量的表达式<a class="headerlink" href="#0integraltype" title="Permanent link">&para;</a></h4>
 <p>注意 <code>Type.getUnspecifiedType()</code>. 它会把 <code>typedef</code> 展开成底层类型</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span>
-<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnspecifiedType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
-<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">AssignExpr</span> <span style="color: #f8f8f2">e</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">e.getRValue().getValue().toInt()</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">e.getLValue().getType().getUnspecifiedType()</span> <span style="color: #f8f8f2">instanceof</span> <span style="color: #f8f8f2">IntegralType</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">e,</span> <span style="color: #e6db74">&quot;Assigning the value 0 to an integer.&quot;</span>
 </pre></div>
 
 <h4 id="for0">在'for'循环初始化中查找赋值为0<a class="headerlink" href="#for0" title="Permanent link">&para;</a></h4>
 <p>由于<code>for</code>的初始化通常是一个<code>Stmt</code>而不是<code>Expr</code>, 使用<code>getEnclosingStmt</code> 获取Expr最接近的Smt（类 AssignExpr 被类 ExprStmt 封装）</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span><span class="p">,</span> <span class="n">ForStmt</span> <span class="n">f</span>
-<span class="o">//</span> <span class="n">the</span> <span class="k">assignment</span> <span class="k">is</span> <span class="k">in</span> <span class="n">the</span> <span class="s1">&#39;for&#39;</span> <span class="n">loop</span> <span class="n">initialization</span> <span class="k">statement</span>
-<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getEnclosingStmt</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">getInitialization</span><span class="p">()</span>
-  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnspecifiedType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
-<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer, inside a for loop initialization.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">AssignExpr</span> <span style="color: #f8f8f2">e,</span> <span style="color: #f8f8f2">ForStmt</span> <span style="color: #f8f8f2">f</span>
+<span style="color: #f92672">//</span> <span style="color: #f8f8f2">the</span> <span style="color: #66d9ef">assignment</span> <span style="color: #66d9ef">is</span> <span style="color: #66d9ef">in</span> <span style="color: #f8f8f2">the</span> <span style="color: #e6db74">&#39;for&#39;</span> <span style="color: #f8f8f2">loop</span> <span style="color: #f8f8f2">initialization</span> <span style="color: #66d9ef">statement</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">e.getEnclosingStmt()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f.getInitialization()</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">e.getRValue().getValue().toInt()</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">e.getLValue().getType().getUnspecifiedType()</span> <span style="color: #f8f8f2">instanceof</span> <span style="color: #f8f8f2">IntegralType</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">e,</span> <span style="color: #e6db74">&quot;Assigning the value 0 to an integer, inside a for loop initialization.&quot;</span>
 </pre></div>
 
 <h4 id="for0_1">在'for'循环的循环体中查找赋值为0<a class="headerlink" href="#for0_1" title="Permanent link">&para;</a></h4>
 <p><code>*</code>表示0次或多次，即这个 Stmt 本身，它的 父Stmt，父Stmt的父Stmt 等等</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
 
-<span class="k">from</span> <span class="n">AssignExpr</span> <span class="n">e</span><span class="p">,</span> <span class="n">ForStmt</span> <span class="n">f</span>
-<span class="o">//</span> <span class="n">the</span> <span class="k">assignment</span> <span class="k">is</span> <span class="k">in</span> <span class="n">the</span> <span class="k">for</span> <span class="n">loop</span> <span class="n">body</span>
-<span class="k">where</span> <span class="n">e</span><span class="p">.</span><span class="n">getEnclosingStmt</span><span class="p">().</span><span class="n">getParentStmt</span><span class="o">*</span><span class="p">()</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">getStmt</span><span class="p">()</span>
-  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getRValue</span><span class="p">().</span><span class="n">getValue</span><span class="p">().</span><span class="n">toInt</span><span class="p">()</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="k">and</span> <span class="n">e</span><span class="p">.</span><span class="n">getLValue</span><span class="p">().</span><span class="n">getType</span><span class="p">().</span><span class="n">getUnderlyingType</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">IntegralType</span>
-<span class="k">select</span> <span class="n">e</span><span class="p">,</span> <span class="ss">&quot;Assigning the value 0 to an integer, inside a for loop body.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">AssignExpr</span> <span style="color: #f8f8f2">e,</span> <span style="color: #f8f8f2">ForStmt</span> <span style="color: #f8f8f2">f</span>
+<span style="color: #f92672">//</span> <span style="color: #f8f8f2">the</span> <span style="color: #66d9ef">assignment</span> <span style="color: #66d9ef">is</span> <span style="color: #66d9ef">in</span> <span style="color: #f8f8f2">the</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">loop</span> <span style="color: #f8f8f2">body</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">e.getEnclosingStmt().getParentStmt</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">f.getStmt()</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">e.getRValue().getValue().toInt()</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">e.getLValue().getType().getUnderlyingType()</span> <span style="color: #f8f8f2">instanceof</span> <span style="color: #f8f8f2">IntegralType</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">e,</span> <span style="color: #e6db74">&quot;Assigning the value 0 to an integer, inside a for loop body.&quot;</span>
 </pre></div>
 
 <h3 id="tutorial-conversions-and-classes">Tutorial: Conversions and classes<a class="headerlink" href="#tutorial-conversions-and-classes" title="Permanent link">&para;</a></h3>
@@ -1763,59 +1877,59 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <h3 id="local-data-flow">Local data flow<a class="headerlink" href="#local-data-flow" title="Permanent link">&para;</a></h3>
 <p>单个函数内部的数据流。在 <code>DataFlow</code> 模块中定义了类 <code>Node</code>, 表示数据可以经过的任何元素。Node 分 <code>ExprNode</code> 和 <code>ParameterNode</code>。</p>
 <p>predicates <code>asExpr</code> and <code>asParameter</code></p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Node</span> <span class="p">{</span>
-  <span class="cm">/** Gets the expression corresponding to this node, if any. */</span>
-  <span class="n">Expr</span> <span class="n">asExpr</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">Node</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">/** Gets the expression corresponding to this node, if any. */</span>
+  <span style="color: #f8f8f2">Expr</span> <span style="color: #f8f8f2">asExpr()</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">...</span> <span style="color: #f8f8f2">}</span>
 
-  <span class="cm">/** Gets the parameter corresponding to this node, if any. */</span>
-  <span class="n">Parameter</span> <span class="n">asParameter</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+  <span style="color: #75715e">/** Gets the parameter corresponding to this node, if any. */</span>
+  <span style="color: #f8f8f2">Parameter</span> <span style="color: #f8f8f2">asParameter()</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">...</span> <span style="color: #f8f8f2">}</span>
 
-  <span class="p">...</span>
-<span class="p">}</span>
+  <span style="color: #f8f8f2">...</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div>
 
 <p>或者使用 predicates <code>exprNode</code> 和 <code>parameterNode</code></p>
-<div class="codehilite"><pre><span></span><span class="cm">/**</span>
-<span class="cm"> * Gets the node corresponding to expression `e`.</span>
-<span class="cm"> */</span>
-<span class="n">ExprNode</span> <span class="nf">exprNode</span><span class="p">(</span><span class="n">Expr</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">/**</span>
+<span style="color: #75715e"> * Gets the node corresponding to expression `e`.</span>
+<span style="color: #75715e"> */</span>
+<span style="color: #f8f8f2">ExprNode</span> <span style="color: #a6e22e">exprNode</span><span style="color: #f8f8f2">(Expr</span> <span style="color: #f8f8f2">e)</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">...</span> <span style="color: #f8f8f2">}</span>
 
-<span class="cm">/**</span>
-<span class="cm"> * Gets the node corresponding to the value of parameter `p` at function entry.</span>
-<span class="cm"> */</span>
-<span class="n">ParameterNode</span> <span class="nf">parameterNode</span><span class="p">(</span><span class="n">Parameter</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span style="color: #75715e">/**</span>
+<span style="color: #75715e"> * Gets the node corresponding to the value of parameter `p` at function entry.</span>
+<span style="color: #75715e"> */</span>
+<span style="color: #f8f8f2">ParameterNode</span> <span style="color: #a6e22e">parameterNode</span><span style="color: #f8f8f2">(Parameter</span> <span style="color: #f8f8f2">p)</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">...</span> <span style="color: #f8f8f2">}</span>
 </pre></div>
 
 <p><code>localFlowStep(Node nodeFrom, Node nodeTo)</code>, 可以使用'*'和'+'递归，<code>localFlow</code> 相当于 <code>localFlowStep*</code>。比如</p>
-<div class="codehilite"><pre><span></span><span class="n">DataFlow</span><span class="o">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">parameterNode</span><span class="p">(</span><span class="n">source</span><span class="p">),</span> <span class="n">DataFlow</span><span class="o">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">sink</span><span class="p">))</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">localFlow(DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">parameterNode(source),</span> <span style="color: #f8f8f2">DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">exprNode(sink))</span>
 </pre></div>
 
 <h3 id="using-local-taint-tracking">Using local taint tracking<a class="headerlink" href="#using-local-taint-tracking" title="Permanent link">&para;</a></h3>
 <p>局部污点跟踪通过包含非保存值的流步骤扩展了局部数据流。例如下面，这种情况下malloc的参数被会被污染。</p>
-<div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">tainted_user_input</span><span class="p">();</span>
-<span class="n">some_big_struct</span> <span class="o">*</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">some_big_struct</span><span class="p">));</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">tainted_user_input();</span>
+<span style="color: #f8f8f2">some_big_struct</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">array</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">malloc(i</span> <span style="color: #f92672">*</span> <span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(some_big_struct));</span>
 </pre></div>
 
 <p>本地污点跟踪在模块 <code>TaintTracking</code> 中, <code>localTaintStep(DataFlow::Node nodeFrom, DataFlow::Node nodeTo)</code> 意味着（?）从节点<code>nodeFrom</code>到节点<code>nodeTo</code>有一个立即污染传递边，<code>localTaint</code> 想当于 <code>localTaintStep*</code></p>
-<div class="codehilite"><pre><span></span>TaintTracking::localTaint(DataFlow::parameterNode(source), DataFlow::exprNode(sink))
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>TaintTracking::localTaint(DataFlow::parameterNode(source), DataFlow::exprNode(sink))
 </pre></div>
 
 <h3 id="using-global-data-flow">Using global data flow<a class="headerlink" href="#using-global-data-flow" title="Permanent link">&para;</a></h3>
 <p>全局数据流跟踪整个程序中的数据流，因此比本地数据流更强大。但是，全局数据流不如本地数据流精确，而且执行分析通常需要大量的时间和内存。</p>
 <p>使用全局数据流库扩展类 <code>DataFlow::Configuration</code>，如下所示</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.DataFlow</span>
 
-<span class="k">class</span> <span class="nc">MyDataFlowConfiguration</span> <span class="n">extends</span> <span class="n">DataFlow</span><span class="o">::</span><span class="n">Configuration</span> <span class="p">{</span>
-  <span class="n">MyDataFlowConfiguration</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span> <span class="o">=</span> <span class="s">&quot;MyDataFlowConfiguration&quot;</span> <span class="p">}</span>
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">MyDataFlowConfiguration</span> <span style="color: #f8f8f2">extends</span> <span style="color: #f8f8f2">DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Configuration</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">MyDataFlowConfiguration()</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">this</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;MyDataFlowConfiguration&quot;</span> <span style="color: #f8f8f2">}</span>
 
-  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">source</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">}</span>
+  <span style="color: #66d9ef">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSource(DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Node</span> <span style="color: #f8f8f2">source)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">...</span>
+  <span style="color: #f8f8f2">}</span>
 
-  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  <span style="color: #66d9ef">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSink(DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Node</span> <span style="color: #f8f8f2">sink)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">...</span>
+  <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div>
 
 <p>定义以下配置</p>
@@ -1827,90 +1941,90 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
 <li><code>isAdditionalFlowStep</code> 可选，添加额外的流步骤</li>
 </ul>
 <p>使用谓词<code>hasFlow(DataFlow::Node source, DataFlow::Node sink)</code>进行数据流分析:</p>
-<div class="codehilite"><pre><span></span><span class="k">from</span> <span class="n">MyDataFlowConfiguration</span> <span class="n">dataflow</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span>
-<span class="k">where</span> <span class="n">dataflow</span><span class="p">.</span><span class="n">hasFlow</span><span class="p">(</span><span class="k">source</span><span class="p">,</span> <span class="n">sink</span><span class="p">)</span>
-<span class="k">select</span> <span class="k">source</span><span class="p">,</span> <span class="ss">&quot;Data flow to $@.&quot;</span><span class="p">,</span> <span class="n">sink</span><span class="p">,</span> <span class="n">sink</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">MyDataFlowConfiguration</span> <span style="color: #f8f8f2">dataflow,</span> <span style="color: #f8f8f2">DataFlow::Node</span> <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">DataFlow::Node</span> <span style="color: #f8f8f2">sink</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">dataflow.hasFlow(</span><span style="color: #66d9ef">source</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sink)</span>
+<span style="color: #66d9ef">select</span> <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Data flow to $@.&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sink,</span> <span style="color: #f8f8f2">sink.toString()</span>
 </pre></div>
 
 <h3 id="using-global-taint-tracking">Using global taint tracking<a class="headerlink" href="#using-global-taint-tracking" title="Permanent link">&para;</a></h3>
 <p>全局污点跟踪使用附加的非保存值的步骤扩展了全局数据流。通过扩展<code>TaintTracking::Configuration</code>类来使用全局污染跟踪库，具体如下:</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">TaintTracking</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.TaintTracking</span>
 
-<span class="k">class</span> <span class="nc">MyTaintTrackingConfiguration</span> <span class="n">extends</span> <span class="n">TaintTracking</span><span class="o">::</span><span class="n">Configuration</span> <span class="p">{</span>
-  <span class="n">MyTaintTrackingConfiguration</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span> <span class="o">=</span> <span class="s">&quot;MyTaintTrackingConfiguration&quot;</span> <span class="p">}</span>
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">MyTaintTrackingConfiguration</span> <span style="color: #f8f8f2">extends</span> <span style="color: #f8f8f2">TaintTracking</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Configuration</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">MyTaintTrackingConfiguration()</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">this</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;MyTaintTrackingConfiguration&quot;</span> <span style="color: #f8f8f2">}</span>
 
-  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">source</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">}</span>
+  <span style="color: #66d9ef">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSource(DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Node</span> <span style="color: #f8f8f2">source)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">...</span>
+  <span style="color: #f8f8f2">}</span>
 
-  <span class="k">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="o">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  <span style="color: #66d9ef">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSink(DataFlow</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Node</span> <span style="color: #f8f8f2">sink)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">...</span>
+  <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div>
 
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <p>查找所有传入 fopen 参数1 的表达式:</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
-<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
+<span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.DataFlow</span>
 
-<span class="k">from</span> <span class="k">Function</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="n">fc</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">src</span>
-<span class="k">where</span> <span class="n">fopen</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
-  <span class="k">and</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">fopen</span>
-  <span class="k">and</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">src</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
-<span class="k">select</span> <span class="n">src</span>
+<span style="color: #66d9ef">from</span> <span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">fopen,</span> <span style="color: #f8f8f2">FunctionCall</span> <span style="color: #f8f8f2">fc,</span> <span style="color: #f8f8f2">Expr</span> <span style="color: #f8f8f2">src</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">fopen.hasQualifiedName(</span><span style="color: #e6db74">&quot;fopen&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">fc.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">fopen</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">DataFlow::localFlow(DataFlow::exprNode(src),</span> <span style="color: #f8f8f2">DataFlow::exprNode(fc.getArgument(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)))</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">src</span>
 </pre></div>
 
 <p>查找传入 fopen 参数1 的 publi parameter (这个函数接收的参数，比如<code>main(int argc, char **argv, char **envp)</code>中的argc， argv, envp):</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">cpp</span>
-<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">cpp</span>
+<span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.DataFlow</span>
 
-<span class="k">from</span> <span class="k">Function</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="n">fc</span><span class="p">,</span> <span class="k">Parameter</span> <span class="n">p</span>
-<span class="k">where</span> <span class="n">fopen</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
-  <span class="k">and</span> <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">fopen</span>
-  <span class="k">and</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">parameterNode</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
-<span class="k">select</span> <span class="n">p</span>
+<span style="color: #66d9ef">from</span> <span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">fopen,</span> <span style="color: #f8f8f2">FunctionCall</span> <span style="color: #f8f8f2">fc,</span> <span style="color: #66d9ef">Parameter</span> <span style="color: #f8f8f2">p</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">fopen.hasQualifiedName(</span><span style="color: #e6db74">&quot;fopen&quot;</span><span style="color: #f8f8f2">)</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">fc.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">fopen</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #f8f8f2">DataFlow::localFlow(DataFlow::parameterNode(p),</span> <span style="color: #f8f8f2">DataFlow::exprNode(fc.getArgument(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)))</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">p</span>
 </pre></div>
 
 <p>查找对格式字符串没有硬编码的格式化函数的调用。</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
-<span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">commons</span><span class="p">.</span><span class="n">Printf</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.DataFlow</span>
+<span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.commons.Printf</span>
 
-<span class="k">from</span> <span class="n">FormattingFunction</span> <span class="n">format</span><span class="p">,</span> <span class="n">FunctionCall</span> <span class="k">call</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">formatString</span>
-<span class="k">where</span> <span class="k">call</span><span class="p">.</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">format</span>
-  <span class="k">and</span> <span class="k">call</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="n">format</span><span class="p">.</span><span class="n">getFormatParameterIndex</span><span class="p">())</span> <span class="o">=</span> <span class="n">formatString</span>
-  <span class="k">and</span> <span class="k">not</span> <span class="k">exists</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">,</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span> <span class="o">|</span>
-    <span class="n">DataFlow</span><span class="p">::</span><span class="n">localFlow</span><span class="p">(</span><span class="k">source</span><span class="p">,</span> <span class="n">sink</span><span class="p">)</span> <span class="k">and</span>
-    <span class="k">source</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="n">instanceof</span> <span class="n">StringLiteral</span> <span class="k">and</span>
-    <span class="n">sink</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="o">=</span> <span class="n">formatString</span>
-  <span class="p">)</span>
-<span class="k">select</span> <span class="k">call</span><span class="p">,</span> <span class="ss">&quot;Argument to &quot;</span> <span class="o">+</span> <span class="n">format</span><span class="p">.</span><span class="n">getQualifiedName</span><span class="p">()</span> <span class="o">+</span> <span class="ss">&quot; isn&#39;t hard-coded.&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">FormattingFunction</span> <span style="color: #f8f8f2">format,</span> <span style="color: #f8f8f2">FunctionCall</span> <span style="color: #66d9ef">call</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">Expr</span> <span style="color: #f8f8f2">formatString</span>
+<span style="color: #66d9ef">where</span> <span style="color: #66d9ef">call</span><span style="color: #f8f8f2">.getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">format</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #66d9ef">call</span><span style="color: #f8f8f2">.getArgument(format.getFormatParameterIndex())</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">formatString</span>
+  <span style="color: #66d9ef">and</span> <span style="color: #66d9ef">not</span> <span style="color: #66d9ef">exists</span><span style="color: #f8f8f2">(DataFlow::Node</span> <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">DataFlow::Node</span> <span style="color: #f8f8f2">sink</span> <span style="color: #f92672">|</span>
+    <span style="color: #f8f8f2">DataFlow::localFlow(</span><span style="color: #66d9ef">source</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sink)</span> <span style="color: #66d9ef">and</span>
+    <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">.asExpr()</span> <span style="color: #f8f8f2">instanceof</span> <span style="color: #f8f8f2">StringLiteral</span> <span style="color: #66d9ef">and</span>
+    <span style="color: #f8f8f2">sink.asExpr()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">formatString</span>
+  <span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">select</span> <span style="color: #66d9ef">call</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Argument to &quot;</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">format.getQualifiedName()</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&quot; isn&#39;t hard-coded.&quot;</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">semmle</span><span class="p">.</span><span class="n">code</span><span class="p">.</span><span class="n">cpp</span><span class="p">.</span><span class="n">dataflow</span><span class="p">.</span><span class="n">DataFlow</span>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">import</span> <span style="color: #f8f8f2">semmle.code.cpp.dataflow.DataFlow</span>
 
-<span class="k">class</span> <span class="n">EnvironmentToFileConfiguration</span> <span class="n">extends</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">Configuration</span> <span class="err">{</span>
-  <span class="n">EnvironmentToFileConfiguration</span><span class="p">()</span> <span class="err">{</span> <span class="n">this</span> <span class="o">=</span> <span class="ss">&quot;EnvironmentToFileConfiguration&quot;</span> <span class="err">}</span>
+<span style="color: #66d9ef">class</span> <span style="color: #f8f8f2">EnvironmentToFileConfiguration</span> <span style="color: #f8f8f2">extends</span> <span style="color: #f8f8f2">DataFlow::Configuration</span> <span style="color: #960050; background-color: #1e0010">{</span>
+  <span style="color: #f8f8f2">EnvironmentToFileConfiguration()</span> <span style="color: #960050; background-color: #1e0010">{</span> <span style="color: #f8f8f2">this</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;EnvironmentToFileConfiguration&quot;</span> <span style="color: #960050; background-color: #1e0010">}</span>
 
-  <span class="n">override</span> <span class="n">predicate</span> <span class="n">isSource</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="k">source</span><span class="p">)</span> <span class="err">{</span>
-    <span class="k">exists</span> <span class="p">(</span><span class="k">Function</span> <span class="n">getenv</span> <span class="o">|</span>
-      <span class="k">source</span><span class="p">.</span><span class="n">asExpr</span><span class="p">().(</span><span class="n">FunctionCall</span><span class="p">).</span><span class="n">getTarget</span><span class="p">()</span> <span class="o">=</span> <span class="n">getenv</span> <span class="k">and</span>
-      <span class="n">getenv</span><span class="p">.</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;getenv&quot;</span><span class="p">)</span>
-    <span class="p">)</span>
-  <span class="err">}</span>
+  <span style="color: #f8f8f2">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSource(DataFlow::Node</span> <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">)</span> <span style="color: #960050; background-color: #1e0010">{</span>
+    <span style="color: #66d9ef">exists</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">Function</span> <span style="color: #f8f8f2">getenv</span> <span style="color: #f92672">|</span>
+      <span style="color: #66d9ef">source</span><span style="color: #f8f8f2">.asExpr().(FunctionCall).getTarget()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">getenv</span> <span style="color: #66d9ef">and</span>
+      <span style="color: #f8f8f2">getenv.hasQualifiedName(</span><span style="color: #e6db74">&quot;getenv&quot;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">)</span>
+  <span style="color: #960050; background-color: #1e0010">}</span>
 
-  <span class="n">override</span> <span class="n">predicate</span> <span class="n">isSink</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">Node</span> <span class="n">sink</span><span class="p">)</span> <span class="err">{</span>
-    <span class="k">exists</span> <span class="p">(</span><span class="n">FunctionCall</span> <span class="n">fc</span> <span class="o">|</span>
-      <span class="n">sink</span><span class="p">.</span><span class="n">asExpr</span><span class="p">()</span> <span class="o">=</span> <span class="n">fc</span><span class="p">.</span><span class="n">getArgument</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">and</span>
-      <span class="n">fc</span><span class="p">.</span><span class="n">getTarget</span><span class="p">().</span><span class="n">hasQualifiedName</span><span class="p">(</span><span class="ss">&quot;fopen&quot;</span><span class="p">)</span>
-    <span class="p">)</span>
-  <span class="err">}</span>
-<span class="err">}</span>
+  <span style="color: #f8f8f2">override</span> <span style="color: #f8f8f2">predicate</span> <span style="color: #f8f8f2">isSink(DataFlow::Node</span> <span style="color: #f8f8f2">sink)</span> <span style="color: #960050; background-color: #1e0010">{</span>
+    <span style="color: #66d9ef">exists</span> <span style="color: #f8f8f2">(FunctionCall</span> <span style="color: #f8f8f2">fc</span> <span style="color: #f92672">|</span>
+      <span style="color: #f8f8f2">sink.asExpr()</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">fc.getArgument(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span> <span style="color: #66d9ef">and</span>
+      <span style="color: #f8f8f2">fc.getTarget().hasQualifiedName(</span><span style="color: #e6db74">&quot;fopen&quot;</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">)</span>
+  <span style="color: #960050; background-color: #1e0010">}</span>
+<span style="color: #960050; background-color: #1e0010">}</span>
 
-<span class="k">from</span> <span class="n">Expr</span> <span class="n">getenv</span><span class="p">,</span> <span class="n">Expr</span> <span class="n">fopen</span><span class="p">,</span> <span class="n">EnvironmentToFileConfiguration</span> <span class="n">config</span>
-<span class="k">where</span> <span class="n">config</span><span class="p">.</span><span class="n">hasFlow</span><span class="p">(</span><span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">getenv</span><span class="p">),</span> <span class="n">DataFlow</span><span class="p">::</span><span class="n">exprNode</span><span class="p">(</span><span class="n">fopen</span><span class="p">))</span>
-<span class="k">select</span> <span class="n">fopen</span><span class="p">,</span> <span class="ss">&quot;This &#39;fopen&#39; uses data from $@.&quot;</span><span class="p">,</span>
-  <span class="n">getenv</span><span class="p">,</span> <span class="ss">&quot;call to &#39;getenv&#39;&quot;</span>
+<span style="color: #66d9ef">from</span> <span style="color: #f8f8f2">Expr</span> <span style="color: #f8f8f2">getenv,</span> <span style="color: #f8f8f2">Expr</span> <span style="color: #f8f8f2">fopen,</span> <span style="color: #f8f8f2">EnvironmentToFileConfiguration</span> <span style="color: #f8f8f2">config</span>
+<span style="color: #66d9ef">where</span> <span style="color: #f8f8f2">config.hasFlow(DataFlow::exprNode(getenv),</span> <span style="color: #f8f8f2">DataFlow::exprNode(fopen))</span>
+<span style="color: #66d9ef">select</span> <span style="color: #f8f8f2">fopen,</span> <span style="color: #e6db74">&quot;This &#39;fopen&#39; uses data from $@.&quot;</span><span style="color: #f8f8f2">,</span>
+  <span style="color: #f8f8f2">getenv,</span> <span style="color: #e6db74">&quot;call to &#39;getenv&#39;&quot;</span>
 </pre></div>
                 
                   
@@ -1932,7 +2046,7 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../lua/lua/" title="lua" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1941,11 +2055,25 @@ mv codeql <span class="nv">$HOME</span>/codeql-home/codeql-cli
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                lua
+                python-prompt-toolkit
               </span>
             </div>
           </a>
         
+        
+          <a href="../../webs/webs/" title="webs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                webs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
