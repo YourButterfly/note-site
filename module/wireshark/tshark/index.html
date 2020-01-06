@@ -457,6 +457,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../fuzzing/afl/" title="afl" class="md-nav__link">
+      afl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
       GUI
     </a>
@@ -900,6 +912,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-2" class="md-nav__link">
+    -2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -979,6 +1011,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    选项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-2" class="md-nav__link">
+    -2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -1009,6 +1061,10 @@ tshark -G <span style="color: #f92672">[</span> &lt;report type&gt; <span style=
 <h2 id="_1">描述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>Tshrak 是一个网络协议分析工具，可以从实时网络捕获数据包数据，也可以从先前保存的捕获文件中读取数据包，进而将这些包的解码形式输出到标准输出，或者将这些包写入文件。</p>
 <p>捕获文件的默认格式是pcapng</p>
+<h2 id="_2">选项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="-2">-2<a class="headerlink" href="#-2" title="Permanent link">&para;</a></h3>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>Perform a two-pass analysis. This causes tshark to buffer output until the entire first pass is done, but allows it to fill in fields that require future knowledge, such as &#39;response in frame #&#39; fields. Also permits reassembly frame dependencies to be calculated correctly.
+</pre></div>
                 
                   
                 

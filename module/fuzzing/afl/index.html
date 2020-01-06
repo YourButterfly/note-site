@@ -1,0 +1,1388 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/fuzzing/afl/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>afl - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#afl" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              
+                afl
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      assembly
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        assembly
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      concolic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        concolic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      file format
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        file format
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        afl
+      </label>
+    
+    <a href="./" title="afl" class="md-nav__link md-nav__link--active">
+      afl
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    种子同步问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distributed-mode" class="md-nav__link">
+    distributed mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#afl_1" class="md-nav__link">
+    AFL并行模式同步机制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../honggfuzz/" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-debug/" title="kernel-debug" class="md-nav__link">
+      kernel-debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-kvm/" title="kernel-kvm" class="md-nav__link">
+      kernel-kvm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      semmel-ql
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        semmel-ql
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
+      CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    种子同步问题
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distributed-mode" class="md-nav__link">
+    distributed mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#afl_1" class="md-nav__link">
+    AFL并行模式同步机制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/fuzzing/afl.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="afl">AFL<a class="headerlink" href="#afl" title="Permanent link">&para;</a></h1>
+<h2 id="_1">种子同步问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>如果我有一个好的种子，想要加入一个正在运行的AFL实例中，怎么办</p>
+<h3 id="distributed-mode">distributed mode<a class="headerlink" href="#distributed-mode" title="Permanent link">&para;</a></h3>
+<p>如果AFL以并行模式运行（-M / -S），比较好办</p>
+<h4 id="afl_1">AFL并行模式同步机制<a class="headerlink" href="#afl_1" title="Permanent link">&para;</a></h4>
+<p>关键数据sync_dir和sync_id</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">EXP_ST</span> <span style="color: #f8f8f2">u8</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">sync_dir,</span>                  <span style="color: #75715e">/* Synchronization directory        */</span>
+          <span style="color: #f92672">*</span><span style="color: #f8f8f2">sync_id,</span>                   <span style="color: #75715e">/* Fuzzer ID                        */</span>
+</pre></div>
+
+<p>sync_id就是 -M / -S 后面的参数</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>      <span style="color: #66d9ef">case</span> <span style="color: #e6db74">&#39;M&#39;</span><span style="color: #f92672">:</span> <span style="color: #f8f8f2">{</span> <span style="color: #75715e">/* master sync ID */</span>
+
+          <span style="color: #f8f8f2">u8</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">c;</span>
+
+          <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(sync_id)</span> <span style="color: #f8f8f2">FATAL(</span><span style="color: #e6db74">&quot;Multiple -S or -M options not supported&quot;</span><span style="color: #f8f8f2">);</span>
+          <span style="color: #f8f8f2">sync_id</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ck_strdup(optarg);</span>
+</pre></div>
+
+<p>sync_dir的值等于-o 后面的参数，也就是说并行模式下out目录变成sync_dir, 真正的out目录变成 sync_dir/sync_id</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">static</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">fix_up_sync</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #75715e">//...</span>
+
+  <span style="color: #f8f8f2">x</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">out_dir,</span> <span style="color: #f8f8f2">sync_id);</span>
+
+  <span style="color: #f8f8f2">sync_dir</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">out_dir;</span>
+  <span style="color: #f8f8f2">out_dir</span>  <span style="color: #f92672">=</span> <span style="color: #f8f8f2">x;</span>
+
+  <span style="color: #75715e">//...</span>
+</pre></div>
+
+<p>执行同步的函数 <code>sync_fuzzers</code></p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">static</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">sync_fuzzers</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">char</span><span style="color: #f92672">**</span> <span style="color: #f8f8f2">argv)</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #66d9ef">DIR</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">sd;</span>
+  <span style="color: #66d9ef">struct</span> <span style="color: #f8f8f2">dirent</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">sd_ent;</span>
+  <span style="color: #f8f8f2">u32</span> <span style="color: #f8f8f2">sync_cnt</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #f8f8f2">sd</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">opendir(sync_dir);</span>
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #f92672">!</span><span style="color: #f8f8f2">sd)</span> <span style="color: #f8f8f2">PFATAL(</span><span style="color: #e6db74">&quot;Unable to open &#39;%s&#39;&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sync_dir);</span>
+
+  <span style="color: #f8f8f2">stage_max</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #f8f8f2">cur_depth</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+  <span style="color: #75715e">/* Look at the entries created for every other fuzzer in the sync directory. */</span>
+
+  <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">((sd_ent</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">readdir(sd)))</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">u8</span> <span style="color: #f8f8f2">stage_tmp[</span><span style="color: #ae81ff">128</span><span style="color: #f8f8f2">];</span>
+
+    <span style="color: #66d9ef">DIR</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">qd;</span>
+    <span style="color: #66d9ef">struct</span> <span style="color: #f8f8f2">dirent</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">qd_ent;</span>
+    <span style="color: #f8f8f2">u8</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">qd_path,</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">qd_synced_path;</span>
+    <span style="color: #f8f8f2">u32</span> <span style="color: #f8f8f2">min_accept</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">next_min_accept;</span>
+
+    <span style="color: #f8f8f2">s32</span> <span style="color: #f8f8f2">id_fd;</span>
+
+    <span style="color: #75715e">/* Skip dot files and our own output directory. */</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(sd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;.&#39;</span> <span style="color: #f92672">||</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">strcmp(sync_id,</span> <span style="color: #f8f8f2">sd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name))</span> <span style="color: #66d9ef">continue</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">/* Skip anything that doesn&#39;t have a queue/ subdirectory. */</span>
+    <span style="color: #75715e">/* 跳过没有queue这个子目录的文件夹 */</span>
+
+    <span style="color: #f8f8f2">qd_path</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/%s/queue&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">sync_dir,</span> <span style="color: #f8f8f2">sd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name);</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #f92672">!</span><span style="color: #f8f8f2">(qd</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">opendir(qd_path)))</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #f8f8f2">ck_free(qd_path);</span>
+      <span style="color: #66d9ef">continue</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">/* Retrieve the ID of the last seen test case. */</span>
+
+    <span style="color: #f8f8f2">qd_synced_path</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/.synced/%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">out_dir,</span> <span style="color: #f8f8f2">sd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name);</span>
+
+    <span style="color: #f8f8f2">id_fd</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">open(qd_synced_path,</span> <span style="color: #f8f8f2">O_RDWR</span> <span style="color: #f92672">|</span> <span style="color: #f8f8f2">O_CREAT,</span> <span style="color: #ae81ff">0600</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(id_fd</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">PFATAL(</span><span style="color: #e6db74">&quot;Unable to create &#39;%s&#39;&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">qd_synced_path);</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(read(id_fd,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">min_accept,</span> <span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(u32))</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+      <span style="color: #f8f8f2">lseek(id_fd,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">SEEK_SET);</span>
+    <span style="color: #75715e">/* 获取最小可接受id值，其值等于上次同步的种子id + 1</span>
+<span style="color: #75715e">    next_min_accept = min_accept;</span>
+
+<span style="color: #75715e">    /* Show stats */</span>
+
+    <span style="color: #f8f8f2">sprintf(stage_tmp,</span> <span style="color: #e6db74">&quot;sync %u&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">++</span><span style="color: #f8f8f2">sync_cnt);</span>
+    <span style="color: #f8f8f2">stage_name</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">stage_tmp;</span>
+    <span style="color: #f8f8f2">stage_cur</span>  <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">stage_max</span>  <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">/* For every file queued by this fuzzer, parse ID and see if we have looked at</span>
+<span style="color: #75715e">       it before; exec a test case if not. */</span>
+
+    <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">((qd_ent</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">readdir(qd)))</span> <span style="color: #f8f8f2">{</span> <span style="color: #75715e">/* 打开另一个fuzz实例的out目录下的queue文件夹</span>
+
+<span style="color: #75715e">      u8* path;</span>
+<span style="color: #75715e">      s32 fd;</span>
+<span style="color: #75715e">      struct stat st;</span>
+<span style="color: #75715e">      /* 排除 &#39;.&#39;开头的文件，排除非id:XXXXXX开头的文件，排除XXXXXX小于上次记录的id的文件 */</span>
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(qd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;.&#39;</span> <span style="color: #f92672">||</span>
+          <span style="color: #f8f8f2">sscanf(qd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name,</span> <span style="color: #f8f8f2">CASE_PREFIX</span> <span style="color: #e6db74">&quot;%06u&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">syncing_case)</span> <span style="color: #f92672">!=</span> <span style="color: #ae81ff">1</span> <span style="color: #f92672">||</span>
+          <span style="color: #f8f8f2">syncing_case</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">min_accept)</span> <span style="color: #66d9ef">continue</span><span style="color: #f8f8f2">;</span>
+
+      <span style="color: #75715e">/* OK, sounds like a new one. Let&#39;s give it a try. */</span>
+
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(syncing_case</span> <span style="color: #f92672">&gt;=</span> <span style="color: #f8f8f2">next_min_accept)</span>
+        <span style="color: #f8f8f2">next_min_accept</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">syncing_case</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+
+      <span style="color: #f8f8f2">path</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">qd_path,</span> <span style="color: #f8f8f2">qd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name);</span>
+
+      <span style="color: #75715e">/* Allow this to fail in case the other fuzzer is resuming or so... */</span>
+
+      <span style="color: #f8f8f2">fd</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">open(path,</span> <span style="color: #f8f8f2">O_RDONLY);</span>
+
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(fd</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+         <span style="color: #f8f8f2">ck_free(path);</span>
+         <span style="color: #66d9ef">continue</span><span style="color: #f8f8f2">;</span>
+      <span style="color: #f8f8f2">}</span>
+
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(fstat(fd,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">st))</span> <span style="color: #f8f8f2">PFATAL(</span><span style="color: #e6db74">&quot;fstat() failed&quot;</span><span style="color: #f8f8f2">);</span>
+
+      <span style="color: #75715e">/* Ignore zero-sized or oversized files. */</span>
+
+      <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(st.st_size</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f8f8f2">st.st_size</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">MAX_FILE)</span> <span style="color: #f8f8f2">{</span>
+
+        <span style="color: #f8f8f2">u8</span>  <span style="color: #f8f8f2">fault;</span>
+        <span style="color: #f8f8f2">u8</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">mem</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">mmap(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">st.st_size,</span> <span style="color: #f8f8f2">PROT_READ,</span> <span style="color: #f8f8f2">MAP_PRIVATE,</span> <span style="color: #f8f8f2">fd,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(mem</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">MAP_FAILED)</span> <span style="color: #f8f8f2">PFATAL(</span><span style="color: #e6db74">&quot;Unable to mmap &#39;%s&#39;&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">path);</span>
+
+        <span style="color: #75715e">/* See what happens. We rely on save_if_interesting() to catch major</span>
+<span style="color: #75715e">           errors and save the test case. */</span>
+
+        <span style="color: #f8f8f2">write_to_testcase(mem,</span> <span style="color: #f8f8f2">st.st_size);</span>
+
+        <span style="color: #f8f8f2">fault</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">run_target(argv,</span> <span style="color: #f8f8f2">exec_tmout);</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(stop_soon)</span> <span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #f8f8f2">syncing_party</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sd_ent</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">d_name;</span>
+        <span style="color: #f8f8f2">queued_imported</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">save_if_interesting(argv,</span> <span style="color: #f8f8f2">mem,</span> <span style="color: #f8f8f2">st.st_size,</span> <span style="color: #f8f8f2">fault);</span>
+        <span style="color: #f8f8f2">syncing_party</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #f8f8f2">munmap(mem,</span> <span style="color: #f8f8f2">st.st_size);</span>
+
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #f92672">!</span><span style="color: #f8f8f2">(stage_cur</span><span style="color: #f92672">++</span> <span style="color: #f92672">%</span> <span style="color: #f8f8f2">stats_update_freq))</span> <span style="color: #f8f8f2">show_stats();</span>
+
+      <span style="color: #f8f8f2">}</span>
+
+      <span style="color: #f8f8f2">ck_free(path);</span>
+      <span style="color: #f8f8f2">close(fd);</span>
+
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">ck_write(id_fd,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">next_min_accept,</span> <span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(u32),</span> <span style="color: #f8f8f2">qd_synced_path);</span>
+
+    <span style="color: #f8f8f2">close(id_fd);</span>
+    <span style="color: #f8f8f2">closedir(qd);</span>
+    <span style="color: #f8f8f2">ck_free(qd_path);</span>
+    <span style="color: #f8f8f2">ck_free(qd_synced_path);</span>
+
+  <span style="color: #f8f8f2">}</span>  
+
+  <span style="color: #f8f8f2">closedir(sd);</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>大致流程</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">for</span> 目录 in 打开sync_dir目录并获取目录下的所有目录
+<span style="color: #66d9ef">do</span>
+  <span style="color: #66d9ef">if</span> 目录没有queue这个子目录 -o 目录名称等于当前sync_id, 即不同步自己<span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">then</span> 跳过<span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">fi</span>
+  获取最小可接受id值，其值等于上次同步的种子id + <span style="color: #ae81ff">1</span>
+  <span style="color: #66d9ef">for</span> seed in 打开queue目录下的所有文件
+    <span style="color: #66d9ef">do</span>
+      <span style="color: #66d9ef">if</span> <span style="color: #e6db74">&#39;.&#39;</span>开头的文件 -o 非id:XXXXXX开头的文件 -o id:XXXXXX小于最小可接受id值<span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">then</span> 跳过<span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">fi</span>
+      更新最小可接受id值，其值等于当前id + <span style="color: #ae81ff">1</span>
+      save_if_interesting<span style="color: #f92672">(</span>argv, mem, st.st_size, fault<span style="color: #f92672">)</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">done</span>
+<span style="color: #66d9ef">done</span>
+</pre></div>
+
+<p>save_if_interesting 流程</p>
+<p>在非crash_mode下，同步的种子如果超时或者崩溃，是不会加入队列的。如果bitmap有更新，是会计入hangs或者crashes</p>
+<p>在crash_mode下，同步的种子崩溃，加入队列，如果bitmap有更新计入crashes。超时处理与非crash_mode相同</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">u8</span> <span style="color: #a6e22e">save_if_interesting</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">char</span><span style="color: #f92672">**</span> <span style="color: #f8f8f2">argv,</span> <span style="color: #66d9ef">void</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">mem,</span> <span style="color: #f8f8f2">u32</span> <span style="color: #f8f8f2">len,</span> <span style="color: #f8f8f2">u8</span> <span style="color: #f8f8f2">fault)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">// ...</span>
+  <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(fault</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">crash_mode)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #75715e">/* crash_mode 默认为0，也就是FAULT_NONE, &#39;-C&#39; 指定crash_mode为FAULT_CRASH */</span>
+    <span style="color: #75715e">/* bitmap不更新直接返回 */</span>
+    <span style="color: #75715e">// ...</span>
+    <span style="color: #f8f8f2">fn</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/queue/id:%06u,%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">out_dir,</span> <span style="color: #f8f8f2">queued_paths,</span>
+                      <span style="color: #f8f8f2">describe_op(hnb));</span>
+    <span style="color: #75715e">// ...</span>
+    <span style="color: #f8f8f2">keeping</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #66d9ef">switch</span> <span style="color: #f8f8f2">(fault)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">FAULT_TMOUT:</span>
+      <span style="color: #75715e">/* 如果没有更新或者大于上限直接返回 */</span>
+      <span style="color: #75715e">// ..</span>
+      <span style="color: #f8f8f2">fn</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/hangs/id:%06llu,%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">out_dir,</span>
+                        <span style="color: #f8f8f2">unique_hangs,</span> <span style="color: #f8f8f2">describe_op(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">));</span>
+      <span style="color: #75715e">// ...</span>
+
+    <span style="color: #66d9ef">case</span> <span style="color: #f8f8f2">FAULT_CRASH:</span>
+      <span style="color: #75715e">/* 如果没有更新或者大于上限直接返回 */</span>
+      <span style="color: #75715e">// ...</span>
+      <span style="color: #f8f8f2">fn</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">alloc_printf(</span><span style="color: #e6db74">&quot;%s/crashes/id:%06llu,sig:%02u,%s&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">out_dir,</span>
+                        <span style="color: #f8f8f2">unique_crashes,</span> <span style="color: #f8f8f2">kill_signal,</span> <span style="color: #f8f8f2">describe_op(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">));</span>
+      <span style="color: #75715e">// ...</span>
+  <span style="color: #f8f8f2">}</span>
+
+  <span style="color: #75715e">/* If we&#39;re here, we apparently want to save the crash or hang</span>
+<span style="color: #75715e">     test case, too. */</span>
+  <span style="color: #75715e">// ...</span>
+  <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">keeping;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>AFL_HANG_TMOUT</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../fileformat/pdf/" title="PDF" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                PDF
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../gui/" title="GUI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                GUI
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
