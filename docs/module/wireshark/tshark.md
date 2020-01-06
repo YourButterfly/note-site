@@ -16,4 +16,10 @@ Tshrak 是一个网络协议分析工具，可以从实时网络捕获数据包�
 
 捕获文件的默认格式是pcapng
 
+## 选项
 
+### -2
+
+```txt
+Perform a two-pass analysis. This causes tshark to buffer output until the entire first pass is done, but allows it to fill in fields that require future knowledge, such as 'response in frame #' fields. Also permits reassembly frame dependencies to be calculated correctly.
+```
