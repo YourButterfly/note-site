@@ -22,6 +22,7 @@ nav:
                 - DOT: module/fileformat/dot.md
                 - PDF: module/fileformat/pdf.md
         - fuzzing:
+            - afl: module/fuzzing/afl.md
             # - asan: module/fuzzing/asan.md
             - GUI: module/fuzzing/gui.md
             - honggfuzz: module/fuzzing/honggfuzz.md
