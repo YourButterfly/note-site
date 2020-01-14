@@ -1,0 +1,2022 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/wireshark/protocol_register/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>protocol register - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#protocol-register" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              
+                protocol register
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      assembly
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        assembly
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      concolic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        concolic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      file format
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        file format
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/afl/" title="afl" class="md-nav__link">
+      afl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/honggfuzz/" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-debug/" title="kernel-debug" class="md-nav__link">
+      kernel-debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-kvm/" title="kernel-kvm" class="md-nav__link">
+      kernel-kvm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      semmel-ql
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        semmel-ql
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
+      CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a21" class="md-nav__link">
+    a21
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aarp" class="md-nav__link">
+    aarp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aasp" class="md-nav__link">
+    aasp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acap" class="md-nav__link">
+    acap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acn" class="md-nav__link">
+    acn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acp133" class="md-nav__link">
+    acp133
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acr122" class="md-nav__link">
+    acr122
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acse" class="md-nav__link">
+    acse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actrace" class="md-nav__link">
+    actrace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adb_cs" class="md-nav__link">
+    adb_cs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adb" class="md-nav__link">
+    adb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adwin_config" class="md-nav__link">
+    adwin_config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adwin" class="md-nav__link">
+    adwin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeron" class="md-nav__link">
+    aeron
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afp" class="md-nav__link">
+    afp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#afs" class="md-nav__link">
+    afs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agentx" class="md-nav__link">
+    agentx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ain" class="md-nav__link">
+    ain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajp13" class="md-nav__link">
+    ajp13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alcap" class="md-nav__link">
+    alcap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alljoyn" class="md-nav__link">
+    AllJoyn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amp" class="md-nav__link">
+    amp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amqp" class="md-nav__link">
+    amqp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amr" class="md-nav__link">
+    amr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amt" class="md-nav__link">
+    amt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ancp" class="md-nav__link">
+    ancp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ans" class="md-nav__link">
+    ans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansi_637" class="md-nav__link">
+    ansi_637
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansi_" class="md-nav__link">
+    ansi_*
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aodv" class="md-nav__link">
+    aodv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aoe" class="md-nav__link">
+    aoe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aol" class="md-nav__link">
+    aol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ap1394" class="md-nav__link">
+    ap1394
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-pkix-cert" class="md-nav__link">
+    app-pkix-cert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applemidi" class="md-nav__link">
+    applemidi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aprs" class="md-nav__link">
+    aprs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ar_drone" class="md-nav__link">
+    ar_drone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arcnet" class="md-nav__link">
+    arcnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armagetronad" class="md-nav__link">
+    armagetronad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp" class="md-nav__link">
+    arp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artemis" class="md-nav__link">
+    artemis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#artnet" class="md-nav__link">
+    artnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aruba-adp" class="md-nav__link">
+    aruba-adp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aruba_erm" class="md-nav__link">
+    aruba_erm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aruba_iap" class="md-nav__link">
+    aruba_iap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#papi" class="md-nav__link">
+    papi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/wireshark/protocol_register.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="protocol-register">protocol register<a class="headerlink" href="#protocol-register" title="Permanent link">&para;</a></h1>
+<h2 id="a21">a21<a class="headerlink" href="#a21" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_a21</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;A21 Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;A21&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;a21&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">proto_reg_handoff_a21</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">a21_handle;</span>
+
+    <span style="color: #f8f8f2">a21_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_a21,</span> <span style="color: #f8f8f2">proto_a21);</span>
+    <span style="color: #f8f8f2">gcsna_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;gcsna&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_a21);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">A21_PORT,</span> <span style="color: #f8f8f2">a21_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aarp">aarp<a class="headerlink" href="#aarp" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_aarp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Appletalk Address Resolution Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                                       <span style="color: #e6db74">&quot;AARP&quot;</span><span style="color: #f8f8f2">,</span>
+                                       <span style="color: #e6db74">&quot;aarp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aarp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">aarp_handle;</span>
+
+  <span style="color: #f8f8f2">aarp_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aarp,</span> <span style="color: #f8f8f2">proto_aarp);</span>
+  <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;ethertype&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ETHERTYPE_AARP,</span> <span style="color: #f8f8f2">aarp_handle);</span>
+  <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;chdlc.protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ETHERTYPE_AARP,</span> <span style="color: #f8f8f2">aarp_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aasp">aasp<a class="headerlink" href="#aasp" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aasp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Aastra Signalling Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AASP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aasp&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aasp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">aasp_handle;</span>
+    <span style="color: #f8f8f2">aasp_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aasp,</span> <span style="color: #f8f8f2">proto_aasp);</span>
+    <span style="color: #f8f8f2">dissector_add_string(</span><span style="color: #e6db74">&quot;media_type&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;message/x-aasp-signalling&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">aasp_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="acap">acap<a class="headerlink" href="#acap" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_acap</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Application Configuration Access Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                         <span style="color: #e6db74">&quot;ACAP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;acap&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_acap</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">TCP_PORT_ACAP,</span> <span style="color: #f8f8f2">acap_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="acn">acn<a class="headerlink" href="#acn" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_acn</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol</span> <span style="color: #f8f8f2">(</span>
+    <span style="color: #e6db74">&quot;Architecture for Control Networks&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #75715e">/* name */</span>
+    <span style="color: #e6db74">&quot;ACN&quot;</span><span style="color: #f8f8f2">,</span>                               <span style="color: #75715e">/* short name */</span>
+    <span style="color: #e6db74">&quot;acn&quot;</span>                                <span style="color: #75715e">/* abbrev */</span>
+    <span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_acn</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">/* dissector_handle_t acn_handle; */</span>
+  <span style="color: #75715e">/* acn_handle = create_dissector_handle(dissect_acn, proto_acn); */</span>
+  <span style="color: #75715e">/* dissector_add_for_decode_as_with_preference(&quot;udp.port&quot;, acn_handle);                         */</span>
+  <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_acn_heur,</span> <span style="color: #e6db74">&quot;ACN over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;acn_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_acn,</span> <span style="color: #f8f8f2">HEURISTIC_DISABLE);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="acp133">acp133<a class="headerlink" href="#acp133" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#define PNAME  &quot;ACP133 Attribute Syntaxes&quot;</span>
+<span style="color: #75715e">#define PSNAME &quot;ACP133&quot;</span>
+<span style="color: #75715e">#define PFNAME &quot;acp133&quot;</span>
+
+<span style="color: #960050; background-color: #1e0010">&#39;</span><span style="color: #f8f8f2">ber.oid</span><span style="color: #960050; background-color: #1e0010">&#39;</span>
+</pre></div>
+
+<h2 id="acr122">acr122<a class="headerlink" href="#acr122" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<h2 id="acse">acse<a class="headerlink" href="#acse" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#define PNAME  &quot;ISO 8650-1 OSI Association Control Service&quot;</span>
+<span style="color: #75715e">#define PSNAME &quot;ACSE&quot;</span>
+<span style="color: #75715e">#define PFNAME &quot;acse&quot;</span>
+
+<span style="color: #75715e">#define CLPNAME  &quot;ISO 10035-1 OSI Connectionless Association Control Service&quot;</span>
+<span style="color: #75715e">#define CLPSNAME &quot;CLACSE&quot;</span>
+<span style="color: #75715e">#define CLPFNAME &quot;clacse&quot;</span>
+
+<span style="color: #960050; background-color: #1e0010">&#39;</span><span style="color: #f8f8f2">ber.oid</span><span style="color: #960050; background-color: #1e0010">&#39;</span>
+</pre></div>
+
+<h2 id="actrace">actrace<a class="headerlink" href="#actrace" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #75715e">/* Register protocol */</span>
+    <span style="color: #f8f8f2">proto_actrace</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AudioCodes Trunk Trace&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ACtrace&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;actrace&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #75715e">/* The registration hand-off routine */</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">proto_reg_handoff_actrace</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">actrace_handle;</span>
+
+    <span style="color: #75715e">/* Get a handle for the lapd dissector. */</span>
+    <span style="color: #f8f8f2">lapd_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;lapd&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_actrace);</span>
+
+    <span style="color: #f8f8f2">actrace_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_actrace,</span> <span style="color: #f8f8f2">proto_actrace);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">UDP_PORT_ACTRACE,</span> <span style="color: #f8f8f2">actrace_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="adb_cs">adb_cs<a class="headerlink" href="#adb_cs" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_adb_cs</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Android Debug Bridge Client-Server&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ADB CS&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adb_cs&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_adb_cs</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">adb_service_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;adb_service&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_adb_cs);</span>
+
+    <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">adb_cs_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="adb">adb<a class="headerlink" href="#adb" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_adb</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Android Debug Bridge&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ADB&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adb&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_adb</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">adb_service_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;adb_service&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_adb);</span>
+
+    <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span>     <span style="color: #f8f8f2">adb_handle);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as(</span><span style="color: #e6db74">&quot;usb.device&quot;</span><span style="color: #f8f8f2">,</span>   <span style="color: #f8f8f2">adb_handle);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as(</span><span style="color: #e6db74">&quot;usb.product&quot;</span><span style="color: #f8f8f2">,</span>  <span style="color: #f8f8f2">adb_handle);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as(</span><span style="color: #e6db74">&quot;usb.protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">adb_handle);</span>
+
+    <span style="color: #f8f8f2">proto_tcp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_get_id_by_filter_name(</span><span style="color: #e6db74">&quot;tcp&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">proto_usb</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_get_id_by_filter_name(</span><span style="color: #e6db74">&quot;usb&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="adwin_config">adwin_config<a class="headerlink" href="#adwin_config" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_adwin_config</span> <span style="color: #f92672">=</span>
+        <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;ADwin configuration protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                    <span style="color: #e6db74">&quot;ADwin-Config&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adwin_config&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">/* Required function calls to register the header fields and</span>
+<span style="color: #75715e">        subtrees used */</span>
+    <span style="color: #f8f8f2">proto_register_field_array(proto_adwin_config,</span> <span style="color: #f8f8f2">hf,</span> <span style="color: #f8f8f2">array_length(hf));</span>
+    <span style="color: #f8f8f2">proto_register_subtree_array(ett,</span> <span style="color: #f8f8f2">array_length(ett));</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #f8f8f2">proto_reg_handoff_adwin_config(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_adwin_config_udp,</span> <span style="color: #e6db74">&quot;ADwin-Config over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adwin_config_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_adwin_config,</span> <span style="color: #f8f8f2">HEURISTIC_ENABLE);</span>
+    <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;tcp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_adwin_config_tcp,</span> <span style="color: #e6db74">&quot;ADwin-Config over TCP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adwin_config_tcp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_adwin_config,</span> <span style="color: #f8f8f2">HEURISTIC_ENABLE);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="adwin">adwin<a class="headerlink" href="#adwin" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_adwin</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">adwin_handle;</span>
+
+    <span style="color: #f8f8f2">adwin_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_adwin,</span> <span style="color: #f8f8f2">proto_adwin);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ADWIN_COMM_PORT,</span> <span style="color: #f8f8f2">adwin_handle);</span>
+<span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">proto_adwin</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;ADwin communication protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                          <span style="color: #e6db74">&quot;ADwin&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adwin&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+<h2 id="aeron">aeron<a class="headerlink" href="#aeron" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aeron</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Aeron Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Aeron&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aeron&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">proto_reg_handoff_aeron</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">aeron_dissector_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aeron,</span> <span style="color: #f8f8f2">proto_aeron);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">aeron_dissector_handle);</span>
+    <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">test_aeron_packet,</span> <span style="color: #e6db74">&quot;Aeron over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aeron_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_aeron,</span> <span style="color: #f8f8f2">HEURISTIC_DISABLE);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="afp">afp<a class="headerlink" href="#afp" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> test</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_afp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Apple Filing Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AFP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;afp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_afp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">spotlight_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;afp_spotlight&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_afp);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="afs">afs<a class="headerlink" href="#afs" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_afs</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Andrew File System (AFS)&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #e6db74">&quot;AFS (RX)&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;afs&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+<h2 id="agentx">agentx<a class="headerlink" href="#agentx" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_agentx</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AgentX&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AgentX&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;agentx&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_agentx</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">agentx_handle;</span>
+    <span style="color: #f8f8f2">agentx_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_agentx,</span> <span style="color: #f8f8f2">proto_agentx);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AGENTX_TCP_PORT,</span> <span style="color: #f8f8f2">agentx_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aim">aim<a class="headerlink" href="#aim" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aim</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AOL Instant Messenger&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AIM&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aim&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">dissector_add_uint_range_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">TCP_PORTS_AIM_DEFAULT,</span> <span style="color: #f8f8f2">aim_handle);</span>
+</pre></div>
+
+<h2 id="ain">ain<a class="headerlink" href="#ain" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#define PNAME  &quot;Advanced Intelligent Network&quot;</span>
+<span style="color: #75715e">#define PSNAME &quot;AIN&quot;</span>
+<span style="color: #75715e">#define PFNAME &quot;ain&quot;</span>
+</pre></div>
+
+<h2 id="ajp13">ajp13<a class="headerlink" href="#ajp13" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_ajp13</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Apache JServ Protocol v1.3&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AJP13&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ajp13&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_ajp13</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">ajp13_handle;</span>
+  <span style="color: #f8f8f2">ajp13_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ajp13,</span> <span style="color: #f8f8f2">proto_ajp13);</span>
+  <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AJP13_TCP_PORT,</span> <span style="color: #f8f8f2">ajp13_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="alcap">alcap<a class="headerlink" href="#alcap" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> alcap</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_alcap</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(alcap_proto_name,</span> <span style="color: #f8f8f2">alcap_proto_name_short,</span> <span style="color: #e6db74">&quot;alcap&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_alcap</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;mtp3.service_indicator&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">MTP_SI_AAL2,</span> <span style="color: #f8f8f2">alcap_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="alljoyn">AllJoyn<a class="headerlink" href="#alljoyn" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> ajns</li>
+<li class="task-list-item"><input type="checkbox" disabled/> aj</li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> ardp</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_AllJoyn_ns</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AllJoyn Name Service Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AllJoyn NS&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ajns&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">/* Message protocols */</span>
+    <span style="color: #f8f8f2">proto_AllJoyn_mess</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AllJoyn Message Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AllJoyn&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aj&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">proto_register_field_array(proto_AllJoyn_ns,</span> <span style="color: #f8f8f2">hf,</span> <span style="color: #f8f8f2">array_length(hf));</span>
+    <span style="color: #f8f8f2">proto_register_subtree_array(ett,</span> <span style="color: #f8f8f2">array_length(ett));</span>
+    <span style="color: #f8f8f2">expert_alljoyn</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">expert_register_protocol(proto_AllJoyn_mess);</span>
+    <span style="color: #f8f8f2">expert_register_field_array(expert_alljoyn,</span> <span style="color: #f8f8f2">ei,</span> <span style="color: #f8f8f2">array_length(ei));</span>
+
+    <span style="color: #75715e">/* ARDP */</span>                        <span style="color: #75715e">/* name, short name, abbrev */</span>
+    <span style="color: #f8f8f2">proto_AllJoyn_ardp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AllJoyn Reliable Datagram Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AllJoyn ARDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ardp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #f8f8f2">proto_reg_handoff_AllJoyn(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">alljoyn_handle_ns;</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">alljoyn_handle_ardp;</span>
+
+    <span style="color: #f8f8f2">alljoyn_handle_ns</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_AllJoyn_name_server,</span> <span style="color: #f8f8f2">proto_AllJoyn_ns);</span>
+    <span style="color: #f8f8f2">alljoyn_handle_ardp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_AllJoyn_ardp,</span> <span style="color: #f8f8f2">proto_AllJoyn_ardp);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ALLJOYN_NAME_SERVER_PORT,</span> <span style="color: #f8f8f2">alljoyn_handle_ns);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ALLJOYN_MESSAGE_PORT,</span>    <span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ALLJOYN_NAME_SERVER_PORT,</span> <span style="color: #f8f8f2">alljoyn_handle_ns);</span>
+
+    <span style="color: #75715e">/* The ARDP dissector will directly call the AllJoyn message dissector if needed.</span>
+<span style="color: #75715e">     * This includes the case where there is no ARDP data. */</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ALLJOYN_MESSAGE_PORT,</span> <span style="color: #f8f8f2">alljoyn_handle_ardp);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="amp">amp<a class="headerlink" href="#amp" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> amp</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_amp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AMP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AMP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;amp&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_amp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;ccsds.apid&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMP_APID,</span> <span style="color: #f8f8f2">amp_handle);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">amp_handle);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #e6db74">&quot;ccsds.apid&quot;</span>
+</pre></div>
+
+<h2 id="amqp">amqp<a class="headerlink" href="#amqp" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_amqp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Advanced Message Queueing Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AMQP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;amqp&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_amqp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">guint</span> <span style="color: #f8f8f2">old_amqps_port</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">gboolean</span> <span style="color: #f8f8f2">initialize</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">FALSE;</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #f92672">!</span><span style="color: #f8f8f2">initialize)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">/* Register TCP port for dissection */</span>
+        <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMQP_PORT,</span> <span style="color: #f8f8f2">amqp_tcp_handle);</span>
+
+        <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;amqp.version&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMQP_V0_9,</span> <span style="color: #f8f8f2">create_dissector_handle(</span> <span style="color: #f8f8f2">dissect_amqpv0_9,</span> <span style="color: #f8f8f2">proto_amqpv0_9</span> <span style="color: #f8f8f2">));</span>
+        <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;amqp.version&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMQP_V0_10,</span> <span style="color: #f8f8f2">create_dissector_handle(</span> <span style="color: #f8f8f2">dissect_amqpv0_10,</span> <span style="color: #f8f8f2">proto_amqpv0_10</span> <span style="color: #f8f8f2">));</span>
+        <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;amqp.version&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMQP_V1_0,</span> <span style="color: #f8f8f2">create_dissector_handle(</span> <span style="color: #f8f8f2">dissect_amqpv1_0,</span> <span style="color: #f8f8f2">proto_amqpv1_0</span> <span style="color: #f8f8f2">));</span>
+
+        <span style="color: #f8f8f2">initialize</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">TRUE;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #75715e">/* Register for SSL/TLS payload dissection */</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(old_amqps_port</span> <span style="color: #f92672">!=</span> <span style="color: #f8f8f2">amqps_port)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(old_amqps_port</span> <span style="color: #f92672">!=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">ssl_dissector_delete(old_amqps_port,</span> <span style="color: #f8f8f2">amqp_tcp_handle);</span>
+        <span style="color: #f8f8f2">ssl_dissector_add(amqps_port,</span> <span style="color: #f8f8f2">amqp_tcp_handle);</span>
+        <span style="color: #f8f8f2">old_amqps_port</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">amqps_port;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">media_type_subdissector_table</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_table</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;media_type&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #e6db74">&quot;tcp.port&quot;</span>
+<span style="color: #e6db74">&quot;tls.port&quot;</span>
+</pre></div>
+
+<h2 id="amr">amr<a class="headerlink" href="#amr" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> amr</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_amr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Adaptive Multi-Rate&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;AMR&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;amr&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #e6db74">&quot;rtp_dyn_payload_type&quot;</span>
+<span style="color: #e6db74">&quot;h245.gef.name&quot;</span>
+</pre></div>
+
+<h2 id="amt">amt<a class="headerlink" href="#amt" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_amt</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Automatic Multicast Tunneling&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AMT&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;amt&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_amt</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">amt_handle;</span>
+
+    <span style="color: #f8f8f2">ip_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;ip&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_amt);</span>
+
+    <span style="color: #f8f8f2">amt_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_amt,</span> <span style="color: #f8f8f2">proto_amt);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">AMT_UDP_PORT,</span> <span style="color: #f8f8f2">amt_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="ancp">ancp<a class="headerlink" href="#ancp" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_ancp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol</span> <span style="color: #f8f8f2">(</span>
+            <span style="color: #e6db74">&quot;Access Node Control Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #e6db74">&quot;ANCP&quot;</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #e6db74">&quot;ancp&quot;</span>
+            <span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_ancp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">ancp_handle;</span>
+
+    <span style="color: #f8f8f2">ancp_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ancp,</span> <span style="color: #f8f8f2">proto_ancp);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ANCP_PORT,</span> <span style="color: #f8f8f2">ancp_handle);</span>
+    <span style="color: #f8f8f2">stats_tree_register(</span><span style="color: #e6db74">&quot;ancp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ancp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ANCP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #f8f8f2">ancp_stats_tree_packet,</span> <span style="color: #f8f8f2">ancp_stats_tree_init,</span> <span style="color: #f8f8f2">NULL);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="ans">ans<a class="headerlink" href="#ans" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_ans</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Intel ANS probe&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ANS&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ans&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_ans</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">ans_handle;</span>
+
+    <span style="color: #f8f8f2">ans_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ans,</span> <span style="color: #f8f8f2">proto_ans);</span>
+    <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;ethertype&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ETHERTYPE_INTEL_ANS,</span> <span style="color: #f8f8f2">ans_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="ansi_637">ansi_637<a class="headerlink" href="#ansi_637" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> ansi_637_trans</li>
+<li class="task-list-item"><input type="checkbox" disabled/> ansi_637_tele</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_ansi_637_tele</span> <span style="color: #f92672">=</span>
+        <span style="color: #f8f8f2">proto_register_protocol(ansi_proto_name_tele,</span> <span style="color: #e6db74">&quot;ANSI IS-637-A Teleservice&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ansi_637_tele&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">proto_ansi_637_trans</span> <span style="color: #f92672">=</span>
+        <span style="color: #f8f8f2">proto_register_protocol(ansi_proto_name_trans,</span> <span style="color: #e6db74">&quot;ANSI IS-637-A Transport&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ansi_637_trans&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">ansi_637_trans_app_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ansi_637_trans_app,</span> <span style="color: #f8f8f2">proto_ansi_637_trans);</span>
+    <span style="color: #f8f8f2">dissector_add_string(</span><span style="color: #e6db74">&quot;media_type&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;application/vnd.3gpp2.sms&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ansi_637_trans_app_handle);</span>
+</pre></div>
+
+<h2 id="ansi_">ansi_*<a class="headerlink" href="#ansi_" title="Permanent link">&para;</a></h2>
+<p>pass</p>
+<h2 id="aodv">aodv<a class="headerlink" href="#aodv" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aodv</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Ad hoc On-demand Distance Vector Routing Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AODV&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aodv&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aodv</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">aodv_handle;</span>
+
+    <span style="color: #f8f8f2">aodv_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aodv,</span>
+                                              <span style="color: #f8f8f2">proto_aodv);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">UDP_PORT_AODV,</span> <span style="color: #f8f8f2">aodv_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aoe">aoe<a class="headerlink" href="#aoe" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_aoe</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;ATAoverEthernet&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AOE&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aoe&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aoe</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;ethertype&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ETHERTYPE_AOE,</span> <span style="color: #f8f8f2">aoe_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aol">aol<a class="headerlink" href="#aol" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aol</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;America Online&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;AOL&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;aol&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">proto_reg_handoff_aol</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">aol_handle;</span>
+
+    <span style="color: #f8f8f2">aol_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aol,proto_aol);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,AOL_PORT,aol_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="ap1394">ap1394<a class="headerlink" href="#ap1394" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> ap1394</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_ap1394</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Apple IP-over-IEEE 1394&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;IP/IEEE1394&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ap1394&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_ap1394</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">ap1394_handle;</span>
+  <span style="color: #f8f8f2">capture_dissector_handle_t</span> <span style="color: #f8f8f2">ap1394_cap_handle;</span>
+
+  <span style="color: #f8f8f2">ethertype_subdissector_table</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_table(</span><span style="color: #e6db74">&quot;ethertype&quot;</span><span style="color: #f8f8f2">);</span>
+
+  <span style="color: #f8f8f2">ap1394_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ap1394,</span> <span style="color: #f8f8f2">proto_ap1394);</span>
+  <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_APPLE_IP_OVER_IEEE1394,</span> <span style="color: #f8f8f2">ap1394_handle);</span>
+
+  <span style="color: #f8f8f2">ap1394_cap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_capture_dissector_handle(capture_ap1394,</span> <span style="color: #f8f8f2">proto_ap1394);</span>
+  <span style="color: #f8f8f2">capture_dissector_add_uint(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_APPLE_IP_OVER_IEEE1394,</span> <span style="color: #f8f8f2">ap1394_cap_handle);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #e6db74">&quot;wtap_encap&quot;</span>
+</pre></div>
+
+<h2 id="app-pkix-cert">app-pkix-cert<a class="headerlink" href="#app-pkix-cert" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>        <span style="color: #f8f8f2">proto_cert</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span>
+                        <span style="color: #e6db74">&quot;PKIX CERT File Format&quot;</span><span style="color: #f8f8f2">,</span>
+                        <span style="color: #e6db74">&quot;PKIX Certificate&quot;</span><span style="color: #f8f8f2">,</span>
+                        <span style="color: #e6db74">&quot;pkix-cert&quot;</span>
+        <span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_cert</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">cert_handle;</span>
+
+        <span style="color: #f8f8f2">cert_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_cert,</span> <span style="color: #f8f8f2">proto_cert);</span>
+
+        <span style="color: #75715e">/* Register the PKIX-CERT media type */</span>
+        <span style="color: #f8f8f2">dissector_add_string(</span><span style="color: #e6db74">&quot;media_type&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;application/pkix-cert&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">cert_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="applemidi">applemidi<a class="headerlink" href="#applemidi" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> applemidi</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#define APPLEMIDI_DISSECTOR_NAME                &quot;Apple Network-MIDI Session Protocol&quot;</span>
+<span style="color: #75715e">#define APPLEMIDI_DISSECTOR_SHORTNAME           &quot;AppleMIDI&quot;</span>
+<span style="color: #75715e">#define APPLEMIDI_DISSECTOR_ABBREVIATION        &quot;applemidi&quot;</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_applemidi</span><span style="color: #f8f8f2">(</span> <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+
+    <span style="color: #f8f8f2">applemidi_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(</span> <span style="color: #f8f8f2">dissect_applemidi,</span> <span style="color: #f8f8f2">proto_applemidi</span> <span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">rtp_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span> <span style="color: #e6db74">&quot;rtp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_applemidi</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">heur_dissector_add(</span> <span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_applemidi_heur,</span> <span style="color: #e6db74">&quot;Apple MIDI over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;applemidi_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_applemidi,</span> <span style="color: #f8f8f2">HEURISTIC_ENABLE</span> <span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aprs">aprs<a class="headerlink" href="#aprs" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aprs</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Automatic Position Reporting System&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;APRS&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aprs&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+<h2 id="ar_drone">ar_drone<a class="headerlink" href="#ar_drone" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_ar_drone</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;AR Drone Packet&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;AR Drone&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ar_drone&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_ar_drone</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">ar_drone_handle;</span>
+
+    <span style="color: #f8f8f2">ar_drone_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_ar_drone,</span> <span style="color: #f8f8f2">proto_ar_drone);</span>
+
+    <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_ar_drone,</span> <span style="color: #e6db74">&quot;AR Drone over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ar_drone_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_ar_drone,</span> <span style="color: #f8f8f2">HEURISTIC_ENABLE);</span>
+    <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ar_drone_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="arcnet">arcnet<a class="headerlink" href="#arcnet" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> arcent</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_arcnet</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;ARCNET&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ARCNET&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;arcnet&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_arcnet</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">arcnet_handle,</span> <span style="color: #f8f8f2">arcnet_linux_handle;</span>
+  <span style="color: #f8f8f2">capture_dissector_handle_t</span> <span style="color: #f8f8f2">arcnet_cap_handle;</span>
+
+  <span style="color: #f8f8f2">arcnet_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle</span> <span style="color: #f8f8f2">(dissect_arcnet,</span> <span style="color: #f8f8f2">proto_arcnet);</span>
+  <span style="color: #f8f8f2">dissector_add_uint</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_ARCNET,</span> <span style="color: #f8f8f2">arcnet_handle);</span>
+
+  <span style="color: #f8f8f2">arcnet_linux_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle</span> <span style="color: #f8f8f2">(dissect_arcnet_linux,</span> <span style="color: #f8f8f2">proto_arcnet);</span>
+  <span style="color: #f8f8f2">dissector_add_uint</span> <span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_ARCNET_LINUX,</span> <span style="color: #f8f8f2">arcnet_linux_handle);</span>
+
+  <span style="color: #f8f8f2">proto_ipx</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_get_id_by_filter_name(</span><span style="color: #e6db74">&quot;ipx&quot;</span><span style="color: #f8f8f2">);</span>
+
+  <span style="color: #f8f8f2">arcnet_cap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_capture_dissector_handle(capture_arcnet,</span> <span style="color: #f8f8f2">proto_arcnet);</span>
+  <span style="color: #f8f8f2">capture_dissector_add_uint(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_ARCNET_LINUX,</span> <span style="color: #f8f8f2">arcnet_cap_handle);</span>
+  <span style="color: #f8f8f2">arcnet_cap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_capture_dissector_handle(capture_arcnet_has_exception,</span> <span style="color: #f8f8f2">proto_arcnet);</span>
+  <span style="color: #f8f8f2">capture_dissector_add_uint(</span><span style="color: #e6db74">&quot;wtap_encap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">WTAP_ENCAP_ARCNET,</span> <span style="color: #f8f8f2">arcnet_cap_handle);</span>
+
+  <span style="color: #f8f8f2">ip_cap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_capture_dissector(</span><span style="color: #e6db74">&quot;ip&quot;</span><span style="color: #f8f8f2">);</span>
+  <span style="color: #f8f8f2">arp_cap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_capture_dissector(</span><span style="color: #e6db74">&quot;arp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #e6db74">&quot;wtap_encap&quot;</span>
+</pre></div>
+
+<h2 id="armagetronad">armagetronad<a class="headerlink" href="#armagetronad" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_armagetronad</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;The Armagetron Advanced OpenGL Tron clone&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Armagetronad&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;armagetronad&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">proto_reg_handoff_armagetronad</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_add_uint_range_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ARMAGETRONAD_UDP_PORT_RANGE,</span> <span style="color: #f8f8f2">armagetronad_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="arp">arp<a class="headerlink" href="#arp" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> arp</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_arp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Address Resolution Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                                      <span style="color: #e6db74">&quot;ARP/RARP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;arp&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+<h2 id="artemis">artemis<a class="headerlink" href="#artemis" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_artemis</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol</span> <span style="color: #f8f8f2">(</span> <span style="color: #e6db74">&quot;Artemis Core Protocol&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;Artemis&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;artemis&quot;</span> <span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_artemis</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">gboolean</span> <span style="color: #f8f8f2">initialize</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">FALSE;</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(</span><span style="color: #f92672">!</span><span style="color: #f8f8f2">initialize)</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">/* Register TCP port for dissection */</span>
+        <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;tcp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ARTEMIS_PORT,</span> <span style="color: #f8f8f2">artemis_tcp_handle);</span>
+        <span style="color: #f8f8f2">initialize</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">TRUE;</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="artnet">artnet<a class="headerlink" href="#artnet" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> artnet</li>
+</ul>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>  <span style="color: #f8f8f2">proto_artnet</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Art-Net&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;ARTNET&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;artnet&quot;</span><span style="color: #f8f8f2">);</span>
+  <span style="color: #f8f8f2">proto_register_field_array(proto_artnet,</span> <span style="color: #f8f8f2">hf,</span> <span style="color: #f8f8f2">array_length(hf));</span>
+  <span style="color: #f8f8f2">proto_register_subtree_array(ett,</span> <span style="color: #f8f8f2">array_length(ett));</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #f8f8f2">proto_reg_handoff_artnet(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">artnet_handle;</span>
+
+  <span style="color: #f8f8f2">artnet_handle</span>   <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_artnet,</span> <span style="color: #f8f8f2">proto_artnet);</span>
+  <span style="color: #f8f8f2">dissector_add_for_decode_as_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">artnet_handle);</span>
+  <span style="color: #f8f8f2">rdm_handle</span>      <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;rdm&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_artnet);</span>
+  <span style="color: #f8f8f2">dmx_chan_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">find_dissector_add_dependency(</span><span style="color: #e6db74">&quot;dmx-chan&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_artnet);</span>
+
+  <span style="color: #f8f8f2">heur_dissector_add(</span><span style="color: #e6db74">&quot;udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">dissect_artnet_heur,</span> <span style="color: #e6db74">&quot;ARTNET over UDP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;artnet_udp&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">proto_artnet,</span> <span style="color: #f8f8f2">HEURISTIC_ENABLE);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aruba-adp">aruba-adp<a class="headerlink" href="#aruba-adp" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aruba_adp</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Aruba Discovery Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                                        <span style="color: #e6db74">&quot;ADP&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;adp&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aruba_adp</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">adp_handle;</span>
+
+    <span style="color: #f8f8f2">adp_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aruba_adp,</span> <span style="color: #f8f8f2">proto_aruba_adp);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">UDP_PORT_ADP,</span> <span style="color: #f8f8f2">adp_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="aruba_erm">aruba_erm<a class="headerlink" href="#aruba_erm" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aruba_erm</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(PROTO_LONG_NAME,</span> <span style="color: #e6db74">&quot;ARUBA_ERM&quot;</span> <span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aruba_erm&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #e6db74">&quot;udp.port&quot;</span>
+<span style="color: #f92672">?</span>
+</pre></div>
+
+<h2 id="aruba_iap">aruba_iap<a class="headerlink" href="#aruba_iap" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_aruba_iap</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Aruba Instant AP Protocol&quot;</span><span style="color: #f8f8f2">,</span>
+                    <span style="color: #e6db74">&quot;aruba_iap&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;aruba_iap&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_aruba_iap</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">iap_handle;</span>
+
+    <span style="color: #f8f8f2">iap_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_aruba_iap,</span> <span style="color: #f8f8f2">proto_aruba_iap);</span>
+    <span style="color: #f8f8f2">dissector_add_uint(</span><span style="color: #e6db74">&quot;ethertype&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ETHERTYPE_IAP,</span> <span style="color: #f8f8f2">iap_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<h2 id="papi">papi<a class="headerlink" href="#papi" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span>    <span style="color: #f8f8f2">proto_papi</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">proto_register_protocol(</span><span style="color: #e6db74">&quot;Aruba PAPI&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;PAPI&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;papi&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">void</span>
+<span style="color: #a6e22e">proto_reg_handoff_papi</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">dissector_handle_t</span> <span style="color: #f8f8f2">papi_handle;</span>
+
+    <span style="color: #f8f8f2">papi_handle</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">create_dissector_handle(dissect_papi,</span> <span style="color: #f8f8f2">proto_papi);</span>
+    <span style="color: #f8f8f2">dissector_add_uint_with_preference(</span><span style="color: #e6db74">&quot;udp.port&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">UDP_PORT_PAPI,</span> <span style="color: #f8f8f2">papi_handle);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>

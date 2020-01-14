@@ -513,8 +513,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    非parallel模式
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一个种子最多可以变异多少次
+  </a>
   
 </li>
       
@@ -1038,8 +1052,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    非parallel模式
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一个种子最多可以变异多少次
+  </a>
   
 </li>
       
@@ -1287,6 +1315,96 @@
 </pre></div>
 
 <p>AFL_HANG_TMOUT</p>
+<h3 id="parallel">非parallel模式<a class="headerlink" href="#parallel" title="Permanent link">&para;</a></h3>
+<p>除了改源码暂时没看到好的办法</p>
+<h2 id="_2">一个种子最多可以变异多少次<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>执行一次，total_execs 自增1</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">u8</span> <span style="color: #a6e22e">run_target</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">char</span><span style="color: #f92672">**</span> <span style="color: #f8f8f2">argv,</span> <span style="color: #f8f8f2">u32</span> <span style="color: #f8f8f2">timeout)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">// ...</span>
+  <span style="color: #f8f8f2">total_execs</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">;</span>
+</pre></div>
+
+<p>调用了 run_target 的函数</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">calibrate_case</span>
+<span style="color: #f8f8f2">save_if_interesting</span> <span style="color: #75715e">// 可以忽略 只在exec_tmout &lt; hang_tmout才有可能执行</span>
+<span style="color: #f8f8f2">trim_case</span>
+<span style="color: #f8f8f2">common_fuzz_stuff</span>
+<span style="color: #f8f8f2">sync_fuzzers</span> <span style="color: #75715e">// 忽略</span>
+</pre></div>
+
+<p>函数fuzz_one</p>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">u8</span> <span style="color: #a6e22e">fuzz_one</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">char</span><span style="color: #f92672">**</span> <span style="color: #f8f8f2">argv)</span> <span style="color: #f8f8f2">{</span>
+
+  <span style="color: #75715e">// ...</span>
+
+  <span style="color: #75715e">/*******************************************</span>
+<span style="color: #75715e">   * CALIBRATION (only if failed earlier on) *</span>
+<span style="color: #75715e">   *******************************************/</span>
+  <span style="color: #f8f8f2">res</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">calibrate_case(argv,</span> <span style="color: #f8f8f2">queue_cur,</span> <span style="color: #f8f8f2">in_buf,</span> <span style="color: #f8f8f2">queue_cycle</span> <span style="color: #f92672">-</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+
+
+  <span style="color: #75715e">/************</span>
+<span style="color: #75715e">   * TRIMMING *</span>
+<span style="color: #75715e">   ************/</span>
+  <span style="color: #f8f8f2">u8</span> <span style="color: #f8f8f2">res</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">trim_case(argv,</span> <span style="color: #f8f8f2">queue_cur,</span> <span style="color: #f8f8f2">in_buf);</span>
+
+  <span style="color: #75715e">/*********************</span>
+<span style="color: #75715e">  * PERFORMANCE SCORE *</span>
+<span style="color: #75715e">  *********************/</span>
+
+  <span style="color: #75715e">// none</span>
+
+  <span style="color: #75715e">/*********************************************</span>
+<span style="color: #75715e">   * SIMPLE BITFLIP (+dictionary construction) *</span>
+<span style="color: #75715e">   *********************************************/</span>
+  <span style="color: #75715e">// stage_max 等于len &lt;&lt; 3 , len 种子大小，一位一位地翻， 步长1个bit</span>
+  <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(stage_cur</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">stage_max;</span> <span style="color: #f8f8f2">stage_cur</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">stage_cur_byte</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">&gt;&gt;</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur);</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(common_fuzz_stuff(argv,</span> <span style="color: #f8f8f2">out_buf,</span> <span style="color: #f8f8f2">len))</span> <span style="color: #66d9ef">goto</span> <span style="color: #f8f8f2">abandon_entry;</span>
+
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur);</span>
+  <span style="color: #75715e">// stage_max 等于len &lt;&lt; 3 , len 种子大小，两位一翻， 步长1个bit</span>
+  <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(stage_cur</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">stage_max;</span> <span style="color: #f8f8f2">stage_cur</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">stage_cur_byte</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">&gt;&gt;</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur);</span>
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(common_fuzz_stuff(argv,</span> <span style="color: #f8f8f2">out_buf,</span> <span style="color: #f8f8f2">len))</span> <span style="color: #66d9ef">goto</span> <span style="color: #f8f8f2">abandon_entry;</span>
+
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur);</span>
+    <span style="color: #f8f8f2">FLIP_BIT(out_buf,</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+
+  <span style="color: #f8f8f2">}</span>
+  <span style="color: #75715e">// stage_max 等于len &lt;&lt; 3 , len 种子大小，4位一翻， 步长1个bit</span>
+  <span style="color: #75715e">// ...</span>
+
+  <span style="color: #75715e">// stage_max 等于len , len 种子大小，一次翻一个字节，步长1个byte</span>
+  <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(stage_cur</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">stage_cur</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">stage_max;</span> <span style="color: #f8f8f2">stage_cur</span><span style="color: #f92672">++</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+
+    <span style="color: #f8f8f2">stage_cur_byte</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">stage_cur;</span>
+
+    <span style="color: #f8f8f2">out_buf[stage_cur]</span> <span style="color: #f92672">^=</span> <span style="color: #ae81ff">0xFF</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(common_fuzz_stuff(argv,</span> <span style="color: #f8f8f2">out_buf,</span> <span style="color: #f8f8f2">len))</span> <span style="color: #66d9ef">goto</span> <span style="color: #f8f8f2">abandon_entry;</span>
+
+  <span style="color: #75715e">// 一次翻2个字节，步长1个byte</span>
+  <span style="color: #75715e">// ...</span>
+  <span style="color: #75715e">// 一次翻4个字节，步长1个byte</span>
+  <span style="color: #75715e">// ...</span>
+
+  <span style="color: #75715e">/**********************</span>
+<span style="color: #75715e">  * ARITHMETIC INC/DEC *</span>
+<span style="color: #75715e">  **********************/</span>
+</pre></div>
+
+<p>跟种子大小和优劣有很大关系，</p>
+<p>暂停分析</p>
                 
                   
                 
