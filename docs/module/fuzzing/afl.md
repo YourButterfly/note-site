@@ -243,3 +243,106 @@ static u8 save_if_interesting(char** argv, void* mem, u32 len, u8 fault) {
 ```
 
 AFL_HANG_TMOUT
+
+## #非parallel模式
+
+除了改源码暂时没看到好的办法
+
+## 一个种子最多可以变异多少次
+
+执行一次，total_execs 自增1
+
+```c
+static u8 run_target(char** argv, u32 timeout) {
+  // ...
+  total_execs++;
+
+```
+
+调用了 run_target 的函数
+
+```c
+calibrate_case
+save_if_interesting // 可以忽略 只在exec_tmout < hang_tmout才有可能执行
+trim_case
+common_fuzz_stuff
+sync_fuzzers // 忽略
+```
+
+函数fuzz_one
+
+```c
+static u8 fuzz_one(char** argv) {
+
+  // ...
+
+  /*******************************************
+   * CALIBRATION (only if failed earlier on) *
+   *******************************************/
+  res = calibrate_case(argv, queue_cur, in_buf, queue_cycle - 1, 0);
+
+
+  /************
+   * TRIMMING *
+   ************/
+  u8 res = trim_case(argv, queue_cur, in_buf);
+
+  /*********************
+  * PERFORMANCE SCORE *
+  *********************/
+
+  // none
+
+  /*********************************************
+   * SIMPLE BITFLIP (+dictionary construction) *
+   *********************************************/
+  // stage_max 等于len << 3 , len 种子大小，一位一位地翻， 步长1个bit
+  for (stage_cur = 0; stage_cur < stage_max; stage_cur++) {
+
+    stage_cur_byte = stage_cur >> 3;
+
+    FLIP_BIT(out_buf, stage_cur);
+
+    if (common_fuzz_stuff(argv, out_buf, len)) goto abandon_entry;
+
+    FLIP_BIT(out_buf, stage_cur);
+  // stage_max 等于len << 3 , len 种子大小，两位一翻， 步长1个bit
+  for (stage_cur = 0; stage_cur < stage_max; stage_cur++) {
+
+    stage_cur_byte = stage_cur >> 3;
+
+    FLIP_BIT(out_buf, stage_cur);
+    FLIP_BIT(out_buf, stage_cur + 1);
+
+    if (common_fuzz_stuff(argv, out_buf, len)) goto abandon_entry;
+
+    FLIP_BIT(out_buf, stage_cur);
+    FLIP_BIT(out_buf, stage_cur + 1);
+
+  }
+  // stage_max 等于len << 3 , len 种子大小，4位一翻， 步长1个bit
+  // ...
+
+  // stage_max 等于len , len 种子大小，一次翻一个字节，步长1个byte
+  for (stage_cur = 0; stage_cur < stage_max; stage_cur++) {
+
+    stage_cur_byte = stage_cur;
+
+    out_buf[stage_cur] ^= 0xFF;
+
+    if (common_fuzz_stuff(argv, out_buf, len)) goto abandon_entry;
+
+  // 一次翻2个字节，步长1个byte
+  // ...
+  // 一次翻4个字节，步长1个byte
+  // ...
+
+  /**********************
+  * ARITHMETIC INC/DEC *
+  **********************/
+  
+```
+
+跟种子大小和优劣有很大关系，
+
+暂停分析
