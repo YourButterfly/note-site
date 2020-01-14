@@ -244,7 +244,7 @@ static u8 save_if_interesting(char** argv, void* mem, u32 len, u8 fault) {
 
 AFL_HANG_TMOUT
 
-## #非parallel模式
+### 非parallel模式
 
 除了改源码暂时没看到好的办法
 
