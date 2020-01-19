@@ -19,3 +19,10 @@ def run_in_background():
         os.setsid()
     return
 ```
+
+## 根据cpu核数创建线程
+
+```python
+import os
+threadnum = int(os.cpu_count() if os.cpu_count() and os.cpu_count() >= 4 else 4)
+```
