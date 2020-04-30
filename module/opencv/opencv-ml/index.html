@@ -1,0 +1,1683 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/opencv/opencv-ml/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>opencv ML - butter-fly</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/simpleLightbox.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#opencv-ml" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              butter-fly
+            </span>
+            <span class="md-header-nav__topic">
+              
+                opencv ML
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://yourbutterfly.github.io/note-site/" title="butter-fly" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    butter-fly
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/YourButterfly/note-site.git/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    YourButterfly/note-site
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      assembly
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        assembly
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../assembly/assembly/" title="assembly" class="md-nav__link">
+      assembly
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      concolic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        concolic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      angr
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        angr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/introduce/" title="angr-introduce" class="md-nav__link">
+      angr-introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/cfg/" title="CFG" class="md-nav__link">
+      CFG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/ddg/" title="DDG" class="md-nav__link">
+      DDG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/fast-question/" title="fast-questions" class="md-nav__link">
+      fast-questions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/program-state/" title="program-state" class="md-nav__link">
+      program-state
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../angr/sim_action/" title="sim_action" class="md-nav__link">
+      sim_action
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      file format
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        file format
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/dot/" title="DOT" class="md-nav__link">
+      DOT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fileformat/pdf/" title="PDF" class="md-nav__link">
+      PDF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      fuzzing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        fuzzing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/afl/" title="afl" class="md-nav__link">
+      afl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/gui/" title="GUI" class="md-nav__link">
+      GUI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/honggfuzz/" title="honggfuzz" class="md-nav__link">
+      honggfuzz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fuzzing/libfuzzer/" title="libfuzzer" class="md-nav__link">
+      libfuzzer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IOT
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        IOT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iot/binwalk/" title="binwalk" class="md-nav__link">
+      binwalk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      kernel
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        kernel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-debug/" title="kernel-debug" class="md-nav__link">
+      kernel-debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-kvm/" title="kernel-kvm" class="md-nav__link">
+      kernel-kvm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-header/" title="kernel-header" class="md-nav__link">
+      kernel-header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kernel/kernel-hook/" title="kernel-hook" class="md-nav__link">
+      kernel-hook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      llvm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        llvm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../llvm/pass/" title="pass" class="md-nav__link">
+      pass
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      lua
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        lua
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lua/lua/" title="lua" class="md-nav__link">
+      lua
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      makefile
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        makefile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
+      cmake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/easyfunction/" title="easyfunction" class="md-nav__link">
+      easyfunction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-flask/" title="flask" class="md-nav__link">
+      flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/GooglePythonStyleGuide/" title="GooglePythonStyleGuide" class="md-nav__link">
+      GooglePythonStyleGuide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python-prompt-toolkit/" title="python-prompt-toolkit" class="md-nav__link">
+      python-prompt-toolkit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      semmel-ql
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        semmel-ql
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../semmle-ql/codeql/" title="CodeQL" class="md-nav__link">
+      CodeQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      webs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        webs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webs/webs/" title="webs" class="md-nav__link">
+      webs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      wireshark
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        wireshark
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wireshark/tshark/" title="wireshark" class="md-nav__link">
+      wireshark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      others
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        others
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../others/others/" title="others" class="md-nav__link">
+      others
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    class
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    算法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    MLP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#letter-recong" class="md-nav__link">
+    letter recong
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/opencv/opencv-ml.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="opencv-ml">opencv ML<a class="headerlink" href="#opencv-ml" title="Permanent link">&para;</a></h1>
+<h2 id="class">class<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ANN_MLP</span>
+    <span style="color: #f8f8f2">Artificial</span> <span style="color: #f8f8f2">Neural</span> <span style="color: #f8f8f2">Networks</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">Multi</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Layer</span> <span style="color: #f8f8f2">Perceptrons.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">Boost</span>
+    <span style="color: #f8f8f2">Boosted</span> <span style="color: #f8f8f2">tree</span> <span style="color: #f8f8f2">classifier</span> <span style="color: #f8f8f2">derived</span> <span style="color: #f8f8f2">from</span> <span style="color: #f8f8f2">DTrees.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">DTrees</span>
+    <span style="color: #f8f8f2">The</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">represents</span> <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">single</span> <span style="color: #f8f8f2">decision</span> <span style="color: #f8f8f2">tree</span> <span style="color: #f8f8f2">or</span> <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">collection</span> <span style="color: #f8f8f2">of</span> <span style="color: #f8f8f2">decision</span> <span style="color: #f8f8f2">trees.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">EM</span>
+    <span style="color: #f8f8f2">The</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">implements</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">Expectation</span> <span style="color: #f8f8f2">Maximization</span> <span style="color: #f8f8f2">algorithm.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">KNearest</span>
+    <span style="color: #f8f8f2">The</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">implements</span> <span style="color: #f8f8f2">K</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Nearest</span> <span style="color: #f8f8f2">Neighbors</span> <span style="color: #f8f8f2">model.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">LogisticRegression</span>
+    <span style="color: #f8f8f2">Implements</span> <span style="color: #f8f8f2">Logistic</span> <span style="color: #f8f8f2">Regression</span> <span style="color: #f8f8f2">classifier.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">NormalBayesClassifier</span>
+    <span style="color: #f8f8f2">Bayes</span> <span style="color: #f8f8f2">classifier</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">normally</span> <span style="color: #f8f8f2">distributed</span> <span style="color: #f8f8f2">data.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #75715e">// class  cv::ml::ParamGrid</span>
+<span style="color: #75715e">//     The structure represents the logarithmic grid range of statmodel parameters. More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">RTrees</span>
+    <span style="color: #f8f8f2">The</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">implements</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">random</span> <span style="color: #f8f8f2">forest</span> <span style="color: #f8f8f2">predictor.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">struct</span>  <span style="color: #f8f8f2">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">SimulatedAnnealingSolverSystem</span>
+    <span style="color: #f8f8f2">This</span> <span style="color: #66d9ef">class</span> <span style="color: #a6e22e">declares</span> <span style="color: #f8f8f2">example</span> <span style="color: #f8f8f2">interface</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">system</span> <span style="color: #f8f8f2">state</span> <span style="color: #f8f8f2">used</span> <span style="color: #f8f8f2">in</span> <span style="color: #f8f8f2">simulated</span> <span style="color: #f8f8f2">annealing</span> <span style="color: #f8f8f2">optimization</span> <span style="color: #f8f8f2">algorithm.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #75715e">// class  cv::ml::StatModel</span>
+<span style="color: #75715e">//     Base class for statistical models in OpenCV ML. More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">SVM</span>
+    <span style="color: #f8f8f2">Support</span> <span style="color: #f8f8f2">Vector</span> <span style="color: #f8f8f2">Machines.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #66d9ef">class</span>  <span style="color: #a6e22e">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">SVMSGD</span>
+    <span style="color: #f8f8f2">Stochastic</span> <span style="color: #f8f8f2">Gradient</span> <span style="color: #f8f8f2">Descent</span> <span style="color: #f8f8f2">SVM</span> <span style="color: #f8f8f2">classifier.</span> <span style="color: #f8f8f2">More...</span>
+
+<span style="color: #75715e">// class  cv::ml::TrainData</span>
+<span style="color: #75715e">//     Class encapsulating training data. More...</span>
+</pre></div>
+
+<h2 id="_1">算法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="mlp">MLP<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h3>
+<p>MLP(Multilayer PerceptronP) 多层感知机, 也叫人工神经网络（ANN，Artificial Neural Network），除了输入输出层，它中间可以有多个隐层，最简单的MLP只含一个隐层，即三层的结构</p>
+<h2 id="letter-recong">letter recong<a class="headerlink" href="#letter-recong" title="Permanent link">&para;</a></h2>
+<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">#include</span> <span style="color: #75715e">&quot;opencv2/core.hpp&quot;</span>
+<span style="color: #75715e">#include</span> <span style="color: #75715e">&quot;opencv2/ml.hpp&quot;</span>
+
+<span style="color: #75715e">#include</span> <span style="color: #75715e">&lt;cstdio&gt;</span>
+<span style="color: #75715e">#include</span> <span style="color: #75715e">&lt;vector&gt;</span>
+<span style="color: #75715e">#include</span> <span style="color: #75715e">&lt;iostream&gt;</span>
+
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">std;</span>
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">cv;</span>
+<span style="color: #66d9ef">using</span> <span style="color: #66d9ef">namespace</span> <span style="color: #f8f8f2">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">ml;</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">help</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">printf(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">The sample demonstrates how to train Random Trees classifier</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;(or Boosting classifier, or MLP, or Knearest, or Nbayes, or Support Vector Machines - see main()) using the provided dataset.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;We use the sample database letter-recognition.data</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;from UCI Repository, here is the link:</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;Newman, D.J. &amp; Hettich, S. &amp; Blake, C.L. &amp; Merz, C.J. (1998).</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;UCI Repository of machine learning databases</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;[http://www.ics.uci.edu/~mlearn/MLRepository.html].</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;Irvine, CA: University of California, Department of Information and Computer Science.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;The dataset consists of 20000 feature vectors along with the</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;responses - capital latin letters A..Z.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;The first 16000 (10000 for boosting)) samples are used for training</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;and the remaining 4000 (10000 for boosting) - to test the classifier.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+    <span style="color: #e6db74">&quot;======================================================</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">printf(</span><span style="color: #e6db74">&quot;</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">This is letter recognition sample.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span>
+            <span style="color: #e6db74">&quot;The usage: letter_recog [-data=&lt;path to letter-recognition.data&gt;] </span><span style="color: #ae81ff">\\\n</span><span style="color: #e6db74">&quot;</span>
+            <span style="color: #e6db74">&quot;  [-save=&lt;output XML file for the classifier&gt;] </span><span style="color: #ae81ff">\\\n</span><span style="color: #e6db74">&quot;</span>
+            <span style="color: #e6db74">&quot;  [-load=&lt;XML file with the pre-trained classifier&gt;] </span><span style="color: #ae81ff">\\\n</span><span style="color: #e6db74">&quot;</span>
+            <span style="color: #e6db74">&quot;  [-boost|-mlp|-knearest|-nbayes|-svm] # to use boost/mlp/knearest/SVM classifier instead of default Random Trees</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span> <span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #75715e">// This function reads data and responses from the file &lt;filename&gt;</span>
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #a6e22e">read_num_class_data</span><span style="color: #f8f8f2">(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">var_count,</span>
+                     <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">_data,</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">_responses</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">M</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1024</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">char</span> <span style="color: #f8f8f2">buf[M</span><span style="color: #f92672">+</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">];</span>
+
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">el_ptr(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">var_count,</span> <span style="color: #f8f8f2">CV_32F);</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i;</span>
+    <span style="color: #f8f8f2">vector</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">responses;</span>
+
+    <span style="color: #f8f8f2">_data</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">release();</span>
+    <span style="color: #f8f8f2">_responses</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">release();</span>
+
+    <span style="color: #66d9ef">FILE</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">f</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">fopen(</span> <span style="color: #f8f8f2">filename.c_str(),</span> <span style="color: #e6db74">&quot;rt&quot;</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Could not read the database &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">filename</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(;;)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">char</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">ptr;</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">fgets(</span> <span style="color: #f8f8f2">buf,</span> <span style="color: #f8f8f2">M,</span> <span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">)</span> <span style="color: #f92672">||</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">strchr(</span> <span style="color: #f8f8f2">buf,</span> <span style="color: #e6db74">&#39;,&#39;</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">responses.push_back((</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)buf[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]);</span>
+        <span style="color: #f8f8f2">ptr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">buf</span><span style="color: #f92672">+</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">var_count;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">sscanf(</span> <span style="color: #f8f8f2">ptr,</span> <span style="color: #e6db74">&quot;%f%n&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">el_ptr.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i),</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">n</span> <span style="color: #f8f8f2">);</span>
+            <span style="color: #f8f8f2">ptr</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">var_count</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">break</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">_data</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">push_back(el_ptr);</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #f8f8f2">fclose(f);</span>
+    <span style="color: #f8f8f2">Mat(responses).copyTo(</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">_responses);</span>
+
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;The database &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">filename</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; is loaded.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">template</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">typename</span> <span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span>
+<span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">load_classifier(</span><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_load)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #75715e">// load classifier from the specified file</span>
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">StatModel</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">load</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">T</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">model.empty()</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Could not read the classifier &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+    <span style="color: #66d9ef">else</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;The classifier &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot; is loaded.</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">model;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span>
+<span style="color: #f8f8f2">prepare_train_data(</span><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data,</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">sample_idx</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">zeros(</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">data.rows,</span> <span style="color: #f8f8f2">CV_8U</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">train_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sample_idx.colRange(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+    <span style="color: #f8f8f2">train_samples.setTo(Scalar</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">all(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">));</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nvars</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.cols;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #a6e22e">var_type</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">nvars</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">CV_8U</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">var_type.setTo(Scalar</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">all(VAR_ORDERED));</span>
+    <span style="color: #f8f8f2">var_type.at</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">uchar</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(nvars)</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">VAR_CATEGORICAL;</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create(data,</span> <span style="color: #f8f8f2">ROW_SAMPLE,</span> <span style="color: #f8f8f2">responses,</span>
+                             <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">sample_idx,</span> <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">var_type);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">inline</span> <span style="color: #f8f8f2">TermCriteria</span> <span style="color: #f8f8f2">TC(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">iters,</span> <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">eps)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">TermCriteria(TermCriteria</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">MAX_ITER</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">(eps</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">?</span> <span style="color: #f8f8f2">TermCriteria</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">EPS</span> <span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">iters,</span> <span style="color: #f8f8f2">eps);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">void</span> <span style="color: #f8f8f2">test_and_save_classifier(</span><span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">StatModel</span><span style="color: #f92672">&gt;&amp;</span> <span style="color: #f8f8f2">model,</span>
+                                     <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data,</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">responses,</span>
+                                     <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">rdelta,</span>
+                                     <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_save)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">// compute prediction error on train and test data</span>
+    <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">nsamples_all;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">sample</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.row(i);</span>
+
+        <span style="color: #66d9ef">float</span> <span style="color: #f8f8f2">r</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">predict(</span> <span style="color: #f8f8f2">sample</span> <span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">r</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">abs(r</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">rdelta</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i))</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">FLT_EPSILON</span> <span style="color: #f92672">?</span> <span style="color: #ae81ff">1.f</span> <span style="color: #f92672">:</span> <span style="color: #ae81ff">0.f</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">r;</span>
+        <span style="color: #66d9ef">else</span>
+            <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">r;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">/=</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">ntrain_samples;</span>
+    <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">?</span> <span style="color: #f8f8f2">train_hr</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">1.</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">printf(</span> <span style="color: #e6db74">&quot;Recognition rate: train = %.1f%%, test = %.1f%%</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #f8f8f2">train_hr</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100.</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">test_hr</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100.</span> <span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_save.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">save(</span> <span style="color: #f8f8f2">filename_to_save</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_rtrees_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename,</span>
+                         <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_save,</span>
+                         <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">RTrees</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">// Create or load Random Trees classifier</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_load.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">load_classifier</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">RTrees</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(filename_to_load);</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">model.empty()</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+        <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">else</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">// create classifier by using &lt;data&gt; and &lt;responses&gt;</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier ...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #75715e">//        Params( int maxDepth, int minSampleCount,</span>
+<span style="color: #75715e">//                   double regressionAccuracy, bool useSurrogates,</span>
+<span style="color: #75715e">//                   int maxCategories, const Mat&amp; priors,</span>
+<span style="color: #75715e">//                   bool calcVarImportance, int nactiveVars,</span>
+<span style="color: #75715e">//                   TermCriteria termCrit );</span>
+        <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prepare_train_data(data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">RTrees</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setMaxDepth(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setMinSampleCount(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setRegressionAccuracy(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setUseSurrogates(false);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setMaxCategories(</span><span style="color: #ae81ff">15</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setPriors(Mat());</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setCalculateVarImportance(true);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setActiveVarCount(</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setTermCriteria(TC(</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">0.01f</span><span style="color: #f8f8f2">));</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">test_and_save_classifier(model,</span> <span style="color: #f8f8f2">data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">filename_to_save);</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Number of trees: &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">getRoots().size()</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+
+    <span style="color: #75715e">// Print variable importance</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">var_importance</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">getVarImportance();</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">var_importance.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">rt_imp_sum</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sum(</span> <span style="color: #f8f8f2">var_importance</span> <span style="color: #f8f8f2">)[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">];</span>
+        <span style="color: #f8f8f2">printf(</span><span style="color: #e6db74">&quot;var#</span><span style="color: #ae81ff">\t</span><span style="color: #e6db74">importance (in %%):</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">n</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)var_importance.total();</span>
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">n;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">printf(</span> <span style="color: #e6db74">&quot;%-2d</span><span style="color: #ae81ff">\t</span><span style="color: #e6db74">%-4.1f</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">i,</span> <span style="color: #ae81ff">100.f</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">var_importance.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">rt_imp_sum);</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_boost_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename,</span>
+                        <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_save,</span>
+                        <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">class_count</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">26</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">weak_responses;</span>
+
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">j,</span> <span style="color: #f8f8f2">k;</span>
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">Boost</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">var_count</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.cols;</span>
+
+    <span style="color: #75715e">// Create or load Boosted Tree classifier</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_load.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">load_classifier</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">Boost</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(filename_to_load);</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">model.empty()</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+        <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">else</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+        <span style="color: #75715e">//</span>
+        <span style="color: #75715e">// As currently boosted tree classifier in MLL can only be trained</span>
+        <span style="color: #75715e">// for 2-class problems, we transform the training database by</span>
+        <span style="color: #75715e">// &quot;unrolling&quot; each training sample as many times as the number of</span>
+        <span style="color: #75715e">// classes (26) that we have.</span>
+        <span style="color: #75715e">//</span>
+        <span style="color: #75715e">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">new_data(</span> <span style="color: #f8f8f2">ntrain_samples</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">class_count,</span> <span style="color: #f8f8f2">var_count</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">CV_32F</span> <span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #a6e22e">new_responses</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">ntrain_samples</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">class_count,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">CV_32S</span> <span style="color: #f8f8f2">);</span>
+
+        <span style="color: #75715e">// 1. unroll the database type mask</span>
+        <span style="color: #f8f8f2">printf(</span> <span style="color: #e6db74">&quot;Unrolling the database...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">ntrain_samples;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">float</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">data_row</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.ptr</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i);</span>
+            <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">class_count;</span> <span style="color: #f8f8f2">j</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">{</span>
+                <span style="color: #66d9ef">float</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">new_data_row</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">float</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">)new_data.ptr</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">class_count</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">j);</span>
+                <span style="color: #f8f8f2">memcpy(new_data_row,</span> <span style="color: #f8f8f2">data_row,</span> <span style="color: #f8f8f2">var_count</span><span style="color: #f92672">*</span><span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(data_row[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]));</span>
+                <span style="color: #f8f8f2">new_data_row[var_count]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">float</span><span style="color: #f8f8f2">)j;</span>
+                <span style="color: #f8f8f2">new_responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">class_count</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">j)</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i)</span> <span style="color: #f92672">==</span> <span style="color: #f8f8f2">j</span><span style="color: #f92672">+</span><span style="color: #e6db74">&#39;A&#39;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">}</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">var_type(</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">var_count</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">CV_8U</span> <span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">var_type.setTo(Scalar</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">all(VAR_ORDERED));</span>
+        <span style="color: #f8f8f2">var_type.at</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">uchar</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(var_count)</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">var_type.at</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">uchar</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(var_count</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">VAR_CATEGORICAL;</span>
+
+        <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create(new_data,</span> <span style="color: #f8f8f2">ROW_SAMPLE,</span> <span style="color: #f8f8f2">new_responses,</span>
+                                                 <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">var_type);</span>
+        <span style="color: #f8f8f2">vector</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">double</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">priors(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">priors[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">priors[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">]</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">26</span><span style="color: #f8f8f2">;</span>
+
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier (may take a few minutes)...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Boost</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setBoostType(Boost</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">GENTLE);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setWeakCount(</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setWeightTrimRate(</span><span style="color: #ae81ff">0.95</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setMaxDepth(</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setUseSurrogates(false);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setPriors(Mat(priors));</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">temp_sample(</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">var_count</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">CV_32F</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">float</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">tptr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">temp_sample.ptr</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">();</span>
+
+    <span style="color: #75715e">// compute prediction error on train and test data</span>
+    <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">nsamples_all;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">best_class</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">max_sum</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">DBL_MAX;</span>
+        <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">float</span><span style="color: #f92672">*</span> <span style="color: #f8f8f2">ptr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.ptr</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i);</span>
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">k</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">k</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">var_count;</span> <span style="color: #f8f8f2">k</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">tptr[k]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ptr[k];</span>
+
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">class_count;</span> <span style="color: #f8f8f2">j</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #f8f8f2">tptr[var_count]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">float</span><span style="color: #f8f8f2">)j;</span>
+            <span style="color: #66d9ef">float</span> <span style="color: #f8f8f2">s</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">predict(</span> <span style="color: #f8f8f2">temp_sample,</span> <span style="color: #f8f8f2">noArray(),</span> <span style="color: #f8f8f2">StatModel</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">RAW_OUTPUT</span> <span style="color: #f8f8f2">);</span>
+            <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">max_sum</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">s</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">{</span>
+                <span style="color: #f8f8f2">max_sum</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">s;</span>
+                <span style="color: #f8f8f2">best_class</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">j</span> <span style="color: #f92672">+</span> <span style="color: #e6db74">&#39;A&#39;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">}</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">r</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">std</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">abs(best_class</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i))</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">FLT_EPSILON</span> <span style="color: #f92672">?</span> <span style="color: #ae81ff">1</span> <span style="color: #f92672">:</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">r;</span>
+        <span style="color: #66d9ef">else</span>
+            <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">+=</span> <span style="color: #f8f8f2">r;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">test_hr</span> <span style="color: #f92672">/=</span> <span style="color: #f8f8f2">nsamples_all</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">ntrain_samples;</span>
+    <span style="color: #f8f8f2">train_hr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">?</span> <span style="color: #f8f8f2">train_hr</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">1.</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">printf(</span> <span style="color: #e6db74">&quot;Recognition rate: train = %.1f%%, test = %.1f%%</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">,</span>
+            <span style="color: #f8f8f2">train_hr</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100.</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">test_hr</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100.</span> <span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Number of trees: &quot;</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">getRoots().size()</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+
+    <span style="color: #75715e">// Save classifier to file if needed</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_save.empty()</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">save(</span> <span style="color: #f8f8f2">filename_to_save</span> <span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_mlp_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename,</span>
+                      <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_save,</span>
+                      <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">const</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">class_count</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">26</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ANN_MLP</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">// Create or load MLP classifier</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_load.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">load_classifier</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">ANN_MLP</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(filename_to_load);</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">model.empty()</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+        <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">else</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+        <span style="color: #75715e">//</span>
+        <span style="color: #75715e">// MLP does not support categorical variables by explicitly.</span>
+        <span style="color: #75715e">// So, instead of the output class label, we will use</span>
+        <span style="color: #75715e">// a binary vector of &lt;class_count&gt; components for training and,</span>
+        <span style="color: #75715e">// therefore, MLP will give us a vector of &quot;probabilities&quot; at the</span>
+        <span style="color: #75715e">// prediction stage</span>
+        <span style="color: #75715e">//</span>
+        <span style="color: #75715e">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">train_data</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rowRange(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">train_responses</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Mat</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">zeros(</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #f8f8f2">class_count,</span> <span style="color: #f8f8f2">CV_32F</span> <span style="color: #f8f8f2">);</span>
+
+        <span style="color: #75715e">// 1. unroll the responses</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Unrolling the responses...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">ntrain_samples;</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">cls_label</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">int</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i)</span> <span style="color: #f92672">-</span> <span style="color: #e6db74">&#39;A&#39;</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #f8f8f2">train_responses.at</span><span style="color: #f92672">&lt;</span><span style="color: #66d9ef">float</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(i,</span> <span style="color: #f8f8f2">cls_label)</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1.f</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">}</span>
+
+        <span style="color: #75715e">// 2. train classifier</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">layer_sz[]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">{</span> <span style="color: #f8f8f2">data.cols,</span> <span style="color: #ae81ff">100</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">100</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">class_count</span> <span style="color: #f8f8f2">};</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nlayers</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(</span><span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(layer_sz)</span><span style="color: #f92672">/</span><span style="color: #66d9ef">sizeof</span><span style="color: #f8f8f2">(layer_sz[</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">]));</span>
+        <span style="color: #f8f8f2">Mat</span> <span style="color: #a6e22e">layer_sizes</span><span style="color: #f8f8f2">(</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">nlayers,</span> <span style="color: #f8f8f2">CV_32S,</span> <span style="color: #f8f8f2">layer_sz</span> <span style="color: #f8f8f2">);</span>
+
+<span style="color: #75715e">#if 1</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ANN_MLP</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">BACKPROP;</span>
+        <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">method_param</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">max_iter</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">300</span><span style="color: #f8f8f2">;</span>
+<span style="color: #75715e">#else</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ANN_MLP</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">RPROP;</span>
+        <span style="color: #66d9ef">double</span> <span style="color: #f8f8f2">method_param</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.1</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">max_iter</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1000</span><span style="color: #f8f8f2">;</span>
+<span style="color: #75715e">#endif</span>
+
+        <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create(train_data,</span> <span style="color: #f8f8f2">ROW_SAMPLE,</span> <span style="color: #f8f8f2">train_responses);</span>
+
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier (may take a few minutes)...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">ANN_MLP</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setLayerSizes(layer_sizes);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setActivationFunction(ANN_MLP</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">SIGMOID_SYM,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setTermCriteria(TC(max_iter,</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">));</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setTrainMethod(method,</span> <span style="color: #f8f8f2">method_param);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">test_and_save_classifier(model,</span> <span style="color: #f8f8f2">data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #e6db74">&#39;A&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">filename_to_save);</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_knearest_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">K</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">// create classifier by using &lt;data&gt; and &lt;responses&gt;</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier ...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prepare_train_data(data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">KNearest</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">KNearest</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+    <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setDefaultK(K);</span>
+    <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setIsClassifier(true);</span>
+    <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+
+    <span style="color: #f8f8f2">test_and_save_classifier(model,</span> <span style="color: #f8f8f2">data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">string());</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_nbayes_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">NormalBayesClassifier</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">// create classifier by using &lt;data&gt; and &lt;responses&gt;</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier ...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prepare_train_data(data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+    <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">NormalBayesClassifier</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+    <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+    <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+
+    <span style="color: #f8f8f2">test_and_save_classifier(model,</span> <span style="color: #f8f8f2">data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">string());</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">static</span> <span style="color: #66d9ef">bool</span>
+<span style="color: #f8f8f2">build_svm_classifier(</span> <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">data_filename,</span>
+                      <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_save,</span>
+                      <span style="color: #66d9ef">const</span> <span style="color: #f8f8f2">string</span><span style="color: #f92672">&amp;</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">data;</span>
+    <span style="color: #f8f8f2">Mat</span> <span style="color: #f8f8f2">responses;</span>
+    <span style="color: #66d9ef">bool</span> <span style="color: #f8f8f2">ok</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">read_num_class_data(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">16</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">data,</span> <span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">responses</span> <span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">ok</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">ok;</span>
+
+    <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">SVM</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">model;</span>
+
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">nsamples_all</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">data.rows;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">)(nsamples_all</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #75715e">// Create or load Random Trees classifier</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f92672">!</span><span style="color: #f8f8f2">filename_to_load.empty()</span> <span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">load_classifier</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">SVM</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(filename_to_load);</span>
+        <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">model.empty()</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">false;</span>
+        <span style="color: #f8f8f2">ntrain_samples</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">}</span>
+    <span style="color: #66d9ef">else</span>
+    <span style="color: #f8f8f2">{</span>
+        <span style="color: #75715e">// create classifier by using &lt;data&gt; and &lt;responses&gt;</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #e6db74">&quot;Training the classifier ...</span><span style="color: #ae81ff">\n</span><span style="color: #e6db74">&quot;</span><span style="color: #f8f8f2">;</span>
+        <span style="color: #f8f8f2">Ptr</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">TrainData</span><span style="color: #f92672">&gt;</span> <span style="color: #f8f8f2">tdata</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">prepare_train_data(data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples);</span>
+        <span style="color: #f8f8f2">model</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">SVM</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">create();</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setType(SVM</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">C_SVC);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setKernel(SVM</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">LINEAR);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">setC(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+        <span style="color: #f8f8f2">model</span><span style="color: #f92672">-&gt;</span><span style="color: #f8f8f2">train(tdata);</span>
+        <span style="color: #f8f8f2">cout</span> <span style="color: #f92672">&lt;&lt;</span> <span style="color: #f8f8f2">endl;</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #f8f8f2">test_and_save_classifier(model,</span> <span style="color: #f8f8f2">data,</span> <span style="color: #f8f8f2">responses,</span> <span style="color: #f8f8f2">ntrain_samples,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">filename_to_save);</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f8f8f2">true;</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">main(</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">argc,</span> <span style="color: #66d9ef">char</span> <span style="color: #f92672">*</span><span style="color: #f8f8f2">argv[]</span> <span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">filename_to_save</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f92672">=</span> <span style="color: #e6db74">&quot;&quot;</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">string</span> <span style="color: #f8f8f2">data_filename;</span>
+    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">cv</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">CommandLineParser</span> <span style="color: #f8f8f2">parser(argc,</span> <span style="color: #f8f8f2">argv,</span> <span style="color: #e6db74">&quot;{data|letter-recognition.data|}{save||}{load||}{boost||}&quot;</span>
+            <span style="color: #e6db74">&quot;{mlp||}{knn knearest||}{nbayes||}{svm||}&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">data_filename</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">samples</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">findFile(parser.get</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">string</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;data&quot;</span><span style="color: #f8f8f2">));</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;save&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">filename_to_save</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">parser.get</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">string</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;save&quot;</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;load&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">samples</span><span style="color: #f92672">::</span><span style="color: #f8f8f2">findFile(parser.get</span><span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">string</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;load&quot;</span><span style="color: #f8f8f2">));</span>
+    <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;boost&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">else</span> <span style="color: #a6e22e">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;mlp&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">else</span> <span style="color: #a6e22e">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;knearest&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">else</span> <span style="color: #a6e22e">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;nbayes&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">else</span> <span style="color: #a6e22e">if</span> <span style="color: #f8f8f2">(parser.has(</span><span style="color: #e6db74">&quot;svm&quot;</span><span style="color: #f8f8f2">))</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #f8f8f2">help();</span>
+
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #f8f8f2">(method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_rtrees_classifier(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #f8f8f2">filename_to_save,</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span> <span style="color: #f92672">:</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_boost_classifier(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #f8f8f2">filename_to_save,</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span> <span style="color: #f92672">:</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_mlp_classifier(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #f8f8f2">filename_to_save,</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span> <span style="color: #f92672">:</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">3</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_knearest_classifier(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #ae81ff">10</span> <span style="color: #f8f8f2">)</span> <span style="color: #f92672">:</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">4</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_nbayes_classifier(</span> <span style="color: #f8f8f2">data_filename)</span> <span style="color: #f92672">:</span>
+        <span style="color: #f8f8f2">method</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">5</span> <span style="color: #f92672">?</span>
+        <span style="color: #f8f8f2">build_svm_classifier(</span> <span style="color: #f8f8f2">data_filename,</span> <span style="color: #f8f8f2">filename_to_save,</span> <span style="color: #f8f8f2">filename_to_load</span> <span style="color: #f8f8f2">)</span><span style="color: #f92672">:</span>
+        <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">)</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/jquery-3.4.1.min.js"></script>
+      
+        <script src="../../../javascripts/simpleLightbox.min.js"></script>
+      
+        <script src="../../../javascripts/custom.js"></script>
+      
+    
+  </body>
+</html>
