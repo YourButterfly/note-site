@@ -26,6 +26,7 @@ nav:
             # - asan: module/fuzzing/asan.md
             - GUI: module/fuzzing/gui.md
             - honggfuzz: module/fuzzing/honggfuzz.md
+            - libfuzzer: module/fuzzing/libfuzzer.md
         - IOT:
                 - binwalk: module/iot/binwalk.md
         - kernel:
