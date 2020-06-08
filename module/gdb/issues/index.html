@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/makefile/cmake/">
+        <link rel="canonical" href="https://yourbutterfly.github.io/note-site/module/gdb/issues/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>cmake - butter-fly</title>
+        <title>gdb issues - butter-fly</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#cmake" tabindex="1" class="md-skip">
+      <a href="#gdb" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                cmake
+                gdb issues
               
             </span>
           
@@ -508,10 +508,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       gdb
@@ -527,11 +529,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../gdb/issues/" title="gdb issues" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        gdb issues
+      </label>
+    
+    <a href="./" title="gdb issues" class="md-nav__link md-nav__link--active">
       gdb issues
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inline-function" class="md-nav__link">
+    inline function
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -724,12 +764,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
       makefile
@@ -745,56 +783,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        cmake
-      </label>
-    
-    <a href="./" title="cmake" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../makefile/cmake/" title="cmake" class="md-nav__link">
       cmake
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-makefileinstall-target" class="md-nav__link">
-    install 指令（主要是生成Makefile中的install target）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure_file" class="md-nav__link">
-    configure_file
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1124,15 +1117,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-makefileinstall-target" class="md-nav__link">
-    install 指令（主要是生成Makefile中的install target）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure_file" class="md-nav__link">
-    configure_file
+  <a href="#inline-function" class="md-nav__link">
+    inline function
   </a>
   
 </li>
@@ -1153,25 +1139,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/makefile/cmake.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/YourButterfly/note-site.git/edit/master/docs/module/gdb/issues.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="cmake">cmake<a class="headerlink" href="#cmake" title="Permanent link">&para;</a></h1>
-<p>cmake 语法</p>
-<h2 id="install-makefileinstall-target">install 指令（主要是生成Makefile中的install target）<a class="headerlink" href="#install-makefileinstall-target" title="Permanent link">&para;</a></h2>
-<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">install(</span><span style="color: #e6db74">FILES</span> <span style="color: #e6db74">flie</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">dir_path</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">#执行make install时，把file拷贝到dir_path</span>
-<span style="color: #f8f8f2">install(</span><span style="color: #e6db74">PROGRAMS</span> <span style="color: #e6db74">file</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">dir_path</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">#执行make install时，把file拷贝到dir_path,并给予file可执行权限</span>
-<span style="color: #f8f8f2">INSTALL(</span><span style="color: #e6db74">TARGETS</span>  <span style="color: #e6db74">ylib</span> <span style="color: #e6db74">ylib_s</span>
-    <span style="color: #75715e">#RUNTIME DESTINATION xxx</span>
-    <span style="color: #e6db74">LIBRARY</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">lib</span>
-    <span style="color: #e6db74">ARCHIVE</span> <span style="color: #e6db74">DESTINATION</span> <span style="color: #e6db74">lib</span>
-<span style="color: #f8f8f2">)</span><span style="color: #75715e"># 安装libylib.so到lib目录，安装libylib_s.a到lib目录，RUNTIME 是安装可执行文件到xxx目录，注意这个指令有个坑，我后面会说明这个</span>
-</pre></div>
-
-<h2 id="configure_file">configure_file<a class="headerlink" href="#configure_file" title="Permanent link">&para;</a></h2>
-<div class="codehilite" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f8f8f2">configure_file(</span><span style="color: #e6db74">fileA</span> <span style="color: #e6db74">fileB</span> <span style="color: #e6db74">@ONLY</span><span style="color: #f8f8f2">)</span>
-<span style="color: #75715e">#把fileA 复制并重命名为fileB,此时，fileA中的@var@的值会被替换为cmakelists.txt 中var的值。@ONLY是只转换@va@这种变量</span>
-</pre></div>
+                <h1 id="gdb">gdb<a class="headerlink" href="#gdb" title="Permanent link">&para;</a></h1>
+<h2 id="inline-function">inline function<a class="headerlink" href="#inline-function" title="Permanent link">&para;</a></h2>
+<p>在inline函数崩溃，gdb 断在上层函数，但是ni后source显示到了正确位置（inline function），有意思</p>
                 
                   
                 
@@ -1192,7 +1165,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../lua/lua/" title="lua" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../fuzzing/libfuzzer/" title="libfuzzer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1201,19 +1174,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                lua
+                libfuzzer
               </span>
             </div>
           </a>
         
         
-          <a href="../../python/easyfunction/" title="easyfunction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../iot/binwalk/" title="binwalk" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                easyfunction
+                binwalk
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
