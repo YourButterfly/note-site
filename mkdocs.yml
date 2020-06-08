@@ -27,6 +27,8 @@ nav:
             - GUI: module/fuzzing/gui.md
             - honggfuzz: module/fuzzing/honggfuzz.md
             - libfuzzer: module/fuzzing/libfuzzer.md
+        - gdb:
+            - gdb issues: module/gdb/issues.md
         - IOT:
                 - binwalk: module/iot/binwalk.md
         - kernel:
@@ -47,12 +49,18 @@ nav:
             - python-prompt-toolkit: module/python/python-prompt-toolkit.md
         - semmel-ql:
             - CodeQL: module/semmle-ql/codeql.md
+            - Examples: module\semmle-ql\ql-examples.md
         # - virtualization:
         #     - qemu: module/virtualization/qemu.md
         - webs:
             - webs: module/webs/webs.md
         - wireshark:
             - wireshark: module/wireshark/tshark.md
+        - opencv:
+            - aruco: module\opencv\opencv-aruco.md
+            - bgsegm: module\opencv\opencv-bgsegm.md
+            - ml: module\opencv\opencv-ml.md
+            - opencv: module\opencv\opencv.md
         - others:
             - others: module/others/others.md
 theme: 
